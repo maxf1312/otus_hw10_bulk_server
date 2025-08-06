@@ -36,7 +36,7 @@ namespace otus_hw9{
                 iostream()->clear();
                 
             if( !data.empty() )
-                *iostream() << data << std::endl; 
+                *iostream() << data;// << std::endl; 
             processor()->process(save_status_at_stop);    
         }
 
@@ -50,13 +50,9 @@ namespace otus_hw9{
     using LibAsyncCtxPool_t = unordered_map<libasync_ctx_t, LibAsyncCtxPtr_t>;
 
     static LibAsyncCtxPool_t s_context_pool;
-
     mutex LibAsyncCtx_t::guard_mx_;
-}
 
 
-extern "C"
-{
     libasync_ctx_t  connect(size_t bulk_size)
     {
         using namespace otus_hw9;
@@ -101,5 +97,28 @@ extern "C"
         s_context_pool.erase(p_ctx);
         return 0;
     }
+}
+
+
+extern "C"
+{
+    libasync_ctx_t  libasync_connect(size_t bulk_size)
+    {
+        return otus_hw9::connect(bulk_size);
+    }
+
+    int libasync_receive(libasync_ctx_t ctx, const char buf[], size_t buf_sz)
+    {
+        return otus_hw9::receive(ctx, buf, buf_sz);
+    }
+
+    /// @brief Закрывает сессию и разрушает контекст. С точки зрения логики обработки команд этот вызов считается завершением текущего блока команд.
+    /// @param ctx 
+    /// @return 0 - успешно, иначе код ошибки
+    int libasync_disconnect(libasync_ctx_t ctx)
+    {
+        return otus_hw9::disconnect(ctx);
+    }
+
 };
 

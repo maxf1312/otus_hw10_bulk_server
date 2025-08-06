@@ -22,7 +22,6 @@ add_library(libasync SHARED async.cpp async_internal.cpp async_utils.cpp)
 #target_compile_definitions(libbulk PUBLIC -DUSE_DBG_TRACE)
 #target_compile_definitions(libasync PUBLIC -DUSE_DBG_TRACE)
 
-
 set_target_properties(async PROPERTIES
     CXX_STANDARD 17
     CXX_STANDARD_REQUIRED ON

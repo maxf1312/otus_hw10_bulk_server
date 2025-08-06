@@ -1,10 +1,10 @@
 #include <iostream>
-#include <algorithm>
+#include <boost/asio.hpp>
 
 #include "vers.h"
 #include "bulkserver_utils.h"
+#include "bulkserver_internal.h"
 #include "async.h"
-
 
 using namespace std::literals::string_literals;
 
@@ -17,16 +17,9 @@ int main(int argc, char const* argv[])
 		if (!options.parse_command_line(argc, argv))
 			return 1;
 		
-		libasync_ctx_t ctx = connect(options.cmd_chunk_sz);
-		if( !ctx )
-			throw std::runtime_error("Cannot connect to libasync!");
-		
-		std::string s_inp;
-		for( ; std::getline(std::cin, s_inp) ; )
-		{
-			receive(ctx, s_inp.c_str(), s_inp.length());
-		}
-		disconnect(ctx);
+		ba::io_context io_context;
+	    async_server server(io_context, options.port, options.cmd_chunk_sz);
+		io_context.run();
 	}	
 	catch(const std::exception &e)
 	{

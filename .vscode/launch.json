@@ -9,7 +9,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/build/bulk_server",
-            "args": ["3", "9000", "--thread_count=3"],
+            "args": ["9000", "4", "--thread_count=3"],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [{"name": "LSAN_OPTIONS", "value": "verbosity=1:log_threads=1"}],

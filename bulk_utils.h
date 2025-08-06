@@ -16,5 +16,7 @@ namespace otus_hw7{
         Options(size_t cmd_bulk_sz, istream* istrm = nullptr) : show_help(false), cmd_chunk_sz(cmd_bulk_sz), is_(istrm) {}
         virtual bool parse_command_line(int argc, const char* argv[]);
         virtual Options& add_options(otus_hw7::po::options_description& desc);
+        virtual Options& add_positional(otus_hw7::po::positional_options_description& pos_desc);
+        virtual Options& add_caption_lines( std::string& caption);
     };
 };

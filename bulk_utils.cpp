@@ -25,16 +25,28 @@ namespace otus_hw7{
         return *this;
     }
 
+    Options& Options::add_positional(otus_hw7::po::positional_options_description& pos_desc)
+    {
+        pos_desc.add(OPTION_NAME_CHUNK_SIZE, -1);
+        return *this;
+    }
+
+    Options& Options::add_caption_lines( std::string& caption )
+    {
+        caption = "Аргументы командной строки";
+        return *this;
+    }
+
     bool Options::parse_command_line(int argc, const char* argv[])
     {
         *this = Options();
         Options& parsed_options = *this;
         
-        po::options_description desc("Аргументы командной строки");
-        add_options(desc);
-
+        std::string caption;
+        add_caption_lines( caption );
+        po::options_description desc(caption);
         po::positional_options_description pos_desc;
-        pos_desc.add(OPTION_NAME_CHUNK_SIZE, -1);
+        add_options(desc).add_positional(pos_desc);
 
         po::variables_map vm;
         po::store(po::command_line_parser(argc, argv).options(desc).positional(pos_desc).run(), vm);
