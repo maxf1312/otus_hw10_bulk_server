@@ -3,7 +3,7 @@ name: 'C++ CI'
 on:
   push:
     branches:
-      - no/main
+      - main
       - no/dev
 
 jobs:
