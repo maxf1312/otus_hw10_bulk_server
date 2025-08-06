@@ -1,0 +1,9 @@
+<map id="otus_hw7::QueueExecutor" name="otus_hw7::QueueExecutor">
+<area shape="rect" id="Node000001" title="Реализация исполнителя очереди" alt="" coords="19,181,180,267"/>
+<area shape="rect" id="Node000003" href="$classotus__hw7_1_1QueueExecutorMulti.html" title="Реализация исполнителя очереди для диспетчеризации по воркерам" alt="" coords="5,315,194,544"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="102,282,102,316,97,316,97,282"/>
+<area shape="rect" id="Node000002" href="$structotus__hw7_1_1IQueueExecutor.html" title="Актор, выполняющий очередь" alt="" coords="17,5,182,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,147,102,181,97,181,97,147"/>
+<area shape="rect" id="Node000004" href="$classotus__hw9_1_1QueueExecutorMT.html" title="Реализация исполнителя очереди для диспетчеризации по воркерам" alt="" coords="10,592,190,659"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="102,559,102,593,97,593,97,559"/>
+</map>

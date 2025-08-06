@@ -1,0 +1,32 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,217,55,242"/>
+<area shape="rect" id="Node000002" href="$namespaceotus__hw9.html#a5fbf7ff97a27c75bbed9280d8bf2a527" title="Фабрика для процессора, сама по настройкам выбирает какой тип процессора создать" alt="" coords="103,100,286,125"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="48,214,161,132,164,137,51,218"/>
+<area shape="rect" id="Node000009" href="$structotus__hw7_1_1Options.html#a25e46ea8ccd0eeb7fab7140e105f84fe" title=" " alt="" coords="122,271,266,311"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="56,236,125,262,123,267,54,241"/>
+<area shape="rect" id="Node000003" href="$namespaceotus__hw9.html#a8ff4738172837efd8ee2b2828d5ed5ba" title="Фабрика очереди команд" alt="" coords="334,5,517,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="228,96,333,55,349,49,351,54,335,60,229,101"/>
+<area shape="rect" id="Node000004" href="$namespaceotus__hw7.html#aa570168e6d8dd03155494428b8019c5d" title="Фабрика для процессора, сама по настройкам выбирает какой тип процессора создать" alt="" coords="334,70,517,96"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="286,98,318,94,319,99,286,103"/>
+<area shape="rect" id="Node000008" href="$namespaceotus__hw9.html#af82e02949614cb74e06b88c4b5922adb" title="Фабрика исполнителя очереди команд" alt="" coords="345,120,506,161"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="286,121,330,126,329,131,286,126"/>
+<area shape="rect" id="Node000005" href="$namespaceotus__hw7.html#a2ef1444c7856bdb73f7d73ca3fea67a3" title="Фабрика очереди команд" alt="" coords="565,5,749,46"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="480,67,556,48,558,53,481,72"/>
+<area shape="rect" id="Node000006" href="$namespaceotus__hw7.html#a433db7e5f83dde426c4df55dfebde346" title="Фабрика для парсера. Опции нужны для выбора типа парсера" alt="" coords="576,70,738,96"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="517,80,560,80,560,86,517,86"/>
+<area shape="rect" id="Node000007" href="$namespaceotus__hw7.html#a4030afb06fb6a61d7cce85d149f361d1" title="Фабрика исполнителя очереди команд" alt="" coords="576,120,738,161"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="481,94,562,114,561,119,480,99"/>
+<area shape="rect" id="Node000010" href="$structotus__hw7_1_1Options.html#a56f7e104bc9288282c660a2d326aa434" title=" " alt="" coords="358,185,493,226"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="251,268,353,229,355,234,253,273"/>
+<area shape="rect" id="Node000011" href="$structotus__hw7_1_1Options.html#a87d11a6a9a7a2c8acfaef8085da85a03" title=" " alt="" coords="590,271,724,311"/>
+<area shape="poly" id="edge15_Node000009_Node000011" title=" " alt="" coords="267,287,334,286,517,286,574,286,574,292,517,291,334,291,267,292"/>
+<area shape="rect" id="Node000012" href="$structotus__hw7_1_1Options.html#ad8518181dd4001b68ba853f7fb9a66cf" title=" " alt="" coords="358,300,493,341"/>
+<area shape="poly" id="edge11_Node000009_Node000012" title=" " alt="" coords="267,297,343,307,342,313,266,303"/>
+<area shape="rect" id="Node000013" href="$structotus__hw7_1_1Options.html#ac0efbab3d6edbf345e3c3870e8cabcc2" title=" " alt="" coords="358,365,493,406"/>
+<area shape="poly" id="edge13_Node000009_Node000013" title=" " alt="" coords="242,309,335,350,353,357,351,362,333,355,240,314"/>
+<area shape="rect" id="Node000014" href="$namespaceotus__hw7.html#adb5a45f3fdb0627a223d9e18128428f0" title=" " alt="" coords="356,430,495,456"/>
+<area shape="poly" id="edge16_Node000009_Node000014" title=" " alt="" coords="215,310,265,363,299,391,335,415,349,422,346,427,333,420,296,395,262,367,211,314"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="484,224,586,262,584,267,482,229"/>
+<area shape="poly" id="edge12_Node000012_Node000011" title=" " alt="" coords="493,309,574,299,575,304,493,314"/>
+<area shape="poly" id="edge14_Node000013_Node000011" title=" " alt="" coords="485,362,516,350,596,316,598,321,518,355,486,367"/>
+</map>

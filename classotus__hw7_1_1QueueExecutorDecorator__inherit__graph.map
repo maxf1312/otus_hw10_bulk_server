@@ -1,0 +1,13 @@
+<map id="otus_hw7::QueueExecutorDecorator" name="otus_hw7::QueueExecutorDecorator">
+<area shape="rect" id="Node000001" title="Декоратор для исполнителя очереди" alt="" coords="231,181,448,308"/>
+<area shape="rect" id="Node000003" href="$classotus__hw7_1_1QueueExecutorToBulkInitializer.html" title="Класс &#45; декоратор Исполнителя очереди для упаковки массива команд в BulkCommand." alt="" coords="5,356,217,498"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="251,319,201,358,198,354,247,315"/>
+<area shape="rect" id="Node000005" href="$classotus__hw7_1_1QueueExecutorToFile.html" title=" " alt="" coords="241,374,438,481"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="342,323,342,374,337,374,337,323"/>
+<area shape="rect" id="Node000006" href="$classotus__hw9_1_1QueueExecutorWithPackingDecorator.html" title=" " alt="" coords="462,369,649,486"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="427,315,489,367,485,371,423,319"/>
+<area shape="rect" id="Node000002" href="$structotus__hw7_1_1IQueueExecutor.html" title="Актор, выполняющий очередь" alt="" coords="257,5,422,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="342,147,342,181,337,181,337,147"/>
+<area shape="rect" id="Node000004" href="$classotus__hw7_1_1QueueExecutorToFileInitializer.html" title="Класс &#45; декоратор Исполнителя очереди для упаковки массива команд в блочную команду с инициализаций ф..." alt="" coords="8,546,215,648"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="114,513,114,547,109,547,109,513"/>
+</map>

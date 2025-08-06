@@ -1,0 +1,436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Класс otus_hw10::async_session</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">bulk_server<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">Bulk text commands network server made for homework 9</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceotus__hw10.html">otus_hw10</a></li><li class="navelem"><a class="el" href="classotus__hw10_1_1async__session.html">async_session</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pri-types">Закрытые типы</a> &#124;
+<a href="#pri-methods">Закрытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="classotus__hw10_1_1async__session-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс otus_hw10::async_session</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс сессии приема и обработки команд. Для обработки устанавливает соединение с libasync и работает через него. За основу взят класс session из примера Урок 31.  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="bulkserver__internal_8h_source.html">bulkserver_internal.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:otus_hw10::async_session:</div>
+<div class="dyncontent">
+<div class="center"><img src="classotus__hw10_1_1async__session__inherit__graph.png" border="0" usemap="#aotus__hw10_1_1async__session_inherit__map" alt="Inheritance graph"/></div>
+<map name="aotus__hw10_1_1async__session_inherit__map" id="aotus__hw10_1_1async__session_inherit__map">
+<area shape="rect" title="Класс сессии приема и обработки команд. Для обработки устанавливает соединение с libasync и работает ..." alt="" coords="12,135,178,303"/>
+<area shape="rect" title=" " alt="" coords="5,5,185,87"/>
+<area shape="poly" title=" " alt="" coords="98,101,98,135,92,135,92,101"/>
+</map>
+</div>
+<div class="dynheader">
+Граф связей класса otus_hw10::async_session:</div>
+<div class="dyncontent">
+<div class="center"><img src="classotus__hw10_1_1async__session__coll__graph.png" border="0" usemap="#aotus__hw10_1_1async__session_coll__map" alt="Collaboration graph"/></div>
+<map name="aotus__hw10_1_1async__session_coll__map" id="aotus__hw10_1_1async__session_coll__map">
+<area shape="rect" title="Класс сессии приема и обработки команд. Для обработки устанавливает соединение с libasync и работает ..." alt="" coords="192,150,358,277"/>
+<area shape="rect" title=" " alt="" coords="5,5,185,87"/>
+<area shape="poly" title=" " alt="" coords="151,94,209,148,205,152,147,98"/>
+<area shape="rect" title=" " alt="" coords="209,13,259,79"/>
+<area shape="poly" title=" " alt="" coords="234,79,238,125,240,133,235,134,233,126,229,79"/>
+<area shape="rect" title=" " alt="" coords="300,13,336,79"/>
+<area shape="poly" title=" " alt="" coords="312,80,298,134,293,133,307,78"/>
+<area shape="rect" title=" " alt="" coords="366,13,408,79"/>
+<area shape="poly" title=" " alt="" coords="374,80,347,127,340,137,335,134,342,124,369,78"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a09861a33b4b009c73540411221272a6b" id="r_a09861a33b4b009c73540411221272a6b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09861a33b4b009c73540411221272a6b">async_session</a> (tcp::socket socket, size_t bulk_size)</td></tr>
+<tr class="separator:a09861a33b4b009c73540411221272a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac08e2846b2f3b73b6b3ec290aec2e34d" id="r_ac08e2846b2f3b73b6b3ec290aec2e34d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac08e2846b2f3b73b6b3ec290aec2e34d">~async_session</a> ()</td></tr>
+<tr class="separator:ac08e2846b2f3b73b6b3ec290aec2e34d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c5ee9ee7f6836c31a42cfb174d8a207" id="r_a3c5ee9ee7f6836c31a42cfb174d8a207"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c5ee9ee7f6836c31a42cfb174d8a207">start</a> ()</td></tr>
+<tr class="separator:a3c5ee9ee7f6836c31a42cfb174d8a207"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-types" name="pri-types"></a>
+Закрытые типы</h2></td></tr>
+<tr class="memitem:ac3f1c415d3b4b8c453eec6ea1d76d153" id="r_ac3f1c415d3b4b8c453eec6ea1d76d153"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="#ac3f1c415d3b4b8c453eec6ea1d76d153a862d8689f427525daf40259db7c0db10">max_length</a> = 1024
+ }</td></tr>
+<tr class="separator:ac3f1c415d3b4b8c453eec6ea1d76d153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Закрытые члены</h2></td></tr>
+<tr class="memitem:ad732c389af6db6ff23aa8da8f02e1cf6" id="r_ad732c389af6db6ff23aa8da8f02e1cf6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad732c389af6db6ff23aa8da8f02e1cf6">do_read</a> ()</td></tr>
+<tr class="memdesc:ad732c389af6db6ff23aa8da8f02e1cf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод для запуска асинхронного чтения в буффер и вызова обработки. Поскольку обработка не предполагает ответов - снова вызывается <a class="el" href="#ad732c389af6db6ff23aa8da8f02e1cf6" title="Метод для запуска асинхронного чтения в буффер и вызова обработки. Поскольку обработка не предполагае...">do_read()</a> из обработчика  <br /></td></tr>
+<tr class="separator:ad732c389af6db6ff23aa8da8f02e1cf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:abc72309698417bfef22acafaf6a138c6" id="r_abc72309698417bfef22acafaf6a138c6"><td class="memItemLeft" align="right" valign="top">tcp::socket&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc72309698417bfef22acafaf6a138c6">socket_</a></td></tr>
+<tr class="separator:abc72309698417bfef22acafaf6a138c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e5c2437c69fe0bec43f383c06e57f33" id="r_a6e5c2437c69fe0bec43f383c06e57f33"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e5c2437c69fe0bec43f383c06e57f33">data_</a> [<a class="el" href="#ac3f1c415d3b4b8c453eec6ea1d76d153a862d8689f427525daf40259db7c0db10">max_length</a>]</td></tr>
+<tr class="separator:a6e5c2437c69fe0bec43f383c06e57f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae271fc0777aefa069da5dea7f0d32be8" id="r_ae271fc0777aefa069da5dea7f0d32be8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="async_8h.html#a2e8545bd66a6c098006ff1f4727c86bf">libasync_ctx_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae271fc0777aefa069da5dea7f0d32be8">ctx_</a></td></tr>
+<tr class="separator:ae271fc0777aefa069da5dea7f0d32be8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс сессии приема и обработки команд. Для обработки устанавливает соединение с libasync и работает через него. За основу взят класс session из примера Урок 31. </p>
+</div><h2 class="groupheader">Перечисления</h2>
+<a id="ac3f1c415d3b4b8c453eec6ea1d76d153" name="ac3f1c415d3b4b8c453eec6ea1d76d153"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3f1c415d3b4b8c453eec6ea1d76d153">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ac3f1c415d3b4b8c453eec6ea1d76d153a862d8689f427525daf40259db7c0db10" name="ac3f1c415d3b4b8c453eec6ea1d76d153a862d8689f427525daf40259db7c0db10"></a>max_length&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a09861a33b4b009c73540411221272a6b" name="a09861a33b4b009c73540411221272a6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09861a33b4b009c73540411221272a6b">&#9670;&#160;</a></span>async_session()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">otus_hw10::async_session::async_session </td>
+          <td>(</td>
+          <td class="paramtype">tcp::socket</td>          <td class="paramname"><span class="paramname"><em>socket</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>bulk_size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="classotus__hw10_1_1async__session_a09861a33b4b009c73540411221272a6b_cgraph.png" border="0" usemap="#aclassotus__hw10_1_1async__session_a09861a33b4b009c73540411221272a6b_cgraph" alt=""/></div>
+<map name="aclassotus__hw10_1_1async__session_a09861a33b4b009c73540411221272a6b_cgraph" id="aclassotus__hw10_1_1async__session_a09861a33b4b009c73540411221272a6b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,182,46"/>
+<area shape="rect" href="async_8cpp.html#a6f0268136fc2b696c5ad31481a297954" title="Открывает сессию обработки команд." alt="" coords="230,13,351,38"/>
+<area shape="poly" title=" " alt="" coords="182,23,214,23,214,28,182,28"/>
+<area shape="rect" href="namespaceotus__hw9.html#a1ee84ffea4a31b6cc61fa42e8ea534cf" title=" " alt="" coords="399,13,528,38"/>
+<area shape="poly" title=" " alt="" coords="351,23,384,23,384,28,351,28"/>
+<area shape="rect" href="classotus__hw9_1_1LibAsyncCtx__t.html#a0d9b890d3c946496c45bc30f3ae761f1" title=" " alt="" coords="576,5,733,46"/>
+<area shape="poly" title=" " alt="" coords="529,23,561,23,561,28,529,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac08e2846b2f3b73b6b3ec290aec2e34d" name="ac08e2846b2f3b73b6b3ec290aec2e34d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac08e2846b2f3b73b6b3ec290aec2e34d">&#9670;&#160;</a></span>~async_session()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">otus_hw10::async_session::~async_session </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="classotus__hw10_1_1async__session_ac08e2846b2f3b73b6b3ec290aec2e34d_cgraph.png" border="0" usemap="#aclassotus__hw10_1_1async__session_ac08e2846b2f3b73b6b3ec290aec2e34d_cgraph" alt=""/></div>
+<map name="aclassotus__hw10_1_1async__session_ac08e2846b2f3b73b6b3ec290aec2e34d_cgraph" id="aclassotus__hw10_1_1async__session_ac08e2846b2f3b73b6b3ec290aec2e34d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,182,46"/>
+<area shape="rect" href="async_8cpp.html#ac2a564d46e0cc5d0efe9a4a53ebe6ece" title="Закрывает сессию и разрушает контекст. С точки зрения логики обработки команд этот вызов считается за..." alt="" coords="230,13,368,38"/>
+<area shape="poly" title=" " alt="" coords="182,23,214,23,214,28,182,28"/>
+<area shape="rect" href="namespaceotus__hw9.html#a65b3f7c86fd93ba3911d2dcd72a454ba" title=" " alt="" coords="416,13,562,38"/>
+<area shape="poly" title=" " alt="" coords="368,23,400,23,400,28,368,28"/>
+<area shape="rect" href="classotus__hw9_1_1LibAsyncCtx__t.html#a0d9b890d3c946496c45bc30f3ae761f1" title=" " alt="" coords="610,5,767,46"/>
+<area shape="poly" title=" " alt="" coords="563,23,595,23,595,28,563,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="ad732c389af6db6ff23aa8da8f02e1cf6" name="ad732c389af6db6ff23aa8da8f02e1cf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad732c389af6db6ff23aa8da8f02e1cf6">&#9670;&#160;</a></span>do_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otus_hw10::async_session::do_read </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Метод для запуска асинхронного чтения в буффер и вызова обработки. Поскольку обработка не предполагает ответов - снова вызывается <a class="el" href="#ad732c389af6db6ff23aa8da8f02e1cf6" title="Метод для запуска асинхронного чтения в буффер и вызова обработки. Поскольку обработка не предполагае...">do_read()</a> из обработчика </p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="classotus__hw10_1_1async__session_ad732c389af6db6ff23aa8da8f02e1cf6_cgraph.png" border="0" usemap="#aclassotus__hw10_1_1async__session_ad732c389af6db6ff23aa8da8f02e1cf6_cgraph" alt=""/></div>
+<map name="aclassotus__hw10_1_1async__session_ad732c389af6db6ff23aa8da8f02e1cf6_cgraph" id="aclassotus__hw10_1_1async__session_ad732c389af6db6ff23aa8da8f02e1cf6_cgraph">
+<area shape="rect" title="Метод для запуска асинхронного чтения в буффер и вызова обработки. Поскольку обработка не предполагае..." alt="" coords="5,29,182,70"/>
+<area shape="poly" title=" " alt="" coords="56,29,55,19,61,10,74,5,94,3,115,5,127,11,125,16,113,10,93,8,75,10,64,15,60,20,62,28"/>
+<area shape="rect" href="async_8cpp.html#aa4d56a15362dd2a9ae09f654abf68a8f" title="принимает команду (список команд, если встречается перевод строки)." alt="" coords="230,37,347,62"/>
+<area shape="poly" title=" " alt="" coords="182,47,214,47,214,52,182,52"/>
+<area shape="rect" href="namespaceotus__hw9.html#a8b1d16c81c29e3dead27817adff69af8" title=" " alt="" coords="395,37,520,62"/>
+<area shape="poly" title=" " alt="" coords="347,47,380,47,380,52,347,52"/>
+<area shape="rect" href="classotus__hw9_1_1LibAsyncCtx__t.html#a0d9b890d3c946496c45bc30f3ae761f1" title=" " alt="" coords="568,29,725,70"/>
+<area shape="poly" title=" " alt="" coords="521,47,553,47,553,52,521,52"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3c5ee9ee7f6836c31a42cfb174d8a207" name="a3c5ee9ee7f6836c31a42cfb174d8a207"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c5ee9ee7f6836c31a42cfb174d8a207">&#9670;&#160;</a></span>start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otus_hw10::async_session::start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="classotus__hw10_1_1async__session_a3c5ee9ee7f6836c31a42cfb174d8a207_cgraph.png" border="0" usemap="#aclassotus__hw10_1_1async__session_a3c5ee9ee7f6836c31a42cfb174d8a207_cgraph" alt=""/></div>
+<map name="aclassotus__hw10_1_1async__session_a3c5ee9ee7f6836c31a42cfb174d8a207_cgraph" id="aclassotus__hw10_1_1async__session_a3c5ee9ee7f6836c31a42cfb174d8a207_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,182,70"/>
+<area shape="rect" href="classotus__hw10_1_1async__session.html#ad732c389af6db6ff23aa8da8f02e1cf6" title="Метод для запуска асинхронного чтения в буффер и вызова обработки. Поскольку обработка не предполагае..." alt="" coords="230,29,406,70"/>
+<area shape="poly" title=" " alt="" coords="182,47,214,47,214,52,182,52"/>
+<area shape="poly" title=" " alt="" coords="281,29,279,19,285,10,298,5,318,3,339,5,352,11,349,16,338,10,318,8,299,10,288,15,284,20,286,28"/>
+<area shape="rect" href="async_8cpp.html#aa4d56a15362dd2a9ae09f654abf68a8f" title="принимает команду (список команд, если встречается перевод строки)." alt="" coords="454,37,571,62"/>
+<area shape="poly" title=" " alt="" coords="406,47,439,47,439,52,406,52"/>
+<area shape="rect" href="namespaceotus__hw9.html#a8b1d16c81c29e3dead27817adff69af8" title=" " alt="" coords="619,37,745,62"/>
+<area shape="poly" title=" " alt="" coords="572,47,604,47,604,52,572,52"/>
+<area shape="rect" href="classotus__hw9_1_1LibAsyncCtx__t.html#a0d9b890d3c946496c45bc30f3ae761f1" title=" " alt="" coords="793,29,949,70"/>
+<area shape="poly" title=" " alt="" coords="745,47,777,47,777,52,745,52"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="ae271fc0777aefa069da5dea7f0d32be8" name="ae271fc0777aefa069da5dea7f0d32be8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae271fc0777aefa069da5dea7f0d32be8">&#9670;&#160;</a></span>ctx_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="async_8h.html#a2e8545bd66a6c098006ff1f4727c86bf">libasync_ctx_t</a> otus_hw10::async_session::ctx_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6e5c2437c69fe0bec43f383c06e57f33" name="a6e5c2437c69fe0bec43f383c06e57f33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e5c2437c69fe0bec43f383c06e57f33">&#9670;&#160;</a></span>data_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char otus_hw10::async_session::data_[<a class="el" href="#ac3f1c415d3b4b8c453eec6ea1d76d153a862d8689f427525daf40259db7c0db10">max_length</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abc72309698417bfef22acafaf6a138c6" name="abc72309698417bfef22acafaf6a138c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc72309698417bfef22acafaf6a138c6">&#9670;&#160;</a></span>socket_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">tcp::socket otus_hw10::async_session::socket_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li><a class="el" href="bulkserver__internal_8h_source.html">bulkserver_internal.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

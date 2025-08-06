@@ -1,0 +1,11 @@
+<map id="otus_hw9::LibAsyncCtx_t" name="otus_hw9::LibAsyncCtx_t">
+<area shape="rect" id="Node000001" title="Вспомогательный класс для хранения процессора и потока с данными" alt="" coords="105,135,262,303"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,50,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="42,70,63,109,95,144,91,148,59,112,37,73"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="89,5,134,72"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="127,71,146,118,141,120,122,73"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="158,5,326,72"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="234,72,219,119,214,118,229,71"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="350,5,506,72"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="386,74,277,152,274,148,382,69"/>
+</map>

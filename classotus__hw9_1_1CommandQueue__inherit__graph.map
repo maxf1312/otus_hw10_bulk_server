@@ -1,0 +1,7 @@
+<map id="otus_hw9::CommandQueue" name="otus_hw9::CommandQueue">
+<area shape="rect" id="Node000001" title="Реализация очереди команд" alt="" coords="6,379,194,602"/>
+<area shape="rect" id="Node000003" href="$classotus__hw9_1_1CommandQueueMT.html" title="Реализация многопоточной очереди команд" alt="" coords="5,650,194,798"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="102,617,102,651,97,651,97,617"/>
+<area shape="rect" id="Node000002" href="$structotus__hw7_1_1ICommandQueue.html" title="Очередь команд. Формируется парсером, затем выполняется исполнителем под управлением процессора." alt="" coords="6,5,194,331"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,346,102,379,97,379,97,346"/>
+</map>

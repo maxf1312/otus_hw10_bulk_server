@@ -1,0 +1,9 @@
+<map id="otus_hw7::QueueExecutorToBulkInitializer" name="otus_hw7::QueueExecutorToBulkInitializer">
+<area shape="rect" id="Node000001" title="Класс &#45; декоратор Исполнителя очереди для упаковки массива команд в BulkCommand." alt="" coords="8,356,220,498"/>
+<area shape="rect" id="Node000004" href="$classotus__hw7_1_1QueueExecutorToFileInitializer.html" title="Класс &#45; декоратор Исполнителя очереди для упаковки массива команд в блочную команду с инициализаций ф..." alt="" coords="10,546,217,648"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="116,513,116,547,111,547,111,513"/>
+<area shape="rect" id="Node000002" href="$classotus__hw7_1_1QueueExecutorDecorator.html" title="Декоратор для исполнителя очереди" alt="" coords="5,181,222,308"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,323,116,356,111,356,111,323"/>
+<area shape="rect" id="Node000003" href="$structotus__hw7_1_1IQueueExecutor.html" title="Актор, выполняющий очередь" alt="" coords="31,5,196,133"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="116,147,116,181,111,181,111,147"/>
+</map>

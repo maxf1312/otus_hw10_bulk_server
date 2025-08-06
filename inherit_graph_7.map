@@ -1,0 +1,9 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="Node000000" href="$structotus__hw7_1_1IProcessor.html" title="Процессор &#45; управляющий обработкой посредник" alt="" coords="5,5,152,31"/>
+<area shape="rect" id="Node000001" href="$classotus__hw7_1_1Processor.html" title="Реализация процессора команд" alt="" coords="200,31,342,56"/>
+<area shape="poly" id="edge35_Node000000_Node000001" title=" " alt="" coords="168,27,200,31,199,37,167,32"/>
+<area shape="rect" id="Node000002" href="$classotus__hw9_1_1ProcessorMT.html" title="Реализация процессора команд" alt="" coords="390,31,551,56"/>
+<area shape="poly" id="edge36_Node000001_Node000002" title=" " alt="" coords="358,41,389,41,389,46,358,46"/>
+<area shape="rect" id="Node000003" href="$structotus__hw9_1_1IProcessor.html" title="Процессор &#45; управляющий обработкой посредник" alt="" coords="5,55,152,80"/>
+<area shape="poly" id="edge37_Node000003_Node000001" title=" " alt="" coords="167,54,199,50,200,55,168,59"/>
+</map>

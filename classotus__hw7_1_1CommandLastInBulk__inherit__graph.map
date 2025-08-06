@@ -1,0 +1,7 @@
+<map id="otus_hw7::CommandLastInBulk" name="otus_hw7::CommandLastInBulk">
+<area shape="rect" id="Node000001" title="Реализация команды&#45;декоратора для последней команды в блоке, для уведомления" alt="" coords="5,437,200,565"/>
+<area shape="rect" id="Node000002" href="$classotus__hw7_1_1CommandDecorator.html" title="Реализация команды&#45;декоратора" alt="" coords="9,221,196,389"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,404,105,437,100,437,100,404"/>
+<area shape="rect" id="Node000003" href="$structotus__hw7_1_1ICommand.html" title="Команда, активный объект, паттерн команда" alt="" coords="35,5,170,173"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="105,188,105,221,100,221,100,188"/>
+</map>

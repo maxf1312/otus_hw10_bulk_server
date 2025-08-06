@@ -1,0 +1,404 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Класс otus_hw7::QueueExecutorToBulkInitializer</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">bulk_server<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">Bulk text commands network server made for homework 9</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceotus__hw7.html">otus_hw7</a></li><li class="navelem"><a class="el" href="classotus__hw7_1_1QueueExecutorToBulkInitializer.html">QueueExecutorToBulkInitializer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pro-methods">Защищенные члены</a> &#124;
+<a href="#pro-attribs">Защищенные данные</a> &#124;
+<a href="classotus__hw7_1_1QueueExecutorToBulkInitializer-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс otus_hw7::QueueExecutorToBulkInitializer</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс - декоратор Исполнителя очереди для упаковки массива команд в <a class="el" href="classotus__hw7_1_1BulkCommand.html">BulkCommand</a>.  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="bulk__internal_8h_source.html">bulk_internal.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:otus_hw7::QueueExecutorToBulkInitializer:</div>
+<div class="dyncontent">
+<div class="center"><img src="classotus__hw7_1_1QueueExecutorToBulkInitializer__inherit__graph.png" border="0" usemap="#aotus__hw7_1_1QueueExecutorToBulkInitializer_inherit__map" alt="Inheritance graph"/></div>
+<map name="aotus__hw7_1_1QueueExecutorToBulkInitializer_inherit__map" id="aotus__hw7_1_1QueueExecutorToBulkInitializer_inherit__map">
+<area shape="rect" title="Класс &#45; декоратор Исполнителя очереди для упаковки массива команд в BulkCommand." alt="" coords="8,356,220,498"/>
+<area shape="rect" href="classotus__hw7_1_1QueueExecutorToFileInitializer.html" title="Класс &#45; декоратор Исполнителя очереди для упаковки массива команд в блочную команду с инициализаций ф..." alt="" coords="10,546,217,648"/>
+<area shape="poly" title=" " alt="" coords="116,513,116,547,111,547,111,513"/>
+<area shape="rect" href="classotus__hw7_1_1QueueExecutorDecorator.html" title="Декоратор для исполнителя очереди" alt="" coords="5,181,222,308"/>
+<area shape="poly" title=" " alt="" coords="116,323,116,356,111,356,111,323"/>
+<area shape="rect" href="structotus__hw7_1_1IQueueExecutor.html" title="Актор, выполняющий очередь" alt="" coords="31,5,196,133"/>
+<area shape="poly" title=" " alt="" coords="116,147,116,181,111,181,111,147"/>
+</map>
+</div>
+<div class="dynheader">
+Граф связей класса otus_hw7::QueueExecutorToBulkInitializer:</div>
+<div class="dyncontent">
+<div class="center"><img src="classotus__hw7_1_1QueueExecutorToBulkInitializer__coll__graph.png" border="0" usemap="#aotus__hw7_1_1QueueExecutorToBulkInitializer_coll__map" alt="Collaboration graph"/></div>
+<map name="aotus__hw7_1_1QueueExecutorToBulkInitializer_coll__map" id="aotus__hw7_1_1QueueExecutorToBulkInitializer_coll__map">
+<area shape="rect" title="Класс &#45; декоратор Исполнителя очереди для упаковки массива команд в BulkCommand." alt="" coords="180,386,392,508"/>
+<area shape="rect" href="classotus__hw7_1_1QueueExecutorDecorator.html" title="Декоратор для исполнителя очереди" alt="" coords="22,196,239,323"/>
+<area shape="poly" title=" " alt="" coords="194,332,239,385,234,388,190,336"/>
+<area shape="rect" href="structotus__hw7_1_1IQueueExecutor.html" title="Актор, выполняющий очередь" alt="" coords="5,5,170,133"/>
+<area shape="poly" title=" " alt="" coords="108,146,119,196,114,197,103,148"/>
+<area shape="rect" title=" " alt="" coords="194,36,379,102"/>
+<area shape="poly" title=" " alt="" coords="289,102,289,369,284,369,284,102"/>
+<area shape="poly" title=" " alt="" coords="259,104,211,158,190,184,186,181,207,155,255,100"/>
+<area shape="rect" title=" " alt="" coords="390,226,585,292"/>
+<area shape="poly" title=" " alt="" coords="455,294,365,377,362,373,451,291"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a934e9b1d43b00672472c4f1d528635f5" id="r_a934e9b1d43b00672472c4f1d528635f5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a934e9b1d43b00672472c4f1d528635f5">BaseCls_t</a> = <a class="el" href="classotus__hw7_1_1QueueExecutorDecorator.html">QueueExecutorDecorator</a></td></tr>
+<tr class="separator:a934e9b1d43b00672472c4f1d528635f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a60991d5d35997c336cc62ec088027f4d" id="r_a60991d5d35997c336cc62ec088027f4d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60991d5d35997c336cc62ec088027f4d">QueueExecutorToBulkInitializer</a> (<a class="el" href="namespaceotus__hw7.html#afc5c79b47326e4974d9df5ae863f5961">IQueueExecutorPtr_t</a> wrapee, <a class="el" href="namespaceotus__hw7.html#ac6fc38ba9456ac58490737e0219feaa4">ICommandQueuePtr_t</a> q=std::make_shared&lt; <a class="el" href="classotus__hw7_1_1CommandQueue.html">CommandQueue</a> &gt;(), <a class="el" href="namespaceotus__hw7.html#afc5c79b47326e4974d9df5ae863f5961">IQueueExecutorPtr_t</a> q_executor=std::make_unique&lt; <a class="el" href="classotus__hw7_1_1QueueExecutor.html">QueueExecutor</a> &gt;())</td></tr>
+<tr class="separator:a60991d5d35997c336cc62ec088027f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fdd25df4f1d3374fb9461772e0cf0f9" id="r_a2fdd25df4f1d3374fb9461772e0cf0f9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fdd25df4f1d3374fb9461772e0cf0f9">execute_from_array</a> (<a class="el" href="structotus__hw7_1_1ICommandQueue.html">ICommandQueue</a> &amp;q, <a class="el" href="structotus__hw7_1_1ICommandContext.html">ICommandContext</a> &amp;ctx, const <a class="el" href="namespaceotus__hw7.html#ac8cc5d28a000a949a58d3357a139073d">ICommandPtrArray_t</a> &amp;commands, size_t pos, size_t cnt) override</td></tr>
+<tr class="separator:a2fdd25df4f1d3374fb9461772e0cf0f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classotus__hw7_1_1QueueExecutorDecorator"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classotus__hw7_1_1QueueExecutorDecorator')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="classotus__hw7_1_1QueueExecutorDecorator.html">otus_hw7::QueueExecutorDecorator</a></td></tr>
+<tr class="memitem:a3b39b822988442b0f5604f9cab808870 inherit pub_methods_classotus__hw7_1_1QueueExecutorDecorator" id="r_a3b39b822988442b0f5604f9cab808870"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classotus__hw7_1_1QueueExecutorDecorator.html#a3b39b822988442b0f5604f9cab808870">QueueExecutorDecorator</a> (<a class="el" href="namespaceotus__hw7.html#afc5c79b47326e4974d9df5ae863f5961">IQueueExecutorPtr_t</a> wrapee)</td></tr>
+<tr class="separator:a3b39b822988442b0f5604f9cab808870 inherit pub_methods_classotus__hw7_1_1QueueExecutorDecorator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa1e2105494551c1a2d4bbcbb450d367 inherit pub_methods_classotus__hw7_1_1QueueExecutorDecorator" id="r_afa1e2105494551c1a2d4bbcbb450d367"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classotus__hw7_1_1QueueExecutorDecorator.html#afa1e2105494551c1a2d4bbcbb450d367">execute</a> (<a class="el" href="structotus__hw7_1_1ICommandQueue.html">ICommandQueue</a> &amp;q, <a class="el" href="structotus__hw7_1_1ICommandContext.html">ICommandContext</a> &amp;ctx, size_t cnt) override</td></tr>
+<tr class="separator:afa1e2105494551c1a2d4bbcbb450d367 inherit pub_methods_classotus__hw7_1_1QueueExecutorDecorator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1223f582aa0d9d1716ef309ae3dbf2eb inherit pub_methods_classotus__hw7_1_1QueueExecutorDecorator" id="r_a1223f582aa0d9d1716ef309ae3dbf2eb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classotus__hw7_1_1QueueExecutorDecorator.html#a1223f582aa0d9d1716ef309ae3dbf2eb">on_end_bulk</a> (<a class="el" href="structotus__hw7_1_1ICommandQueue.html">ICommandQueue</a> &amp;q, <a class="el" href="structotus__hw7_1_1ICommand.html">ICommand</a> &amp;cmd, <a class="el" href="structotus__hw7_1_1ICommandContext.html">ICommandContext</a> &amp;ctx) override</td></tr>
+<tr class="separator:a1223f582aa0d9d1716ef309ae3dbf2eb inherit pub_methods_classotus__hw7_1_1QueueExecutorDecorator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_structotus__hw7_1_1IQueueExecutor"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_structotus__hw7_1_1IQueueExecutor')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="structotus__hw7_1_1IQueueExecutor.html">otus_hw7::IQueueExecutor</a></td></tr>
+<tr class="memitem:ab63fbb50fe87b89d3be320cd290878a4 inherit pub_methods_structotus__hw7_1_1IQueueExecutor" id="r_ab63fbb50fe87b89d3be320cd290878a4"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structotus__hw7_1_1IQueueExecutor.html#ab63fbb50fe87b89d3be320cd290878a4">~IQueueExecutor</a> ()=default</td></tr>
+<tr class="separator:ab63fbb50fe87b89d3be320cd290878a4 inherit pub_methods_structotus__hw7_1_1IQueueExecutor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Защищенные члены</h2></td></tr>
+<tr class="memitem:a8c923ba4209d550f975f9c27f5b853f4" id="r_a8c923ba4209d550f975f9c27f5b853f4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespaceotus__hw7.html#aeb181c4f20f2c6a8263ba7a9a717224a">ICommandPtr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c923ba4209d550f975f9c27f5b853f4">create_bulk_cmd</a> (<a class="el" href="structotus__hw7_1_1ICommandQueue.html">ICommandQueue</a> &amp;, <a class="el" href="namespaceotus__hw7.html#ac8cc5d28a000a949a58d3357a139073d">ICommandPtrArray_t</a> const &amp;commands, size_t pos, size_t cnt)</td></tr>
+<tr class="memdesc:a8c923ba4209d550f975f9c27f5b853f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a bulk cmd object.  <br /></td></tr>
+<tr class="separator:a8c923ba4209d550f975f9c27f5b853f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Защищенные данные</h2></td></tr>
+<tr class="memitem:a80f236bd817fe99d23a0e388ed90fa4b" id="r_a80f236bd817fe99d23a0e388ed90fa4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceotus__hw7.html#ac6fc38ba9456ac58490737e0219feaa4">ICommandQueuePtr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80f236bd817fe99d23a0e388ed90fa4b">q_</a></td></tr>
+<tr class="separator:a80f236bd817fe99d23a0e388ed90fa4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05fe5572904afc537cc3ddbb0f114064" id="r_a05fe5572904afc537cc3ddbb0f114064"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceotus__hw7.html#afc5c79b47326e4974d9df5ae863f5961">IQueueExecutorPtr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05fe5572904afc537cc3ddbb0f114064">q_executor_</a></td></tr>
+<tr class="separator:a05fe5572904afc537cc3ddbb0f114064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classotus__hw7_1_1QueueExecutorDecorator"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classotus__hw7_1_1QueueExecutorDecorator')"><img src="closed.png" alt="-"/>&#160;Защищенные данные унаследованные от <a class="el" href="classotus__hw7_1_1QueueExecutorDecorator.html">otus_hw7::QueueExecutorDecorator</a></td></tr>
+<tr class="memitem:a52c32c543fd1ec9b802d7d6cef8e9f45 inherit pro_attribs_classotus__hw7_1_1QueueExecutorDecorator" id="r_a52c32c543fd1ec9b802d7d6cef8e9f45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceotus__hw7.html#afc5c79b47326e4974d9df5ae863f5961">IQueueExecutorPtr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classotus__hw7_1_1QueueExecutorDecorator.html#a52c32c543fd1ec9b802d7d6cef8e9f45">wrapee_</a></td></tr>
+<tr class="separator:a52c32c543fd1ec9b802d7d6cef8e9f45 inherit pro_attribs_classotus__hw7_1_1QueueExecutorDecorator"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс - декоратор Исполнителя очереди для упаковки массива команд в <a class="el" href="classotus__hw7_1_1BulkCommand.html">BulkCommand</a>. </p>
+</div><h2 class="groupheader">Определения типов</h2>
+<a id="a934e9b1d43b00672472c4f1d528635f5" name="a934e9b1d43b00672472c4f1d528635f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a934e9b1d43b00672472c4f1d528635f5">&#9670;&#160;</a></span>BaseCls_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a934e9b1d43b00672472c4f1d528635f5">otus_hw7::QueueExecutorToBulkInitializer::BaseCls_t</a> = <a class="el" href="classotus__hw7_1_1QueueExecutorDecorator.html">QueueExecutorDecorator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a60991d5d35997c336cc62ec088027f4d" name="a60991d5d35997c336cc62ec088027f4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60991d5d35997c336cc62ec088027f4d">&#9670;&#160;</a></span>QueueExecutorToBulkInitializer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">otus_hw7::QueueExecutorToBulkInitializer::QueueExecutorToBulkInitializer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceotus__hw7.html#afc5c79b47326e4974d9df5ae863f5961">IQueueExecutorPtr_t</a></td>          <td class="paramname"><span class="paramname"><em>wrapee</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceotus__hw7.html#ac6fc38ba9456ac58490737e0219feaa4">ICommandQueuePtr_t</a></td>          <td class="paramname"><span class="paramname"><em>q</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::make_shared&lt;<a class="el" href="classotus__hw7_1_1CommandQueue.html">CommandQueue</a>&gt;()</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceotus__hw7.html#afc5c79b47326e4974d9df5ae863f5961">IQueueExecutorPtr_t</a></td>          <td class="paramname"><span class="paramname"><em>q_executor</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::make_unique&lt;<a class="el" href="classotus__hw7_1_1QueueExecutor.html">QueueExecutor</a>&gt;()</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="classotus__hw7_1_1QueueExecutorToBulkInitializer_a60991d5d35997c336cc62ec088027f4d_cgraph.png" border="0" usemap="#aclassotus__hw7_1_1QueueExecutorToBulkInitializer_a60991d5d35997c336cc62ec088027f4d_cgraph" alt=""/></div>
+<map name="aclassotus__hw7_1_1QueueExecutorToBulkInitializer_a60991d5d35997c336cc62ec088027f4d_cgraph" id="aclassotus__hw7_1_1QueueExecutorToBulkInitializer_a60991d5d35997c336cc62ec088027f4d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,198,61"/>
+<area shape="rect" href="classotus__hw7_1_1QueueExecutorDecorator.html#a3b39b822988442b0f5604f9cab808870" title=" " alt="" coords="246,13,473,54"/>
+<area shape="poly" title=" " alt="" coords="198,30,230,30,230,36,198,36"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a8c923ba4209d550f975f9c27f5b853f4" name="a8c923ba4209d550f975f9c27f5b853f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c923ba4209d550f975f9c27f5b853f4">&#9670;&#160;</a></span>create_bulk_cmd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespaceotus__hw7.html#aeb181c4f20f2c6a8263ba7a9a717224a">ICommandPtr_t</a> otus_hw7::QueueExecutorToBulkInitializer::create_bulk_cmd </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structotus__hw7_1_1ICommandQueue.html">ICommandQueue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceotus__hw7.html#ac8cc5d28a000a949a58d3357a139073d">ICommandPtrArray_t</a> const &amp;</td>          <td class="paramname"><span class="paramname"><em>commands</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>pos</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>cnt</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a bulk cmd object. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">commands</td><td>массив команд </td></tr>
+    <tr><td class="paramname">pos</td><td>с какой команды берем </td></tr>
+    <tr><td class="paramname">cnt</td><td>сколько </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>- указатель на созданную команду </dd></dl>
+
+<p>Переопределяется в <a class="el" href="classotus__hw7_1_1QueueExecutorToFileInitializer.html#a977c620a99887acd57ea6aae5a7775e4">otus_hw7::QueueExecutorToFileInitializer</a> и <a class="el" href="classotus__hw9_1_1QueueExecutorToFileInitializer.html#a977c620a99887acd57ea6aae5a7775e4">otus_hw9::QueueExecutorToFileInitializer</a>.</p>
+
+</div>
+</div>
+<a id="a2fdd25df4f1d3374fb9461772e0cf0f9" name="a2fdd25df4f1d3374fb9461772e0cf0f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fdd25df4f1d3374fb9461772e0cf0f9">&#9670;&#160;</a></span>execute_from_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void otus_hw7::QueueExecutorToBulkInitializer::execute_from_array </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structotus__hw7_1_1ICommandQueue.html">ICommandQueue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>q</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structotus__hw7_1_1ICommandContext.html">ICommandContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespaceotus__hw7.html#ac8cc5d28a000a949a58d3357a139073d">ICommandPtrArray_t</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>commands</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>pos</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>cnt</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Переопределяет метод предка <a class="el" href="classotus__hw7_1_1QueueExecutorDecorator.html#a61a6c89a00a7fa1f161e727943c190a0">otus_hw7::QueueExecutorDecorator</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="classotus__hw7_1_1QueueExecutorToBulkInitializer_a2fdd25df4f1d3374fb9461772e0cf0f9_cgraph.png" border="0" usemap="#aclassotus__hw7_1_1QueueExecutorToBulkInitializer_a2fdd25df4f1d3374fb9461772e0cf0f9_cgraph" alt=""/></div>
+<map name="aclassotus__hw7_1_1QueueExecutorToBulkInitializer_a2fdd25df4f1d3374fb9461772e0cf0f9_cgraph" id="aclassotus__hw7_1_1QueueExecutorToBulkInitializer_a2fdd25df4f1d3374fb9461772e0cf0f9_cgraph">
+<area shape="rect" title=" " alt="" coords="5,41,192,97"/>
+<area shape="rect" href="classotus__hw7_1_1QueueExecutorToBulkInitializer.html#a8c923ba4209d550f975f9c27f5b853f4" title="Create a bulk cmd object." alt="" coords="260,5,446,61"/>
+<area shape="poly" title=" " alt="" coords="192,53,244,46,245,51,193,59"/>
+<area shape="rect" href="classotus__hw7_1_1QueueExecutorDecorator.html#a61a6c89a00a7fa1f161e727943c190a0" title=" " alt="" coords="240,85,467,126"/>
+<area shape="poly" title=" " alt="" coords="193,80,225,84,224,90,192,85"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a80f236bd817fe99d23a0e388ed90fa4b" name="a80f236bd817fe99d23a0e388ed90fa4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80f236bd817fe99d23a0e388ed90fa4b">&#9670;&#160;</a></span>q_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceotus__hw7.html#ac6fc38ba9456ac58490737e0219feaa4">ICommandQueuePtr_t</a> otus_hw7::QueueExecutorToBulkInitializer::q_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05fe5572904afc537cc3ddbb0f114064" name="a05fe5572904afc537cc3ddbb0f114064"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05fe5572904afc537cc3ddbb0f114064">&#9670;&#160;</a></span>q_executor_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceotus__hw7.html#afc5c79b47326e4974d9df5ae863f5961">IQueueExecutorPtr_t</a> otus_hw7::QueueExecutorToBulkInitializer::q_executor_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li><a class="el" href="bulk__internal_8h_source.html">bulk_internal.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

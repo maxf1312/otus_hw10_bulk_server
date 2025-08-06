@@ -1,0 +1,5 @@
+<map id="otus_hw10::async_session" name="otus_hw10::async_session">
+<area shape="rect" id="Node000001" title="Класс сессии приема и обработки команд. Для обработки устанавливает соединение с libasync и работает ..." alt="" coords="12,135,178,303"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,185,87"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,101,98,135,92,135,92,101"/>
+</map>

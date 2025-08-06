@@ -1,0 +1,9 @@
+<map id="otus_hw10::async_session::async_session" name="otus_hw10::async_session::async_session">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,182,46"/>
+<area shape="rect" id="Node000002" href="$async_8cpp.html#a6f0268136fc2b696c5ad31481a297954" title="Открывает сессию обработки команд." alt="" coords="230,13,351,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,23,214,23,214,28,182,28"/>
+<area shape="rect" id="Node000003" href="$namespaceotus__hw9.html#a1ee84ffea4a31b6cc61fa42e8ea534cf" title=" " alt="" coords="399,13,528,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="351,23,384,23,384,28,351,28"/>
+<area shape="rect" id="Node000004" href="$classotus__hw9_1_1LibAsyncCtx__t.html#a0d9b890d3c946496c45bc30f3ae761f1" title=" " alt="" coords="576,5,733,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="529,23,561,23,561,28,529,28"/>
+</map>

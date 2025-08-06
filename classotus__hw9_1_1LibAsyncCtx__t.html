@@ -1,0 +1,444 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Класс otus_hw9::LibAsyncCtx_t</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">bulk_server<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">Bulk text commands network server made for homework 9</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceotus__hw9.html">otus_hw9</a></li><li class="navelem"><a class="el" href="classotus__hw9_1_1LibAsyncCtx__t.html">LibAsyncCtx_t</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pub-static-methods">Открытые статические члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="#pri-static-attribs">Закрытые статические данные</a> &#124;
+<a href="classotus__hw9_1_1LibAsyncCtx__t-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс otus_hw9::LibAsyncCtx_t</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Вспомогательный класс для хранения процессора и потока с данными  
+ <a href="#details">Подробнее...</a></p>
+<div class="dynheader">
+Граф связей класса otus_hw9::LibAsyncCtx_t:</div>
+<div class="dyncontent">
+<div class="center"><img src="classotus__hw9_1_1LibAsyncCtx__t__coll__graph.png" border="0" usemap="#aotus__hw9_1_1LibAsyncCtx__t_coll__map" alt="Collaboration graph"/></div>
+<map name="aotus__hw9_1_1LibAsyncCtx__t_coll__map" id="aotus__hw9_1_1LibAsyncCtx__t_coll__map">
+<area shape="rect" title="Вспомогательный класс для хранения процессора и потока с данными" alt="" coords="105,135,262,303"/>
+<area shape="rect" title=" " alt="" coords="5,5,50,72"/>
+<area shape="poly" title=" " alt="" coords="42,70,63,109,95,144,91,148,59,112,37,73"/>
+<area shape="rect" title=" " alt="" coords="89,5,134,72"/>
+<area shape="poly" title=" " alt="" coords="127,71,146,118,141,120,122,73"/>
+<area shape="rect" title=" " alt="" coords="158,5,326,72"/>
+<area shape="poly" title=" " alt="" coords="234,72,219,119,214,118,229,71"/>
+<area shape="rect" title=" " alt="" coords="350,5,506,72"/>
+<area shape="poly" title=" " alt="" coords="386,74,277,152,274,148,382,69"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ad4dc2b86dcf92b01d058fd7133201b3a" id="r_ad4dc2b86dcf92b01d058fd7133201b3a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4dc2b86dcf92b01d058fd7133201b3a">LibAsyncCtx_t</a> (size_t bulk_size)</td></tr>
+<tr class="separator:ad4dc2b86dcf92b01d058fd7133201b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b2c25ea00cc815bb7fcb91d1e62a261" id="r_a6b2c25ea00cc815bb7fcb91d1e62a261"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b2c25ea00cc815bb7fcb91d1e62a261">~LibAsyncCtx_t</a> ()</td></tr>
+<tr class="separator:a6b2c25ea00cc815bb7fcb91d1e62a261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cf7a2b7f8893fdecf822553b0e4b1ac" id="r_a0cf7a2b7f8893fdecf822553b0e4b1ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceotus__hw9.html#a4e93756fd93229aabb6f734970ccea58">IOStreamPtr_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cf7a2b7f8893fdecf822553b0e4b1ac">iostream</a> ()</td></tr>
+<tr class="separator:a0cf7a2b7f8893fdecf822553b0e4b1ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdcad81fe4902156efd003a40bb86c0e" id="r_afdcad81fe4902156efd003a40bb86c0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceotus__hw7.html#aa7f86a27801044b4e45589f182119e99">IProcessorPtr_t</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afdcad81fe4902156efd003a40bb86c0e">processor</a> ()</td></tr>
+<tr class="separator:afdcad81fe4902156efd003a40bb86c0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29e1738515689ed74461430a5871f92c" id="r_a29e1738515689ed74461430a5871f92c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29e1738515689ed74461430a5871f92c">receive</a> (const string_view &amp;data, bool save_status_at_stop)</td></tr>
+<tr class="separator:a29e1738515689ed74461430a5871f92c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a0d9b890d3c946496c45bc30f3ae761f1" id="r_a0d9b890d3c946496c45bc30f3ae761f1"><td class="memItemLeft" align="right" valign="top">static mutex &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d9b890d3c946496c45bc30f3ae761f1">guard_mx</a> ()</td></tr>
+<tr class="separator:a0d9b890d3c946496c45bc30f3ae761f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:a1ba4b5f608f00c16207e0014d2ee900b" id="r_a1ba4b5f608f00c16207e0014d2ee900b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceotus__hw9.html#a4e93756fd93229aabb6f734970ccea58">IOStreamPtr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ba4b5f608f00c16207e0014d2ee900b">iostream_</a></td></tr>
+<tr class="separator:a1ba4b5f608f00c16207e0014d2ee900b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e72108b3a4af67056d25d09f0b8004a" id="r_a9e72108b3a4af67056d25d09f0b8004a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceotus__hw7.html#aa7f86a27801044b4e45589f182119e99">IProcessorPtr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e72108b3a4af67056d25d09f0b8004a">processor_</a></td></tr>
+<tr class="separator:a9e72108b3a4af67056d25d09f0b8004a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Закрытые статические данные</h2></td></tr>
+<tr class="memitem:a145b2b4d06a0e33257ae2953344a5faf" id="r_a145b2b4d06a0e33257ae2953344a5faf"><td class="memItemLeft" align="right" valign="top">static constexpr const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a145b2b4d06a0e33257ae2953344a5faf">thread_cnt</a> = 3</td></tr>
+<tr class="separator:a145b2b4d06a0e33257ae2953344a5faf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a077d5029a3a0073ceaaf171bac0fec08" id="r_a077d5029a3a0073ceaaf171bac0fec08"><td class="memItemLeft" align="right" valign="top">static mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a077d5029a3a0073ceaaf171bac0fec08">guard_mx_</a></td></tr>
+<tr class="separator:a077d5029a3a0073ceaaf171bac0fec08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Вспомогательный класс для хранения процессора и потока с данными </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ad4dc2b86dcf92b01d058fd7133201b3a" name="ad4dc2b86dcf92b01d058fd7133201b3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4dc2b86dcf92b01d058fd7133201b3a">&#9670;&#160;</a></span>LibAsyncCtx_t()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">otus_hw9::LibAsyncCtx_t::LibAsyncCtx_t </td>
+          <td>(</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>bulk_size</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="classotus__hw9_1_1LibAsyncCtx__t_ad4dc2b86dcf92b01d058fd7133201b3a_cgraph.png" border="0" usemap="#aclassotus__hw9_1_1LibAsyncCtx__t_ad4dc2b86dcf92b01d058fd7133201b3a_cgraph" alt=""/></div>
+<map name="aclassotus__hw9_1_1LibAsyncCtx__t_ad4dc2b86dcf92b01d058fd7133201b3a_cgraph" id="aclassotus__hw9_1_1LibAsyncCtx__t_ad4dc2b86dcf92b01d058fd7133201b3a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,63,162,103"/>
+<area shape="rect" href="namespaceotus__hw9.html#a5fbf7ff97a27c75bbed9280d8bf2a527" title="Фабрика для процессора, сама по настройкам выбирает какой тип процессора создать" alt="" coords="210,70,393,96"/>
+<area shape="poly" title=" " alt="" coords="162,80,194,80,194,86,162,86"/>
+<area shape="rect" href="namespaceotus__hw9.html#a8ff4738172837efd8ee2b2828d5ed5ba" title="Фабрика очереди команд" alt="" coords="441,5,624,46"/>
+<area shape="poly" title=" " alt="" coords="356,67,432,48,433,53,357,72"/>
+<area shape="rect" href="namespaceotus__hw7.html#aa570168e6d8dd03155494428b8019c5d" title="Фабрика для процессора, сама по настройкам выбирает какой тип процессора создать" alt="" coords="441,70,624,96"/>
+<area shape="poly" title=" " alt="" coords="393,80,425,80,425,86,393,86"/>
+<area shape="rect" href="namespaceotus__hw9.html#af82e02949614cb74e06b88c4b5922adb" title="Фабрика исполнителя очереди команд" alt="" coords="452,120,613,161"/>
+<area shape="poly" title=" " alt="" coords="357,94,438,114,436,119,356,99"/>
+<area shape="rect" href="namespaceotus__hw7.html#a2ef1444c7856bdb73f7d73ca3fea67a3" title="Фабрика очереди команд" alt="" coords="672,5,856,46"/>
+<area shape="poly" title=" " alt="" coords="587,67,663,48,665,53,588,72"/>
+<area shape="rect" href="namespaceotus__hw7.html#a433db7e5f83dde426c4df55dfebde346" title="Фабрика для парсера. Опции нужны для выбора типа парсера" alt="" coords="683,70,845,96"/>
+<area shape="poly" title=" " alt="" coords="624,80,667,80,667,86,624,86"/>
+<area shape="rect" href="namespaceotus__hw7.html#a4030afb06fb6a61d7cce85d149f361d1" title="Фабрика исполнителя очереди команд" alt="" coords="683,120,845,161"/>
+<area shape="poly" title=" " alt="" coords="588,94,669,114,668,119,587,99"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6b2c25ea00cc815bb7fcb91d1e62a261" name="a6b2c25ea00cc815bb7fcb91d1e62a261"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b2c25ea00cc815bb7fcb91d1e62a261">&#9670;&#160;</a></span>~LibAsyncCtx_t()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">otus_hw9::LibAsyncCtx_t::~LibAsyncCtx_t </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a0d9b890d3c946496c45bc30f3ae761f1" name="a0d9b890d3c946496c45bc30f3ae761f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d9b890d3c946496c45bc30f3ae761f1">&#9670;&#160;</a></span>guard_mx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static mutex &amp; otus_hw9::LibAsyncCtx_t::guard_mx </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0cf7a2b7f8893fdecf822553b0e4b1ac" name="a0cf7a2b7f8893fdecf822553b0e4b1ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cf7a2b7f8893fdecf822553b0e4b1ac">&#9670;&#160;</a></span>iostream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceotus__hw9.html#a4e93756fd93229aabb6f734970ccea58">IOStreamPtr_t</a> &amp; otus_hw9::LibAsyncCtx_t::iostream </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afdcad81fe4902156efd003a40bb86c0e" name="afdcad81fe4902156efd003a40bb86c0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdcad81fe4902156efd003a40bb86c0e">&#9670;&#160;</a></span>processor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceotus__hw7.html#aa7f86a27801044b4e45589f182119e99">IProcessorPtr_t</a> &amp; otus_hw9::LibAsyncCtx_t::processor </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a29e1738515689ed74461430a5871f92c" name="a29e1738515689ed74461430a5871f92c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29e1738515689ed74461430a5871f92c">&#9670;&#160;</a></span>receive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otus_hw9::LibAsyncCtx_t::receive </td>
+          <td>(</td>
+          <td class="paramtype">const string_view &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>save_status_at_stop</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="classotus__hw9_1_1LibAsyncCtx__t_a29e1738515689ed74461430a5871f92c_cgraph.png" border="0" usemap="#aclassotus__hw9_1_1LibAsyncCtx__t_a29e1738515689ed74461430a5871f92c_cgraph" alt=""/></div>
+<map name="aclassotus__hw9_1_1LibAsyncCtx__t_a29e1738515689ed74461430a5871f92c_cgraph" id="aclassotus__hw9_1_1LibAsyncCtx__t_a29e1738515689ed74461430a5871f92c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,39,162,79"/>
+<area shape="rect" href="classotus__hw9_1_1LibAsyncCtx__t.html#a0cf7a2b7f8893fdecf822553b0e4b1ac" title=" " alt="" coords="210,5,366,46"/>
+<area shape="poly" title=" " alt="" coords="162,44,194,38,195,43,163,49"/>
+<area shape="rect" href="classotus__hw9_1_1LibAsyncCtx__t.html#afdcad81fe4902156efd003a40bb86c0e" title=" " alt="" coords="210,71,366,111"/>
+<area shape="poly" title=" " alt="" coords="163,69,195,74,194,79,162,74"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a077d5029a3a0073ceaaf171bac0fec08" name="a077d5029a3a0073ceaaf171bac0fec08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a077d5029a3a0073ceaaf171bac0fec08">&#9670;&#160;</a></span>guard_mx_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">mutex otus_hw9::LibAsyncCtx_t::guard_mx_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1ba4b5f608f00c16207e0014d2ee900b" name="a1ba4b5f608f00c16207e0014d2ee900b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ba4b5f608f00c16207e0014d2ee900b">&#9670;&#160;</a></span>iostream_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceotus__hw9.html#a4e93756fd93229aabb6f734970ccea58">IOStreamPtr_t</a> otus_hw9::LibAsyncCtx_t::iostream_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e72108b3a4af67056d25d09f0b8004a" name="a9e72108b3a4af67056d25d09f0b8004a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e72108b3a4af67056d25d09f0b8004a">&#9670;&#160;</a></span>processor_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceotus__hw7.html#aa7f86a27801044b4e45589f182119e99">IProcessorPtr_t</a> otus_hw9::LibAsyncCtx_t::processor_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a145b2b4d06a0e33257ae2953344a5faf" name="a145b2b4d06a0e33257ae2953344a5faf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a145b2b4d06a0e33257ae2953344a5faf">&#9670;&#160;</a></span>thread_cnt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const size_t otus_hw9::LibAsyncCtx_t::thread_cnt = 3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li><a class="el" href="async_8cpp.html">async.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

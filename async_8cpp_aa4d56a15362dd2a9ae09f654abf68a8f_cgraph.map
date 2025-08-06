@@ -1,0 +1,7 @@
+<map id="libasync_receive" name="libasync_receive">
+<area shape="rect" id="Node000001" title="принимает команду (список команд, если встречается перевод строки)." alt="" coords="5,13,123,38"/>
+<area shape="rect" id="Node000002" href="$namespaceotus__hw9.html#a8b1d16c81c29e3dead27817adff69af8" title=" " alt="" coords="171,13,296,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,23,155,23,155,28,123,28"/>
+<area shape="rect" id="Node000003" href="$classotus__hw9_1_1LibAsyncCtx__t.html#a0d9b890d3c946496c45bc30f3ae761f1" title=" " alt="" coords="344,5,500,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="297,23,328,23,328,28,297,28"/>
+</map>

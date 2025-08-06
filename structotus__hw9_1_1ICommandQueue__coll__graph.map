@@ -1,0 +1,9 @@
+<map id="otus_hw9::ICommandQueue" name="otus_hw9::ICommandQueue">
+<area shape="rect" id="Node000001" title="Очередь команд. Формируется парсером, затем выполняется исполнителем под управлением процессора." alt="" coords="44,135,232,419"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,52,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="41,71,56,110,60,118,55,120,51,112,36,73"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="92,5,184,72"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="141,72,141,118,135,118,135,72"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="208,5,314,72"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="246,73,222,121,217,118,242,70"/>
+</map>

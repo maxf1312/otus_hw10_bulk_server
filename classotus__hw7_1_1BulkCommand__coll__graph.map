@@ -1,0 +1,17 @@
+<map id="otus_hw7::BulkCommand" name="otus_hw7::BulkCommand">
+<area shape="rect" id="Node000001" title=" " alt="" coords="420,467,577,615"/>
+<area shape="rect" id="Node000002" href="$classotus__hw7_1_1EmptyCommand.html" title="Реализация пустой команды" alt="" coords="103,236,270,404"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="284,402,284,402,354,450,422,492,419,497,351,454,281,407,281,406"/>
+<area shape="rect" id="Node000003" href="$structotus__hw7_1_1ICommand.html" title="Команда, активный объект, паттерн команда" alt="" coords="5,5,141,173"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="123,185,148,236,143,238,118,188"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="165,56,208,122"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="189,122,189,219,184,219,184,122"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="232,56,322,122"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="269,123,236,213,232,222,227,220,231,211,264,121"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="294,287,489,354"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="410,352,458,451,453,453,405,355"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="514,287,699,354"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="593,355,544,453,539,451,588,352"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="723,287,768,354"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="739,354,729,380,714,406,688,436,658,462,594,503,591,498,655,457,685,432,710,403,724,378,734,352"/>
+</map>

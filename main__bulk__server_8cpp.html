@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл main_bulk_server.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">bulk_server<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">Bulk text commands network server made for homework 9</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл main_bulk_server.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;boost/asio.hpp&gt;</code><br />
+<code>#include &quot;<a class="el" href="vers_8h_source.html">vers.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="bulkserver__utils_8h_source.html">bulkserver_utils.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="bulkserver__internal_8h_source.html">bulkserver_internal.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="async_8h_source.html">async.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для main_bulk_server.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="main__bulk__server_8cpp__incl.png" border="0" usemap="#amain__bulk__server_8cpp" alt=""/></div>
+<map name="amain__bulk__server_8cpp" id="amain__bulk__server_8cpp">
+<area shape="rect" title=" " alt="" coords="181,5,328,31"/>
+<area shape="rect" title=" " alt="" coords="15,300,86,326"/>
+<area shape="poly" title=" " alt="" coords="181,32,91,51,54,65,31,81,17,105,10,131,8,159,10,188,24,242,40,285,35,287,18,244,5,189,3,159,5,130,12,103,27,77,51,60,89,46,180,27"/>
+<area shape="rect" title=" " alt="" coords="183,153,288,178"/>
+<area shape="poly" title=" " alt="" coords="249,32,238,54,229,80,227,109,231,137,226,138,222,109,224,78,233,52,244,30"/>
+<area shape="rect" href="vers_8h.html" title=" " alt="" coords="454,79,510,105"/>
+<area shape="poly" title=" " alt="" coords="294,29,440,74,438,80,292,34"/>
+<area shape="rect" href="bulkserver__utils_8h.html" title=" " alt="" coords="41,79,163,105"/>
+<area shape="poly" title=" " alt="" coords="230,34,143,74,141,70,227,29"/>
+<area shape="rect" href="bulkserver__internal_8h.html" title=" " alt="" coords="239,79,379,105"/>
+<area shape="poly" title=" " alt="" coords="265,30,293,65,288,68,261,33"/>
+<area shape="rect" href="async_8h.html" title=" " alt="" coords="378,153,443,178"/>
+<area shape="poly" title=" " alt="" coords="314,29,356,47,376,61,394,77,408,107,413,137,408,138,403,108,389,81,373,65,354,52,312,34"/>
+<area shape="poly" title=" " alt="" coords="89,107,69,127,53,154,44,188,42,223,47,284,42,285,37,223,39,187,48,152,65,124,85,103"/>
+<area shape="rect" href="async__utils_8h.html" title=" " alt="" coords="62,153,158,178"/>
+<area shape="poly" title=" " alt="" coords="106,105,110,137,105,138,101,105"/>
+<area shape="poly" title=" " alt="" coords="108,180,64,286,59,284,103,178"/>
+<area shape="rect" href="bulk__utils_8h.html" title=" " alt="" coords="112,226,199,252"/>
+<area shape="poly" title=" " alt="" coords="120,177,142,212,138,215,116,180"/>
+<area shape="poly" title=" " alt="" coords="139,255,82,293,79,289,136,250"/>
+<area shape="rect" title=" " alt="" coords="110,300,287,326"/>
+<area shape="poly" title=" " alt="" coords="165,251,186,285,181,288,160,254"/>
+<area shape="poly" title=" " alt="" coords="313,105,314,139,311,160,303,180,285,207,265,225,212,254,156,281,102,300,100,295,154,276,209,250,262,220,281,204,299,177,305,159,309,139,308,105"/>
+<area shape="poly" title=" " alt="" coords="299,107,261,144,257,140,295,103"/>
+<area shape="poly" title=" " alt="" coords="328,103,382,141,379,145,325,107"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:abf9e6b7e6f15df4b525a2e7705ba3089" id="r_abf9e6b7e6f15df4b525a2e7705ba3089"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf9e6b7e6f15df4b525a2e7705ba3089">main</a> (int argc, char const *argv[])</td></tr>
+<tr class="separator:abf9e6b7e6f15df4b525a2e7705ba3089"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="abf9e6b7e6f15df4b525a2e7705ba3089" name="abf9e6b7e6f15df4b525a2e7705ba3089"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf9e6b7e6f15df4b525a2e7705ba3089">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>argc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char const *</td>          <td class="paramname"><span class="paramname"><em>argv</em></span>[]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="main__bulk__server_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089_cgraph.png" border="0" usemap="#amain__bulk__server_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089_cgraph" alt=""/></div>
+<map name="amain__bulk__server_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089_cgraph" id="amain__bulk__server_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089_cgraph">
+<area shape="rect" title=" " alt="" coords="5,128,55,153"/>
+<area shape="rect" href="structotus__hw7_1_1Options.html#a25e46ea8ccd0eeb7fab7140e105f84fe" title=" " alt="" coords="103,120,247,161"/>
+<area shape="poly" title=" " alt="" coords="55,138,87,138,87,143,55,143"/>
+<area shape="rect" href="structotus__hw7_1_1Options.html#a56f7e104bc9288282c660a2d326aa434" title=" " alt="" coords="298,5,432,46"/>
+<area shape="poly" title=" " alt="" coords="206,117,294,62,311,52,314,56,296,67,209,122"/>
+<area shape="rect" href="structotus__hw7_1_1Options.html#a87d11a6a9a7a2c8acfaef8085da85a03" title=" " alt="" coords="482,92,617,133"/>
+<area shape="poly" title=" " alt="" coords="241,117,295,106,384,100,467,102,467,108,384,105,295,111,242,122"/>
+<area shape="rect" href="structotus__hw7_1_1Options.html#ad8518181dd4001b68ba853f7fb9a66cf" title=" " alt="" coords="298,120,432,161"/>
+<area shape="poly" title=" " alt="" coords="247,138,282,138,282,143,247,143"/>
+<area shape="rect" href="structotus__hw7_1_1Options.html#ac0efbab3d6edbf345e3c3870e8cabcc2" title=" " alt="" coords="298,185,432,226"/>
+<area shape="poly" title=" " alt="" coords="237,159,290,177,289,182,235,164"/>
+<area shape="rect" href="namespaceotus__hw7.html#adb5a45f3fdb0627a223d9e18128428f0" title=" " alt="" coords="295,250,434,276"/>
+<area shape="poly" title=" " alt="" coords="199,159,242,197,296,235,308,241,305,246,294,240,239,201,195,163"/>
+<area shape="poly" title=" " alt="" coords="411,44,492,83,490,87,409,49"/>
+<area shape="poly" title=" " alt="" coords="432,128,467,122,468,127,433,133"/>
+<area shape="poly" title=" " alt="" coords="408,182,433,170,495,138,497,143,436,175,411,187"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

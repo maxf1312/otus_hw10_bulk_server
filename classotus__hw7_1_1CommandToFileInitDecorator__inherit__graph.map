@@ -1,0 +1,9 @@
+<map id="otus_hw7::CommandToFileInitDecorator" name="otus_hw7::CommandToFileInitDecorator">
+<area shape="rect" id="Node000001" title=" " alt="" coords="104,458,305,559"/>
+<area shape="rect" id="Node000002" href="$classotus__hw7_1_1CommandDecorator.html" title="Реализация команды&#45;декоратора" alt="" coords="5,232,193,400"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,411,180,457,175,459,150,414"/>
+<area shape="rect" id="Node000003" href="$structotus__hw7_1_1ICommand.html" title="Команда, активный объект, паттерн команда" alt="" coords="31,5,167,173"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="102,188,102,232,96,232,96,188"/>
+<area shape="rect" id="Node000004" href="$classotus__hw7_1_1CmdLogFileSetuper.html" title=" " alt="" coords="217,221,405,410"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="254,424,234,459,230,457,250,421"/>
+</map>

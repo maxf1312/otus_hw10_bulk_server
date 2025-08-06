@@ -1,0 +1,9 @@
+<map id="otus_hw7::InputParser::read_next_command" name="otus_hw7::InputParser::read_next_command">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,156,79"/>
+<area shape="rect" id="Node000002" href="$classotus__hw7_1_1InputParser.html#a009f547fc452df09a1b9c92ed6e568ab" title=" " alt="" coords="204,5,373,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,44,188,39,189,44,156,50"/>
+<area shape="rect" id="Node000003" href="$classotus__hw7_1_1InputParser.html#a2a89b98b66b6a40dc8682998a423f5c0" title=" " alt="" coords="213,71,364,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="156,68,198,74,197,80,155,73"/>
+<area shape="rect" id="Node000004" href="$classotus__hw7_1_1InputParser.html#ad4f4337d67a3fa49305989bed526bfa3" title=" " alt="" coords="421,71,571,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="364,88,406,88,406,94,364,94"/>
+</map>

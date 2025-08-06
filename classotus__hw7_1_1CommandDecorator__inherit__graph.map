@@ -1,0 +1,17 @@
+<map id="otus_hw7::CommandDecorator" name="otus_hw7::CommandDecorator">
+<area shape="rect" id="Node000001" title="Реализация команды&#45;декоратора" alt="" coords="457,221,644,389"/>
+<area shape="rect" id="Node000003" href="$classotus__hw7_1_1CommandLastInBulk.html" title="Реализация команды&#45;декоратора для последней команды в блоке, для уведомления" alt="" coords="5,437,200,565"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="444,346,332,389,213,440,201,446,198,441,211,435,330,384,442,341"/>
+<area shape="rect" id="Node000004" href="$classotus__hw7_1_1CommandToFileInitDecorator.html" title=" " alt="" coords="224,450,424,552"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="447,398,383,453,380,449,444,394"/>
+<area shape="rect" id="Node000005" href="$classotus__hw7_1_1SimpleCommandDelim.html" title="Реализация декоратора команды для вывода в поток разделителя" alt="" coords="448,458,653,544"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="553,404,553,458,548,458,548,404"/>
+<area shape="rect" id="Node000007" href="$classotus__hw7_1_1SimpleCommandLast.html" title="Реализация команды&#45;декоратора для последней команды в блоке" alt="" coords="677,448,875,554"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="657,394,717,446,713,450,654,399"/>
+<area shape="rect" id="Node000008" href="$classotus__hw9_1_1PackagedCommandDecorator.html" title=" " alt="" coords="899,450,1104,552"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="660,342,771,385,888,435,914,448,912,453,886,440,769,390,658,347"/>
+<area shape="rect" id="Node000002" href="$structotus__hw7_1_1ICommand.html" title="Команда, активный объект, паттерн команда" alt="" coords="483,5,618,173"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="553,188,553,221,548,221,548,188"/>
+<area shape="rect" id="Node000006" href="$classotus__hw7_1_1SimpleCommandFirst.html" title="Реализация команды&#45;декоратора для первой команды в блоке" alt="" coords="452,613,650,699"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="553,559,553,613,548,613,548,559"/>
+</map>

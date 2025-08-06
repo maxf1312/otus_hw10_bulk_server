@@ -1,0 +1,7 @@
+<map id="otus_hw7::IProcessor" name="otus_hw7::IProcessor">
+<area shape="rect" id="Node000001" title="Процессор &#45; управляющий обработкой посредник" alt="" coords="13,5,148,92"/>
+<area shape="rect" id="Node000002" href="$classotus__hw7_1_1Processor.html" title="Реализация процессора команд" alt="" coords="15,140,146,328"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,107,83,140,78,140,78,107"/>
+<area shape="rect" id="Node000003" href="$classotus__hw9_1_1ProcessorMT.html" title="Реализация процессора команд" alt="" coords="5,376,156,443"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="83,343,83,376,78,376,78,343"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="otus_hw7::CommandToFileInitDecorator::execute" name="otus_hw7::CommandToFileInitDecorator::execute">
+<area shape="rect" id="Node000001" title="Выполнить команду в заданном контексте" alt="" coords="5,39,202,79"/>
+<area shape="rect" id="Node000002" href="$classotus__hw7_1_1CommandDecorator.html#a2e7596b190c361657ed010b5d794618c" title="Выполнить команду в заданном контексте" alt="" coords="250,5,448,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,43,234,39,235,44,202,48"/>
+<area shape="rect" id="Node000003" href="$classotus__hw7_1_1CmdLogFileSetuper.html#a22d021061b4fdb819584aec39a96953c" title=" " alt="" coords="250,71,448,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="202,69,235,73,234,79,202,74"/>
+<area shape="rect" id="Node000004" href="$classotus__hw7_1_1CmdLogFileSetuper.html#a2dea8156288da67e879c826389c2d4a8" title=" " alt="" coords="496,71,694,111"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="449,88,480,88,480,94,449,94"/>
+<area shape="rect" id="Node000005" href="$classotus__hw7_1_1CmdLogFileSetuper.html#a9ef66bff9b0a0d8e699a826ca5be09b6" title=" " alt="" coords="742,71,941,111"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="695,88,726,88,726,94,695,94"/>
+</map>

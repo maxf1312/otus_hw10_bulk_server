@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл bulk.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">bulk_server<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">Bulk text commands network server made for homework 9</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл bulk.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &quot;<a class="el" href="bulk__internal_8h_source.html">bulk_internal.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="bulk__utils_8h_source.html">bulk_utils.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для bulk.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="bulk_8cpp__incl.png" border="0" usemap="#abulk_8cpp" alt=""/></div>
+<map name="abulk_8cpp" id="abulk_8cpp">
+<area shape="rect" title=" " alt="" coords="533,5,602,31"/>
+<area shape="rect" title=" " alt="" coords="562,226,634,252"/>
+<area shape="poly" title=" " alt="" coords="578,30,606,81,620,116,630,152,630,179,616,214,611,212,625,178,625,153,615,118,601,84,573,33"/>
+<area shape="rect" title=" " alt="" coords="480,153,546,178"/>
+<area shape="poly" title=" " alt="" coords="566,32,525,139,520,137,561,30"/>
+<area shape="rect" title=" " alt="" coords="5,226,74,252"/>
+<area shape="poly" title=" " alt="" coords="532,21,442,24,383,31,319,41,253,58,189,82,128,113,73,154,55,182,46,212,41,211,50,180,70,151,125,109,186,77,252,53,318,36,382,25,441,19,532,16"/>
+<area shape="rect" title=" " alt="" coords="570,153,616,178"/>
+<area shape="poly" title=" " alt="" coords="572,31,591,137,585,138,567,32"/>
+<area shape="rect" href="bulk__internal_8h.html" title=" " alt="" coords="337,79,441,105"/>
+<area shape="poly" title=" " alt="" coords="538,34,434,75,432,70,536,29"/>
+<area shape="rect" href="bulk__utils_8h.html" title=" " alt="" coords="690,79,776,105"/>
+<area shape="poly" title=" " alt="" coords="597,29,692,70,690,75,594,34"/>
+<area shape="poly" title=" " alt="" coords="400,103,429,138,470,176,510,200,550,218,547,223,507,204,467,180,425,142,395,107"/>
+<area shape="poly" title=" " alt="" coords="411,103,480,142,478,147,409,108"/>
+<area shape="poly" title=" " alt="" coords="336,96,285,100,225,110,164,127,106,155,76,182,55,214,50,211,72,179,103,150,162,122,224,105,284,95,336,91"/>
+<area shape="poly" title=" " alt="" coords="424,103,556,149,554,154,423,108"/>
+<area shape="rect" title=" " alt="" coords="143,226,200,252"/>
+<area shape="poly" title=" " alt="" coords="337,100,276,106,210,117,152,133,131,143,118,154,112,169,117,184,128,200,143,214,140,218,124,204,112,187,107,169,113,151,128,139,150,128,209,112,275,101,336,94"/>
+<area shape="rect" title=" " alt="" coords="127,153,184,178"/>
+<area shape="poly" title=" " alt="" coords="350,108,199,154,198,149,348,103"/>
+<area shape="rect" title=" " alt="" coords="208,153,282,178"/>
+<area shape="poly" title=" " alt="" coords="366,108,284,148,282,143,363,103"/>
+<area shape="rect" href="bulk_8h.html" title=" " alt="" coords="741,153,796,178"/>
+<area shape="poly" title=" " alt="" coords="442,100,726,153,725,159,441,106"/>
+<area shape="rect" href="mydbgtrace_8h.html" title=" " alt="" coords="306,153,405,178"/>
+<area shape="poly" title=" " alt="" coords="386,106,370,140,365,137,381,104"/>
+<area shape="poly" title=" " alt="" coords="742,181,642,223,640,218,740,176"/>
+<area shape="rect" title=" " alt="" coords="449,226,502,252"/>
+<area shape="poly" title=" " alt="" coords="741,176,518,230,517,225,740,171"/>
+<area shape="rect" title=" " alt="" coords="658,226,712,252"/>
+<area shape="poly" title=" " alt="" coords="756,181,712,218,709,214,753,177"/>
+<area shape="rect" title=" " alt="" coords="735,226,802,252"/>
+<area shape="poly" title=" " alt="" coords="772,179,772,211,766,211,766,179"/>
+<area shape="rect" title=" " alt="" coords="826,226,882,252"/>
+<area shape="poly" title=" " alt="" coords="785,177,830,214,827,218,782,181"/>
+<area shape="rect" title=" " alt="" coords="907,226,967,252"/>
+<area shape="poly" title=" " alt="" coords="798,176,895,217,893,222,796,181"/>
+<area shape="poly" title=" " alt="" coords="397,176,548,220,547,226,396,181"/>
+<area shape="poly" title=" " alt="" coords="306,181,90,229,89,224,305,175"/>
+<area shape="poly" title=" " alt="" coords="325,181,215,224,214,219,323,176"/>
+<area shape="poly" title=" " alt="" coords="377,177,443,216,441,220,374,181"/>
+<area shape="rect" href="pretty_8h.html" title=" " alt="" coords="252,226,315,252"/>
+<area shape="poly" title=" " alt="" coords="345,180,308,217,305,213,342,177"/>
+<area shape="rect" title=" " alt="" coords="340,226,406,252"/>
+<area shape="poly" title=" " alt="" coords="361,178,369,211,364,212,356,179"/>
+<area shape="poly" title=" " alt="" coords="728,106,705,141,673,180,629,219,626,215,670,176,701,138,724,103"/>
+<area shape="rect" title=" " alt="" coords="820,153,998,178"/>
+<area shape="poly" title=" " alt="" coords="764,103,866,144,864,149,762,108"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceotus__hw7.html">otus_hw7</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a433db7e5f83dde426c4df55dfebde346" id="r_a433db7e5f83dde426c4df55dfebde346"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceotus__hw7.html#ad99bb3540faa8719e73ee68f17cf9f5a">IInputParserPtr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceotus__hw7.html#a433db7e5f83dde426c4df55dfebde346">otus_hw7::create_parser</a> (<a class="el" href="structotus__hw7_1_1Options.html">Options</a> const &amp;options)</td></tr>
+<tr class="memdesc:a433db7e5f83dde426c4df55dfebde346"><td class="mdescLeft">&#160;</td><td class="mdescRight">Фабрика для парсера. Опции нужны для выбора типа парсера  <br /></td></tr>
+<tr class="separator:a433db7e5f83dde426c4df55dfebde346"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ef1444c7856bdb73f7d73ca3fea67a3" id="r_a2ef1444c7856bdb73f7d73ca3fea67a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceotus__hw7.html#ac6fc38ba9456ac58490737e0219feaa4">ICommandQueuePtr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceotus__hw7.html#a2ef1444c7856bdb73f7d73ca3fea67a3">otus_hw7::create_command_queue</a> (<a class="el" href="structotus__hw7_1_1ICommandQueue.html#aa26f1104a7666afa52917523cfd5d987">ICommandQueue::Type</a>)</td></tr>
+<tr class="memdesc:a2ef1444c7856bdb73f7d73ca3fea67a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Фабрика очереди команд  <br /></td></tr>
+<tr class="separator:a2ef1444c7856bdb73f7d73ca3fea67a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4030afb06fb6a61d7cce85d149f361d1" id="r_a4030afb06fb6a61d7cce85d149f361d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceotus__hw7.html#afc5c79b47326e4974d9df5ae863f5961">IQueueExecutorPtr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceotus__hw7.html#a4030afb06fb6a61d7cce85d149f361d1">otus_hw7::create_queue_executor</a> ()</td></tr>
+<tr class="memdesc:a4030afb06fb6a61d7cce85d149f361d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Фабрика исполнителя очереди команд  <br /></td></tr>
+<tr class="separator:a4030afb06fb6a61d7cce85d149f361d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa570168e6d8dd03155494428b8019c5d" id="r_aa570168e6d8dd03155494428b8019c5d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceotus__hw7.html#aa7f86a27801044b4e45589f182119e99">IProcessorPtr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceotus__hw7.html#aa570168e6d8dd03155494428b8019c5d">otus_hw7::create_processor</a> (<a class="el" href="structotus__hw7_1_1Options.html">Options</a> const &amp;options)</td></tr>
+<tr class="memdesc:aa570168e6d8dd03155494428b8019c5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Фабрика для процессора, сама по настройкам выбирает какой тип процессора создать  <br /></td></tr>
+<tr class="separator:aa570168e6d8dd03155494428b8019c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

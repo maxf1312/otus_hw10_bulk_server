@@ -1,0 +1,9 @@
+<map id="otus_hw9::QueueExecutorWithPackingDecorator" name="otus_hw9::QueueExecutorWithPackingDecorator">
+<area shape="rect" id="Node000001" title=" " alt="" coords="93,372,280,489"/>
+<area shape="rect" id="Node000002" href="$classotus__hw7_1_1QueueExecutorDecorator.html" title="Декоратор для исполнителя очереди" alt="" coords="78,196,295,323"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,338,189,373,184,373,184,338"/>
+<area shape="rect" id="Node000003" href="$structotus__hw7_1_1IQueueExecutor.html" title="Актор, выполняющий очередь" alt="" coords="5,5,170,133"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="130,144,156,195,151,197,125,147"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="194,36,379,102"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="272,103,230,182,225,179,267,100"/>
+</map>

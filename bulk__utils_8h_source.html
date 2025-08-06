@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл bulk_utils.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">bulk_server<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">Bulk text commands network server made for homework 9</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">bulk_utils.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="bulk__utils_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;boost/program_options.hpp&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceotus__hw7.html">otus_hw7</a>{</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keyword">namespace </span>po = boost::program_options;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keyword">using </span>std::istream;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keyword">using </span>std::ostream;</div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="structotus__hw7_1_1Options.html">   10</a></span>    <span class="keyword">struct </span><a class="code hl_function" href="structotus__hw7_1_1Options.html#a87d11a6a9a7a2c8acfaef8085da85a03">Options</a></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structotus__hw7_1_1Options.html#a39d415467458851ddf61c21391ef5eb6">   12</a></span>        <span class="keywordtype">bool</span>      <a class="code hl_variable" href="structotus__hw7_1_1Options.html#a39d415467458851ddf61c21391ef5eb6">show_help</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="structotus__hw7_1_1Options.html#afa6cd8c6e63b14e339344240f26e5fea">   13</a></span>        <span class="keywordtype">size_t</span>    <a class="code hl_variable" href="structotus__hw7_1_1Options.html#afa6cd8c6e63b14e339344240f26e5fea">cmd_chunk_sz</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structotus__hw7_1_1Options.html#ae686a405cf67261ccd5708b05b4646da">   14</a></span>        istream*  <a class="code hl_variable" href="structotus__hw7_1_1Options.html#ae686a405cf67261ccd5708b05b4646da">is_</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structotus__hw7_1_1Options.html#a87d11a6a9a7a2c8acfaef8085da85a03">   15</a></span>        <a class="code hl_function" href="structotus__hw7_1_1Options.html#a87d11a6a9a7a2c8acfaef8085da85a03">Options</a>() : <a class="code hl_variable" href="structotus__hw7_1_1Options.html#a39d415467458851ddf61c21391ef5eb6">show_help</a>(false), <a class="code hl_variable" href="structotus__hw7_1_1Options.html#afa6cd8c6e63b14e339344240f26e5fea">cmd_chunk_sz</a>(3), <a class="code hl_variable" href="structotus__hw7_1_1Options.html#ae686a405cf67261ccd5708b05b4646da">is_</a>(nullptr) {}</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structotus__hw7_1_1Options.html#a32c8067e7e1a09f7c3d683c74e942029">   16</a></span>        <a class="code hl_function" href="structotus__hw7_1_1Options.html#a32c8067e7e1a09f7c3d683c74e942029">Options</a>(<span class="keywordtype">size_t</span> cmd_bulk_sz, istream* istrm = <span class="keyword">nullptr</span>) : <a class="code hl_variable" href="structotus__hw7_1_1Options.html#a39d415467458851ddf61c21391ef5eb6">show_help</a>(false), <a class="code hl_variable" href="structotus__hw7_1_1Options.html#afa6cd8c6e63b14e339344240f26e5fea">cmd_chunk_sz</a>(cmd_bulk_sz), <a class="code hl_variable" href="structotus__hw7_1_1Options.html#ae686a405cf67261ccd5708b05b4646da">is_</a>(istrm) {}</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="structotus__hw7_1_1Options.html#a25e46ea8ccd0eeb7fab7140e105f84fe">parse_command_line</a>(<span class="keywordtype">int</span> argc, <span class="keyword">const</span> <span class="keywordtype">char</span>* argv[]);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="structotus__hw7_1_1Options.html#ad8518181dd4001b68ba853f7fb9a66cf">   18</a></span>        <span class="keyword">virtual</span> <a class="code hl_function" href="structotus__hw7_1_1Options.html#a87d11a6a9a7a2c8acfaef8085da85a03">Options</a>&amp; <a class="code hl_function" href="structotus__hw7_1_1Options.html#ad8518181dd4001b68ba853f7fb9a66cf">add_options</a>(otus_hw7::po::options_description&amp; desc);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keyword">virtual</span> <a class="code hl_function" href="structotus__hw7_1_1Options.html#a87d11a6a9a7a2c8acfaef8085da85a03">Options</a>&amp; <a class="code hl_function" href="structotus__hw7_1_1Options.html#ac0efbab3d6edbf345e3c3870e8cabcc2">add_positional</a>(otus_hw7::po::positional_options_description&amp; pos_desc);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">virtual</span> <a class="code hl_function" href="structotus__hw7_1_1Options.html#a87d11a6a9a7a2c8acfaef8085da85a03">Options</a>&amp; <a class="code hl_function" href="structotus__hw7_1_1Options.html#a56f7e104bc9288282c660a2d326aa434">add_caption_lines</a>( std::string&amp; caption);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    };</div>
+</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>};</div>
+<div class="ttc" id="anamespaceotus__hw7_html"><div class="ttname"><a href="namespaceotus__hw7.html">otus_hw7</a></div><div class="ttdef"><b>Определения</b> bulk.cpp:11</div></div>
+<div class="ttc" id="astructotus__hw7_1_1Options_html_a25e46ea8ccd0eeb7fab7140e105f84fe"><div class="ttname"><a href="structotus__hw7_1_1Options.html#a25e46ea8ccd0eeb7fab7140e105f84fe">otus_hw7::Options::parse_command_line</a></div><div class="ttdeci">virtual bool parse_command_line(int argc, const char *argv[])</div><div class="ttdef"><b>Определения</b> bulk_utils.cpp:40</div></div>
+<div class="ttc" id="astructotus__hw7_1_1Options_html_a32c8067e7e1a09f7c3d683c74e942029"><div class="ttname"><a href="structotus__hw7_1_1Options.html#a32c8067e7e1a09f7c3d683c74e942029">otus_hw7::Options::Options</a></div><div class="ttdeci">Options(size_t cmd_bulk_sz, istream *istrm=nullptr)</div><div class="ttdef"><b>Определения</b> bulk_utils.h:16</div></div>
+<div class="ttc" id="astructotus__hw7_1_1Options_html_a39d415467458851ddf61c21391ef5eb6"><div class="ttname"><a href="structotus__hw7_1_1Options.html#a39d415467458851ddf61c21391ef5eb6">otus_hw7::Options::show_help</a></div><div class="ttdeci">bool show_help</div><div class="ttdef"><b>Определения</b> bulk_utils.h:12</div></div>
+<div class="ttc" id="astructotus__hw7_1_1Options_html_a56f7e104bc9288282c660a2d326aa434"><div class="ttname"><a href="structotus__hw7_1_1Options.html#a56f7e104bc9288282c660a2d326aa434">otus_hw7::Options::add_caption_lines</a></div><div class="ttdeci">virtual Options &amp; add_caption_lines(std::string &amp;caption)</div><div class="ttdef"><b>Определения</b> bulk_utils.cpp:34</div></div>
+<div class="ttc" id="astructotus__hw7_1_1Options_html_a87d11a6a9a7a2c8acfaef8085da85a03"><div class="ttname"><a href="structotus__hw7_1_1Options.html#a87d11a6a9a7a2c8acfaef8085da85a03">otus_hw7::Options::Options</a></div><div class="ttdeci">Options()</div><div class="ttdef"><b>Определения</b> bulk_utils.h:15</div></div>
+<div class="ttc" id="astructotus__hw7_1_1Options_html_ac0efbab3d6edbf345e3c3870e8cabcc2"><div class="ttname"><a href="structotus__hw7_1_1Options.html#ac0efbab3d6edbf345e3c3870e8cabcc2">otus_hw7::Options::add_positional</a></div><div class="ttdeci">virtual Options &amp; add_positional(otus_hw7::po::positional_options_description &amp;pos_desc)</div><div class="ttdef"><b>Определения</b> bulk_utils.cpp:28</div></div>
+<div class="ttc" id="astructotus__hw7_1_1Options_html_ad8518181dd4001b68ba853f7fb9a66cf"><div class="ttname"><a href="structotus__hw7_1_1Options.html#ad8518181dd4001b68ba853f7fb9a66cf">otus_hw7::Options::add_options</a></div><div class="ttdeci">virtual Options &amp; add_options(otus_hw7::po::options_description &amp;desc)</div></div>
+<div class="ttc" id="astructotus__hw7_1_1Options_html_ae686a405cf67261ccd5708b05b4646da"><div class="ttname"><a href="structotus__hw7_1_1Options.html#ae686a405cf67261ccd5708b05b4646da">otus_hw7::Options::is_</a></div><div class="ttdeci">istream * is_</div><div class="ttdef"><b>Определения</b> bulk_utils.h:14</div></div>
+<div class="ttc" id="astructotus__hw7_1_1Options_html_afa6cd8c6e63b14e339344240f26e5fea"><div class="ttname"><a href="structotus__hw7_1_1Options.html#afa6cd8c6e63b14e339344240f26e5fea">otus_hw7::Options::cmd_chunk_sz</a></div><div class="ttdeci">size_t cmd_chunk_sz</div><div class="ttdef"><b>Определения</b> bulk_utils.h:13</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

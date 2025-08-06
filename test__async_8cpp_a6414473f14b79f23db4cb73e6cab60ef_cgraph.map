@@ -1,0 +1,13 @@
+<map id="TEST" name="TEST">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,60,80"/>
+<area shape="rect" id="Node000002" href="$namespaceotus__hw9.html#a1ee84ffea4a31b6cc61fa42e8ea534cf" title=" " alt="" coords="116,5,246,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="59,56,107,40,124,34,126,39,109,45,61,61"/>
+<area shape="rect" id="Node000004" href="$namespaceotus__hw9.html#a65b3f7c86fd93ba3911d2dcd72a454ba" title=" " alt="" coords="108,55,254,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="60,65,92,65,92,70,60,70"/>
+<area shape="rect" id="Node000005" href="$namespaceotus__hw9.html#a8b1d16c81c29e3dead27817adff69af8" title=" " alt="" coords="118,104,244,130"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="61,74,109,90,126,96,124,101,107,95,59,79"/>
+<area shape="rect" id="Node000003" href="$classotus__hw9_1_1LibAsyncCtx__t.html#a0d9b890d3c946496c45bc30f3ae761f1" title=" " alt="" coords="302,47,458,88"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="237,29,288,42,286,47,235,34"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="254,65,286,65,286,70,254,70"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="235,101,286,88,288,93,237,106"/>
+</map>

@@ -1,0 +1,25 @@
+<map id="otus_hw7::CommandToFileInitDecorator" name="otus_hw7::CommandToFileInitDecorator">
+<area shape="rect" id="Node000001" title=" " alt="" coords="539,584,740,686"/>
+<area shape="rect" id="Node000002" href="$classotus__hw7_1_1CommandDecorator.html" title="Реализация команды&#45;декоратора" alt="" coords="150,295,338,463"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="351,446,565,582,562,587,348,450"/>
+<area shape="rect" id="Node000003" href="$structotus__hw7_1_1ICommand.html" title="Команда, активный объект, паттерн команда" alt="" coords="5,5,141,173"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="132,185,197,294,192,296,128,187"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="166,56,322,122"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="246,122,246,277,241,277,241,122"/>
+<area shape="rect" id="Node000005" href="$classotus__hw7_1_1CmdLogFileSetuper.html" title=" " alt="" coords="546,305,734,452"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="642,467,642,584,637,584,637,467"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="346,56,515,122"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="456,121,579,290,575,293,452,124"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="540,56,740,122"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="642,122,642,288,637,288,637,122"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="764,56,809,122"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="777,123,754,174,693,291,688,289,749,172,772,121"/>
+<area shape="rect" id="Node000009" href="$structotus__hw7_1_1ICommandQueue.html" title="Очередь команд. Формируется парсером, затем выполняется исполнителем под управлением процессора." alt="" coords="831,236,1019,521"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="833,465,710,575,706,571,830,461"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="847,56,894,122"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="871,122,870,165,874,212,875,219,870,220,869,213,865,165,865,122"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="934,56,1026,122"/>
+<area shape="poly" id="edge10_Node000009_Node000011" title=" " alt="" coords="976,123,958,220,953,219,971,122"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="1050,56,1155,122"/>
+<area shape="poly" id="edge11_Node000009_Node000012" title=" " alt="" coords="1085,124,1024,223,1019,221,1081,121"/>
+</map>

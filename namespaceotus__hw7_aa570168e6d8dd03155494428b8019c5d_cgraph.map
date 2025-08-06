@@ -1,0 +1,9 @@
+<map id="otus_hw7::create_processor" name="otus_hw7::create_processor">
+<area shape="rect" id="Node000001" title="Фабрика для процессора, сама по настройкам выбирает какой тип процессора создать" alt="" coords="5,70,189,96"/>
+<area shape="rect" id="Node000002" href="$namespaceotus__hw7.html#a2ef1444c7856bdb73f7d73ca3fea67a3" title="Фабрика очереди команд" alt="" coords="237,5,420,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,67,228,48,229,53,153,72"/>
+<area shape="rect" id="Node000003" href="$namespaceotus__hw7.html#a433db7e5f83dde426c4df55dfebde346" title="Фабрика для парсера. Опции нужны для выбора типа парсера" alt="" coords="247,70,410,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="189,80,231,80,231,86,189,86"/>
+<area shape="rect" id="Node000004" href="$namespaceotus__hw7.html#a4030afb06fb6a61d7cce85d149f361d1" title="Фабрика исполнителя очереди команд" alt="" coords="248,120,409,161"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="153,94,233,114,232,119,151,99"/>
+</map>

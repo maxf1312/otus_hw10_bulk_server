@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл async_internal.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">bulk_server<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">Bulk text commands network server made for homework 9</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл async_internal.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;mutex&gt;</code><br />
+<code>#include &lt;thread&gt;</code><br />
+<code>#include &lt;condition_variable&gt;</code><br />
+<code>#include &quot;<a class="el" href="bulk__internal_8h_source.html">bulk_internal.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="async__utils_8h_source.html">async_utils.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для async_internal.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="async__internal_8h__incl.png" border="0" usemap="#aasync__internal_8h" alt=""/></div>
+<map name="aasync__internal_8h" id="aasync__internal_8h">
+<area shape="rect" title=" " alt="" coords="112,5,227,31"/>
+<area shape="rect" title=" " alt="" coords="20,153,76,178"/>
+<area shape="poly" title=" " alt="" coords="152,34,125,54,97,81,77,110,61,140,57,137,72,107,93,77,121,50,149,29"/>
+<area shape="rect" title=" " alt="" coords="8,226,65,252"/>
+<area shape="poly" title=" " alt="" coords="143,34,108,52,70,78,35,112,21,132,11,153,8,168,10,184,22,212,17,214,5,185,3,168,6,152,17,129,31,109,67,74,106,48,140,29"/>
+<area shape="rect" title=" " alt="" coords="107,79,232,105"/>
+<area shape="poly" title=" " alt="" coords="172,31,172,63,167,63,167,31"/>
+<area shape="rect" href="bulk__internal_8h.html" title=" " alt="" coords="276,79,380,105"/>
+<area shape="poly" title=" " alt="" coords="198,29,289,70,286,75,195,34"/>
+<area shape="rect" href="async__utils_8h.html" title=" " alt="" coords="737,79,834,105"/>
+<area shape="poly" title=" " alt="" coords="227,23,722,80,721,86,227,29"/>
+<area shape="poly" title=" " alt="" coords="279,108,92,155,91,150,277,103"/>
+<area shape="poly" title=" " alt="" coords="324,107,299,143,280,163,259,181,214,203,174,213,133,219,80,228,79,223,132,213,173,208,212,198,256,176,277,160,295,140,319,104"/>
+<area shape="rect" title=" " alt="" coords="770,226,841,252"/>
+<area shape="poly" title=" " alt="" coords="381,95,507,113,581,128,653,150,721,181,777,215,774,220,719,186,651,155,579,134,506,118,380,100"/>
+<area shape="rect" title=" " alt="" coords="574,153,640,178"/>
+<area shape="poly" title=" " alt="" coords="376,103,560,150,559,155,375,108"/>
+<area shape="rect" title=" " alt="" coords="502,226,570,252"/>
+<area shape="poly" title=" " alt="" coords="381,95,414,101,449,112,483,128,513,151,530,180,537,210,532,212,525,182,509,154,480,132,447,116,413,106,380,100"/>
+<area shape="rect" title=" " alt="" coords="101,153,147,178"/>
+<area shape="poly" title=" " alt="" coords="295,108,163,154,161,149,293,103"/>
+<area shape="rect" title=" " alt="" coords="171,153,245,178"/>
+<area shape="poly" title=" " alt="" coords="309,108,243,147,240,142,307,103"/>
+<area shape="rect" href="bulk_8h.html" title=" " alt="" coords="443,153,499,178"/>
+<area shape="poly" title=" " alt="" coords="354,103,434,143,432,148,351,108"/>
+<area shape="rect" href="mydbgtrace_8h.html" title=" " alt="" coords="320,153,419,178"/>
+<area shape="poly" title=" " alt="" coords="337,104,357,138,353,141,333,106"/>
+<area shape="poly" title=" " alt="" coords="500,170,755,223,754,228,499,175"/>
+<area shape="rect" title=" " alt="" coords="267,226,320,252"/>
+<area shape="poly" title=" " alt="" coords="444,181,335,224,333,219,442,176"/>
+<area shape="rect" title=" " alt="" coords="344,226,398,252"/>
+<area shape="poly" title=" " alt="" coords="455,181,402,219,399,215,452,177"/>
+<area shape="rect" title=" " alt="" coords="595,226,662,252"/>
+<area shape="poly" title=" " alt="" coords="499,176,589,217,586,222,497,181"/>
+<area shape="rect" title=" " alt="" coords="421,226,478,252"/>
+<area shape="poly" title=" " alt="" coords="470,179,460,212,455,211,465,178"/>
+<area shape="rect" title=" " alt="" coords="686,226,746,252"/>
+<area shape="poly" title=" " alt="" coords="500,172,672,222,670,227,498,178"/>
+<area shape="poly" title=" " alt="" coords="321,178,214,199,81,228,80,223,213,194,320,173"/>
+<area shape="poly" title=" " alt="" coords="420,174,431,176,592,198,755,223,754,228,592,203,431,181,419,179"/>
+<area shape="poly" title=" " alt="" coords="399,176,495,217,493,222,397,181"/>
+<area shape="poly" title=" " alt="" coords="359,181,319,218,315,214,355,177"/>
+<area shape="rect" href="pretty_8h.html" title=" " alt="" coords="179,226,243,252"/>
+<area shape="poly" title=" " alt="" coords="344,181,253,222,251,217,342,176"/>
+<area shape="rect" title=" " alt="" coords="88,226,155,252"/>
+<area shape="poly" title=" " alt="" coords="328,181,170,227,169,221,327,176"/>
+<area shape="poly" title=" " alt="" coords="790,105,804,211,799,211,785,105"/>
+<area shape="rect" href="bulk__utils_8h.html" title=" " alt="" coords="822,153,909,178"/>
+<area shape="poly" title=" " alt="" coords="801,103,843,140,839,144,797,107"/>
+<area shape="poly" title=" " alt="" coords="858,180,827,216,823,213,854,177"/>
+<area shape="rect" title=" " alt="" coords="865,226,1042,252"/>
+<area shape="poly" title=" " alt="" coords="882,177,929,214,925,219,879,181"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="async__internal_8h__dep__incl.png" border="0" usemap="#aasync__internal_8hdep" alt=""/></div>
+<map name="aasync__internal_8hdep" id="aasync__internal_8hdep">
+<area shape="rect" title=" " alt="" coords="188,5,302,31"/>
+<area shape="rect" href="async_8cpp.html" title=" " alt="" coords="5,79,85,105"/>
+<area shape="poly" title=" " alt="" coords="198,39,80,81,78,76,196,34"/>
+<area shape="rect" href="async__internal_8cpp.html" title=" " alt="" coords="109,79,237,105"/>
+<area shape="poly" title=" " alt="" coords="224,44,187,80,183,77,220,40"/>
+<area shape="rect" href="main__async_8cpp.html" title=" " alt="" coords="261,79,376,105"/>
+<area shape="poly" title=" " alt="" coords="270,40,308,77,304,80,266,44"/>
+<area shape="rect" href="test__async_8cpp.html" title=" " alt="" coords="400,79,508,105"/>
+<area shape="poly" title=" " alt="" coords="296,34,420,76,418,81,294,39"/>
+</map>
+</div>
+</div>
+<p><a href="async__internal_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classotus__hw9_1_1CommandQueueMT.html">otus_hw9::CommandQueueMT</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Реализация многопоточной очереди команд  <a href="classotus__hw9_1_1CommandQueueMT.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classotus__hw9_1_1QueueExecutorMT.html">otus_hw9::QueueExecutorMT</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Реализация исполнителя очереди для диспетчеризации по воркерам  <a href="classotus__hw9_1_1QueueExecutorMT.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classotus__hw9_1_1QueueExecutorWithThread.html">otus_hw9::QueueExecutorWithThread</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Реализация исполнителя очереди в отдельном потоке  <a href="classotus__hw9_1_1QueueExecutorWithThread.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classotus__hw9_1_1ProcessorMT.html">otus_hw9::ProcessorMT</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Реализация процессора команд  <a href="classotus__hw9_1_1ProcessorMT.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structotus__hw9_1_1IQueueExecutor.html">otus_hw9::IQueueExecutor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Актор, выполняющий очередь  <a href="structotus__hw9_1_1IQueueExecutor.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structotus__hw9_1_1ICommandContext.html">otus_hw9::ICommandContext</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Контекст выполнения команды  <a href="structotus__hw9_1_1ICommandContext.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structotus__hw9_1_1IInputParser.html">otus_hw9::IInputParser</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Парсер для четния, разбора ввода и формирования пакетов команд. Формирует пакеты, возвращая сразу данные в <a class="el" href="structotus__hw9_1_1ICommandQueue.html" title="Очередь команд. Формируется парсером, затем выполняется исполнителем под управлением процессора.">ICommandQueue</a>.  <a href="structotus__hw9_1_1IInputParser.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structotus__hw9_1_1ICommand.html">otus_hw9::ICommand</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Команда, активный объект, паттерн команда  <a href="structotus__hw9_1_1ICommand.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structotus__hw9_1_1ICommandQueue.html">otus_hw9::ICommandQueue</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Очередь команд. Формируется парсером, затем выполняется исполнителем под управлением процессора.  <a href="structotus__hw9_1_1ICommandQueue.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structotus__hw9_1_1IProcessor.html">otus_hw9::IProcessor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Процессор - управляющий обработкой посредник  <a href="structotus__hw9_1_1IProcessor.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classotus__hw9_1_1CommandDecorator.html">otus_hw9::CommandDecorator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Реализация команды-декоратора  <a href="classotus__hw9_1_1CommandDecorator.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classotus__hw9_1_1CommandQueue.html">otus_hw9::CommandQueue</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Реализация очереди команд  <a href="classotus__hw9_1_1CommandQueue.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structotus__hw9_1_1ICommandCreator.html">otus_hw9::ICommandCreator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Абстрактная фабрика для команды  <a href="structotus__hw9_1_1ICommandCreator.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classotus__hw9_1_1Processor.html">otus_hw9::Processor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Реализация процессора команд  <a href="classotus__hw9_1_1Processor.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classotus__hw9_1_1QueueExecutorToFile.html">otus_hw9::QueueExecutorToFile</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classotus__hw9_1_1QueueExecutorDecorator.html">otus_hw9::QueueExecutorDecorator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Декоратор для исполнителя очереди  <a href="classotus__hw9_1_1QueueExecutorDecorator.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classotus__hw9_1_1QueueExecutorMulti.html">otus_hw9::QueueExecutorMulti</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Реализация исполнителя очереди для диспетчеризации по воркерам  <a href="classotus__hw9_1_1QueueExecutorMulti.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classotus__hw9_1_1QueueExecutorToFileInitializer.html">otus_hw9::QueueExecutorToFileInitializer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Класс - декоратор Исполнителя очереди для упаковки массива команд в блочную команду с инициализаций файла для вывода  <a href="classotus__hw9_1_1QueueExecutorToFileInitializer.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classotus__hw9_1_1QueueExecutorToBulkInitializer.html">otus_hw9::QueueExecutorToBulkInitializer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Класс - декоратор Исполнителя очереди для упаковки массива команд в <a class="el" href="classotus__hw7_1_1BulkCommand.html">BulkCommand</a>.  <a href="classotus__hw9_1_1QueueExecutorToBulkInitializer.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceotus__hw9.html">otus_hw9</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:afc5c79b47326e4974d9df5ae863f5961" id="r_afc5c79b47326e4974d9df5ae863f5961"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceotus__hw9.html#afc5c79b47326e4974d9df5ae863f5961">otus_hw9::IQueueExecutorPtr_t</a></td></tr>
+<tr class="separator:afc5c79b47326e4974d9df5ae863f5961"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad99bb3540faa8719e73ee68f17cf9f5a" id="r_ad99bb3540faa8719e73ee68f17cf9f5a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceotus__hw9.html#ad99bb3540faa8719e73ee68f17cf9f5a">otus_hw9::IInputParserPtr_t</a></td></tr>
+<tr class="separator:ad99bb3540faa8719e73ee68f17cf9f5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb181c4f20f2c6a8263ba7a9a717224a" id="r_aeb181c4f20f2c6a8263ba7a9a717224a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceotus__hw9.html#aeb181c4f20f2c6a8263ba7a9a717224a">otus_hw9::ICommandPtr_t</a></td></tr>
+<tr class="separator:aeb181c4f20f2c6a8263ba7a9a717224a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6fc38ba9456ac58490737e0219feaa4" id="r_ac6fc38ba9456ac58490737e0219feaa4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceotus__hw9.html#ac6fc38ba9456ac58490737e0219feaa4">otus_hw9::ICommandQueuePtr_t</a></td></tr>
+<tr class="separator:ac6fc38ba9456ac58490737e0219feaa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7f86a27801044b4e45589f182119e99" id="r_aa7f86a27801044b4e45589f182119e99"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceotus__hw9.html#aa7f86a27801044b4e45589f182119e99">otus_hw9::IProcessorPtr_t</a></td></tr>
+<tr class="separator:aa7f86a27801044b4e45589f182119e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2fa0f85c65498f80219bcc070a6af2a" id="r_ad2fa0f85c65498f80219bcc070a6af2a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceotus__hw9.html#ad2fa0f85c65498f80219bcc070a6af2a">otus_hw9::ICommandContextPtr_t</a></td></tr>
+<tr class="separator:ad2fa0f85c65498f80219bcc070a6af2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4026c375a8b417622490dac4f7ffac85" id="r_a4026c375a8b417622490dac4f7ffac85"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceotus__hw9.html#a4026c375a8b417622490dac4f7ffac85">otus_hw9::ICommandCreatorPtr_t</a></td></tr>
+<tr class="separator:a4026c375a8b417622490dac4f7ffac85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8cc5d28a000a949a58d3357a139073d" id="r_ac8cc5d28a000a949a58d3357a139073d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceotus__hw9.html#ac8cc5d28a000a949a58d3357a139073d">otus_hw9::ICommandPtrArray_t</a></td></tr>
+<tr class="separator:ac8cc5d28a000a949a58d3357a139073d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a8ff4738172837efd8ee2b2828d5ed5ba" id="r_a8ff4738172837efd8ee2b2828d5ed5ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceotus__hw7.html#ac6fc38ba9456ac58490737e0219feaa4">ICommandQueuePtr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceotus__hw9.html#a8ff4738172837efd8ee2b2828d5ed5ba">otus_hw9::create_command_queue</a> (<a class="el" href="structotus__hw7_1_1ICommandQueue.html#aa26f1104a7666afa52917523cfd5d987">ICommandQueue::Type</a>)</td></tr>
+<tr class="memdesc:a8ff4738172837efd8ee2b2828d5ed5ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Фабрика очереди команд  <br /></td></tr>
+<tr class="separator:a8ff4738172837efd8ee2b2828d5ed5ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af82e02949614cb74e06b88c4b5922adb" id="r_af82e02949614cb74e06b88c4b5922adb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceotus__hw7.html#afc5c79b47326e4974d9df5ae863f5961">IQueueExecutorPtr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceotus__hw9.html#af82e02949614cb74e06b88c4b5922adb">otus_hw9::create_queue_executor</a> (<a class="el" href="structotus__hw9_1_1Options.html">Options</a> const &amp;options)</td></tr>
+<tr class="memdesc:af82e02949614cb74e06b88c4b5922adb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Фабрика исполнителя очереди команд  <br /></td></tr>
+<tr class="separator:af82e02949614cb74e06b88c4b5922adb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fbf7ff97a27c75bbed9280d8bf2a527" id="r_a5fbf7ff97a27c75bbed9280d8bf2a527"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceotus__hw7.html#aa7f86a27801044b4e45589f182119e99">IProcessorPtr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceotus__hw9.html#a5fbf7ff97a27c75bbed9280d8bf2a527">otus_hw9::create_processor</a> (<a class="el" href="structotus__hw9_1_1Options.html">Options</a> const &amp;options)</td></tr>
+<tr class="memdesc:a5fbf7ff97a27c75bbed9280d8bf2a527"><td class="mdescLeft">&#160;</td><td class="mdescRight">Фабрика для процессора, сама по настройкам выбирает какой тип процессора создать  <br /></td></tr>
+<tr class="separator:a5fbf7ff97a27c75bbed9280d8bf2a527"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

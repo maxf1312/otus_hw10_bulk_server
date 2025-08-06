@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл async.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">bulk_server<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">Bulk text commands network server made for homework 9</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">Пространства имен</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл async.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="async_8h__dep__incl.png" border="0" usemap="#aasync_8hdep" alt=""/></div>
+<map name="aasync_8hdep" id="aasync_8hdep">
+<area shape="rect" title=" " alt="" coords="199,5,264,31"/>
+<area shape="rect" href="async_8cpp.html" title=" " alt="" coords="5,79,85,105"/>
+<area shape="poly" title=" " alt="" coords="187,39,78,81,76,76,185,34"/>
+<area shape="rect" href="bulkserver__internal_8h.html" title=" " alt="" coords="108,79,248,105"/>
+<area shape="poly" title=" " alt="" coords="216,45,189,80,185,77,212,42"/>
+<area shape="rect" href="main__bulk__server_8cpp.html" title=" " alt="" coords="158,153,305,178"/>
+<area shape="poly" title=" " alt="" coords="250,44,264,78,265,100,260,121,243,153,238,151,255,119,259,99,258,80,245,46"/>
+<area shape="rect" href="test__async_8cpp.html" title=" " alt="" coords="324,79,432,105"/>
+<area shape="poly" title=" " alt="" coords="271,36,354,76,352,81,269,41"/>
+<area shape="poly" title=" " alt="" coords="198,115,225,151,221,154,194,119"/>
+</map>
+</div>
+</div>
+<p><a href="async_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Пространства имен</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceotus__hw9.html">otus_hw9</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a2e8545bd66a6c098006ff1f4727c86bf" id="r_a2e8545bd66a6c098006ff1f4727c86bf"><td class="memItemLeft" align="right" valign="top">typedef void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e8545bd66a6c098006ff1f4727c86bf">libasync_ctx_t</a></td></tr>
+<tr class="separator:a2e8545bd66a6c098006ff1f4727c86bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a6f0268136fc2b696c5ad31481a297954" id="r_a6f0268136fc2b696c5ad31481a297954"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a2e8545bd66a6c098006ff1f4727c86bf">libasync_ctx_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f0268136fc2b696c5ad31481a297954">libasync_connect</a> (size_t bulk_size)</td></tr>
+<tr class="memdesc:a6f0268136fc2b696c5ad31481a297954"><td class="mdescLeft">&#160;</td><td class="mdescRight">Открывает сессию обработки команд.  <br /></td></tr>
+<tr class="separator:a6f0268136fc2b696c5ad31481a297954"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4d56a15362dd2a9ae09f654abf68a8f" id="r_aa4d56a15362dd2a9ae09f654abf68a8f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4d56a15362dd2a9ae09f654abf68a8f">libasync_receive</a> (<a class="el" href="#a2e8545bd66a6c098006ff1f4727c86bf">libasync_ctx_t</a> ctx, const char buf[], size_t buf_sz)</td></tr>
+<tr class="memdesc:aa4d56a15362dd2a9ae09f654abf68a8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">принимает команду (список команд, если встречается перевод строки).  <br /></td></tr>
+<tr class="separator:aa4d56a15362dd2a9ae09f654abf68a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2a564d46e0cc5d0efe9a4a53ebe6ece" id="r_ac2a564d46e0cc5d0efe9a4a53ebe6ece"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2a564d46e0cc5d0efe9a4a53ebe6ece">libasync_disconnect</a> (<a class="el" href="#a2e8545bd66a6c098006ff1f4727c86bf">libasync_ctx_t</a> ctx)</td></tr>
+<tr class="memdesc:ac2a564d46e0cc5d0efe9a4a53ebe6ece"><td class="mdescLeft">&#160;</td><td class="mdescRight">Закрывает сессию и разрушает контекст. С точки зрения логики обработки команд этот вызов считается завершением текущего блока команд.  <br /></td></tr>
+<tr class="separator:ac2a564d46e0cc5d0efe9a4a53ebe6ece"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ee84ffea4a31b6cc61fa42e8ea534cf" id="r_a1ee84ffea4a31b6cc61fa42e8ea534cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a2e8545bd66a6c098006ff1f4727c86bf">libasync_ctx_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceotus__hw9.html#a1ee84ffea4a31b6cc61fa42e8ea534cf">otus_hw9::connect</a> (size_t bulk_size)</td></tr>
+<tr class="separator:a1ee84ffea4a31b6cc61fa42e8ea534cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b1d16c81c29e3dead27817adff69af8" id="r_a8b1d16c81c29e3dead27817adff69af8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceotus__hw9.html#a8b1d16c81c29e3dead27817adff69af8">otus_hw9::receive</a> (<a class="el" href="#a2e8545bd66a6c098006ff1f4727c86bf">libasync_ctx_t</a> ctx, const char buf[], size_t buf_sz)</td></tr>
+<tr class="separator:a8b1d16c81c29e3dead27817adff69af8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65b3f7c86fd93ba3911d2dcd72a454ba" id="r_a65b3f7c86fd93ba3911d2dcd72a454ba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceotus__hw9.html#a65b3f7c86fd93ba3911d2dcd72a454ba">otus_hw9::disconnect</a> (<a class="el" href="#a2e8545bd66a6c098006ff1f4727c86bf">libasync_ctx_t</a> ctx)</td></tr>
+<tr class="separator:a65b3f7c86fd93ba3911d2dcd72a454ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Типы</h2>
+<a id="a2e8545bd66a6c098006ff1f4727c86bf" name="a2e8545bd66a6c098006ff1f4727c86bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e8545bd66a6c098006ff1f4727c86bf">&#9670;&#160;</a></span>libasync_ctx_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void* <a class="el" href="#a2e8545bd66a6c098006ff1f4727c86bf">libasync_ctx_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a6f0268136fc2b696c5ad31481a297954" name="a6f0268136fc2b696c5ad31481a297954"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f0268136fc2b696c5ad31481a297954">&#9670;&#160;</a></span>libasync_connect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a2e8545bd66a6c098006ff1f4727c86bf">libasync_ctx_t</a> libasync_connect </td>
+          <td>(</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>bulk_size</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Открывает сессию обработки команд. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bulk_size</td><td>- размер блока. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>контекст (ид) сессии. </dd></dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="async_8h_a6f0268136fc2b696c5ad31481a297954_cgraph.png" border="0" usemap="#aasync_8h_a6f0268136fc2b696c5ad31481a297954_cgraph" alt=""/></div>
+<map name="aasync_8h_a6f0268136fc2b696c5ad31481a297954_cgraph" id="aasync_8h_a6f0268136fc2b696c5ad31481a297954_cgraph">
+<area shape="rect" title="Открывает сессию обработки команд." alt="" coords="5,13,127,38"/>
+<area shape="rect" href="namespaceotus__hw9.html#a1ee84ffea4a31b6cc61fa42e8ea534cf" title=" " alt="" coords="175,13,304,38"/>
+<area shape="poly" title=" " alt="" coords="127,23,159,23,159,28,127,28"/>
+<area shape="rect" href="classotus__hw9_1_1LibAsyncCtx__t.html#a0d9b890d3c946496c45bc30f3ae761f1" title=" " alt="" coords="352,5,508,46"/>
+<area shape="poly" title=" " alt="" coords="304,23,336,23,336,28,304,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac2a564d46e0cc5d0efe9a4a53ebe6ece" name="ac2a564d46e0cc5d0efe9a4a53ebe6ece"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2a564d46e0cc5d0efe9a4a53ebe6ece">&#9670;&#160;</a></span>libasync_disconnect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int libasync_disconnect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a2e8545bd66a6c098006ff1f4727c86bf">libasync_ctx_t</a></td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Закрывает сессию и разрушает контекст. С точки зрения логики обработки команд этот вызов считается завершением текущего блока команд. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>0 - успешно, иначе код ошибки </dd></dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="async_8h_ac2a564d46e0cc5d0efe9a4a53ebe6ece_cgraph.png" border="0" usemap="#aasync_8h_ac2a564d46e0cc5d0efe9a4a53ebe6ece_cgraph" alt=""/></div>
+<map name="aasync_8h_ac2a564d46e0cc5d0efe9a4a53ebe6ece_cgraph" id="aasync_8h_ac2a564d46e0cc5d0efe9a4a53ebe6ece_cgraph">
+<area shape="rect" title="Закрывает сессию и разрушает контекст. С точки зрения логики обработки команд этот вызов считается за..." alt="" coords="5,13,144,38"/>
+<area shape="rect" href="namespaceotus__hw9.html#a65b3f7c86fd93ba3911d2dcd72a454ba" title=" " alt="" coords="192,13,338,38"/>
+<area shape="poly" title=" " alt="" coords="144,23,176,23,176,28,144,28"/>
+<area shape="rect" href="classotus__hw9_1_1LibAsyncCtx__t.html#a0d9b890d3c946496c45bc30f3ae761f1" title=" " alt="" coords="386,5,542,46"/>
+<area shape="poly" title=" " alt="" coords="338,23,370,23,370,28,338,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa4d56a15362dd2a9ae09f654abf68a8f" name="aa4d56a15362dd2a9ae09f654abf68a8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4d56a15362dd2a9ae09f654abf68a8f">&#9670;&#160;</a></span>libasync_receive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int libasync_receive </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a2e8545bd66a6c098006ff1f4727c86bf">libasync_ctx_t</a></td>          <td class="paramname"><span class="paramname"><em>ctx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char</td>          <td class="paramname"><span class="paramname"><em>buf</em></span>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>buf_sz</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>принимает команду (список команд, если встречается перевод строки). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>контекст </td></tr>
+    <tr><td class="paramname">buf</td><td>указателя на начало буфера с текстом команд </td></tr>
+    <tr><td class="paramname">buf_sz</td><td>размер буфера </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>0 - успешно, иначе код ошибки </dd></dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="async_8h_aa4d56a15362dd2a9ae09f654abf68a8f_cgraph.png" border="0" usemap="#aasync_8h_aa4d56a15362dd2a9ae09f654abf68a8f_cgraph" alt=""/></div>
+<map name="aasync_8h_aa4d56a15362dd2a9ae09f654abf68a8f_cgraph" id="aasync_8h_aa4d56a15362dd2a9ae09f654abf68a8f_cgraph">
+<area shape="rect" title="принимает команду (список команд, если встречается перевод строки)." alt="" coords="5,13,123,38"/>
+<area shape="rect" href="namespaceotus__hw9.html#a8b1d16c81c29e3dead27817adff69af8" title=" " alt="" coords="171,13,296,38"/>
+<area shape="poly" title=" " alt="" coords="123,23,155,23,155,28,123,28"/>
+<area shape="rect" href="classotus__hw9_1_1LibAsyncCtx__t.html#a0d9b890d3c946496c45bc30f3ae761f1" title=" " alt="" coords="344,5,500,46"/>
+<area shape="poly" title=" " alt="" coords="297,23,328,23,328,28,297,28"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

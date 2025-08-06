@@ -1,0 +1,5 @@
+<map id="otus_hw7::InputParser" name="otus_hw7::InputParser">
+<area shape="rect" id="Node000001" title="Реализация парсера входного потока команд" alt="" coords="5,201,179,593"/>
+<area shape="rect" id="Node000002" href="$structotus__hw7_1_1IInputParser.html" title="Парсер для четния, разбора ввода и формирования пакетов команд. Формирует пакеты, возвращая сразу дан..." alt="" coords="16,5,169,153"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,168,95,202,90,202,90,168"/>
+</map>

@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: 10. Асинхронная сетевая обработка команд</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">bulk_server<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">Bulk text commands network server made for homework 9</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">10. Асинхронная сетевая обработка команд</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a></p>
+<p>Цель – переработать Задание 9 так, чтобы ввод данных осуществлялся по сети. Необходимо разработать асинхронный сервер, работающий с протоколом, аналогичным консоли. Сервер принимает команды построчно. Дальнейшая обработка остаётся без изменений – вывод в консоль и файлы, статический блоки и блоки динамического размера. В качестве библиотеки сетевого взаимодействия следует использовать библиотеку Boost.ASIO (используем асинхронные возможности). Поскольку не предполагается отправка данных от сервера клиенту в ответ на команды, основное взаимодействие будет вокруг методов async_read и async_accept. Порядок запуска: </p><div class="fragment"><div class="line"># bulk_server &lt;port&gt; &lt;bulk_size&gt;</div>
+</div><!-- fragment --><p> где • port – номер tcp порта для входящих соединений. Соединения должны обслуживаться стпроизвольных интерфейсов • bulk_size – уже знакомый размер блока команд. Не должно быть искусственных ограничений на количество одновременно подключенных клиентов. Команды из статических блоков, полученные из разных соединений, должны смешиваться между собой. Однако команды из динамических блоков (ограниченные символами { и } ) из разных соединений смешиваться не должны. Пример запуска команд: bulk_server 9000 3 и seq 0 9 | nc localhost 9000 (что означает формирование 10 строк с числами от 0 до 9 на каждой строке и отправкой из по сетина локальный порт 9000).</p>
+<p>Запуск команд должен привести к появлению в консоли: bulk: 0, 1, 2 bulk: 3, 4, 5 bulk: 6, 7, 8 bulk: 9 и формированию четырёх файлов с содержимым, аналогичным каждой строке. Одновременный запуск двух команд (например, из двух разных консолей) при уже ранее запущенном сервере с bulk_size == 3: seq 0 9 | nc localhost 9000 и seq 10 19 | nc localhost 9000 (что означает формирование 20 строк с числами от 0 до 19 на каждой строке и отправкой их по сети на локальный порт 9000 из разных соединений) должны привести к появлению в консоли:</p>
+<p>bulk: 0, 1, 10 bulk: 2, 3, 11 bulk: 4, 5, 12 bulk: 6, 7, 13 bulk: 8, 9, 14 bulk: 15, 16, 17 bulk: 18, 19 и формированию семи файлов с содержимым, аналогичным каждой строке. При этом - как именно смешаются команды из разных источников зависит от условий времени исполнения и может отличаться от запуска к запуску. </p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Требования к реализации</h1>
+<p>Результатом работы должен стать исполняемый файл bulk_server, который находится в пакете bulk_server. Специальных усилий по демонизации сервера выполнять не стоит – сразу после запуска сервер может не возвращать управление вплоть до принудительного завершения. Результат работы должен быть опубликован на bintray. </p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Проверка</h1>
+<p>Задание считается выполненным успешно, если после установки пакета и запуска с тестовыми данными вывод соответствует описанию Задания 9. Будет отмечена способность не терять команды, полученные непосредственно перед закрытием соединения клиентом. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

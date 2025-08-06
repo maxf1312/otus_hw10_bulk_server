@@ -1,0 +1,5 @@
+<map id="otus_hw7::ICommandCreator" name="otus_hw7::ICommandCreator">
+<area shape="rect" id="Node000001" title="Абстрактная фабрика для команды" alt="" coords="5,5,198,112"/>
+<area shape="rect" id="Node000002" href="$classotus__hw7_1_1CommandCreator.html" title="Фабрика команд" alt="" coords="5,160,198,247"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,127,104,160,99,160,99,127"/>
+</map>

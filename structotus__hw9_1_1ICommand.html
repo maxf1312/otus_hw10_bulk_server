@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Структура otus_hw9::ICommand</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">bulk_server<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">Bulk text commands network server made for homework 9</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceotus__hw9.html">otus_hw9</a></li><li class="navelem"><a class="el" href="structotus__hw9_1_1ICommand.html">ICommand</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Открытые типы</a> &#124;
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="structotus__hw9_1_1ICommand-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Структура otus_hw9::ICommand<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Команда, активный объект, паттерн команда  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="bulk_8h_source.html">bulk.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:otus_hw9::ICommand:</div>
+<div class="dyncontent">
+<div class="center"><img src="structotus__hw9_1_1ICommand__inherit__graph.png" border="0" usemap="#aotus__hw9_1_1ICommand_inherit__map" alt="Inheritance graph"/></div>
+<map name="aotus__hw9_1_1ICommand_inherit__map" id="aotus__hw9_1_1ICommand_inherit__map">
+<area shape="rect" title="Команда, активный объект, паттерн команда" alt="" coords="811,5,946,173"/>
+<area shape="rect" href="classotus__hw7_1_1CommandDecorator.html" title="Реализация команды&#45;декоратора" alt="" coords="570,232,758,400"/>
+<area shape="poly" title=" " alt="" coords="803,173,745,234,741,230,799,170"/>
+<area shape="rect" href="classotus__hw7_1_1EmptyCommand.html" title="Реализация пустой команды" alt="" coords="1123,221,1290,410"/>
+<area shape="poly" title=" " alt="" coords="960,143,1124,255,1121,259,957,147"/>
+<area shape="rect" href="classotus__hw7_1_1CommandLastInBulk.html" title="Реализация команды&#45;декоратора для последней команды в блоке, для уведомления" alt="" coords="5,488,200,616"/>
+<area shape="poly" title=" " alt="" coords="556,340,478,359,390,386,300,419,213,460,169,491,166,486,211,455,298,414,389,380,477,354,555,335"/>
+<area shape="rect" href="classotus__hw7_1_1CommandToFileInitDecorator.html" title=" " alt="" coords="224,501,424,603"/>
+<area shape="poly" title=" " alt="" coords="559,381,438,460,382,503,379,499,434,455,556,376"/>
+<area shape="rect" href="classotus__hw7_1_1SimpleCommandDelim.html" title="Реализация декоратора команды для вывода в поток разделителя" alt="" coords="448,508,653,595"/>
+<area shape="poly" title=" " alt="" coords="620,414,573,510,569,508,615,412"/>
+<area shape="rect" href="classotus__hw7_1_1SimpleCommandLast.html" title="Реализация команды&#45;декоратора для последней команды в блоке" alt="" coords="677,498,875,605"/>
+<area shape="poly" title=" " alt="" coords="712,412,753,497,749,500,708,414"/>
+<area shape="rect" href="classotus__hw9_1_1PackagedCommandDecorator.html" title=" " alt="" coords="899,501,1104,603"/>
+<area shape="poly" title=" " alt="" coords="772,379,888,455,945,499,942,504,885,460,769,383"/>
+<area shape="rect" href="classotus__hw7_1_1SimpleCommandFirst.html" title="Реализация команды&#45;декоратора для первой команды в блоке" alt="" coords="452,694,650,781"/>
+<area shape="poly" title=" " alt="" coords="553,610,553,694,548,694,548,610"/>
+<area shape="rect" href="classotus__hw7_1_1BulkCommand.html" title=" " alt="" coords="1128,458,1286,646"/>
+<area shape="poly" title=" " alt="" coords="1209,425,1209,458,1204,458,1204,425"/>
+<area shape="rect" href="classotus__hw7_1_1SimpleCommand.html" title="Реализация простой команды, выводящей себя в поток" alt="" coords="1310,498,1482,605"/>
+<area shape="poly" title=" " alt="" coords="1293,420,1356,497,1352,500,1289,423"/>
+</map>
+</div>
+<div class="dynheader">
+Граф связей класса otus_hw9::ICommand:</div>
+<div class="dyncontent">
+<div class="center"><img src="structotus__hw9_1_1ICommand__coll__graph.png" border="0" usemap="#aotus__hw9_1_1ICommand_coll__map" alt="Collaboration graph"/></div>
+<map name="aotus__hw9_1_1ICommand_coll__map" id="aotus__hw9_1_1ICommand_coll__map">
+<area shape="rect" title="Команда, активный объект, паттерн команда" alt="" coords="5,5,141,173"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Открытые типы</h2></td></tr>
+<tr class="memitem:a440b57376794310b5229d9bdee46a43f" id="r_a440b57376794310b5229d9bdee46a43f"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a440b57376794310b5229d9bdee46a43f">CommandType</a> : uint8_t { <br />
+&#160;&#160;<a class="el" href="structotus__hw7_1_1ICommand.html#a440b57376794310b5229d9bdee46a43fa6b2a86b2bdf8c17096a32ed48e7bdb16">cmdEmpty</a>
+, <a class="el" href="structotus__hw7_1_1ICommand.html#a440b57376794310b5229d9bdee46a43faa248177b5f6e7bcfb71804a430645354">cmdSimple</a>
+, <a class="el" href="structotus__hw7_1_1ICommand.html#a440b57376794310b5229d9bdee46a43fafe43349aa328b8c1f00400508e9fca67">cmdFirst</a>
+, <a class="el" href="structotus__hw7_1_1ICommand.html#a440b57376794310b5229d9bdee46a43fa9a2ad8cbe8a411a198162543669034d8">cmdLast</a>
+, <br />
+&#160;&#160;<a class="el" href="structotus__hw7_1_1ICommand.html#a440b57376794310b5229d9bdee46a43faeba1bb75b5f07e6e2c775125d07f4a05">cmdBulk</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a440b57376794310b5229d9bdee46a43f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тип команды  <a href="#a440b57376794310b5229d9bdee46a43f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a440b57376794310b5229d9bdee46a43f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a2c11686acb4b3eba7a26d5858cb7734d" id="r_a2c11686acb4b3eba7a26d5858cb7734d"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c11686acb4b3eba7a26d5858cb7734d">~ICommand</a> ()=default</td></tr>
+<tr class="separator:a2c11686acb4b3eba7a26d5858cb7734d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0f10255f3500b4edf341bb75d421aa0" id="r_ac0f10255f3500b4edf341bb75d421aa0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0f10255f3500b4edf341bb75d421aa0">execute</a> (<a class="el" href="structotus__hw7_1_1ICommandContext.html">ICommandContext</a> &amp;ctx)=0</td></tr>
+<tr class="memdesc:ac0f10255f3500b4edf341bb75d421aa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Выполнить команду в заданном контексте  <br /></td></tr>
+<tr class="separator:ac0f10255f3500b4edf341bb75d421aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af634241b058994e8769ece41f39ec37e" id="r_af634241b058994e8769ece41f39ec37e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af634241b058994e8769ece41f39ec37e">operator()</a> (<a class="el" href="structotus__hw7_1_1ICommandContext.html">ICommandContext</a> &amp;ctx)</td></tr>
+<tr class="memdesc:af634241b058994e8769ece41f39ec37e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Обертка для превращения в Callable.  <br /></td></tr>
+<tr class="separator:af634241b058994e8769ece41f39ec37e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74bada2cc28f88d93160becc3e8b6091" id="r_a74bada2cc28f88d93160becc3e8b6091"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="#a440b57376794310b5229d9bdee46a43f">CommandType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74bada2cc28f88d93160becc3e8b6091">type</a> () const=0</td></tr>
+<tr class="memdesc:a74bada2cc28f88d93160becc3e8b6091"><td class="mdescLeft">&#160;</td><td class="mdescRight">Тип команды  <br /></td></tr>
+<tr class="separator:a74bada2cc28f88d93160becc3e8b6091"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e42ceb2fdf5c2d449f6b1660c3e6b31" id="r_a7e42ceb2fdf5c2d449f6b1660c3e6b31"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structotus__hw9_1_1ICommandQueue.html#a7608608a3aac9b3fcae5022cfe94dfec">ICommandQueue::id_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e42ceb2fdf5c2d449f6b1660c3e6b31">bulk_id</a> () const=0</td></tr>
+<tr class="memdesc:a7e42ceb2fdf5c2d449f6b1660c3e6b31"><td class="mdescLeft">&#160;</td><td class="mdescRight">ИД блока, к которому принадлежит команда  <br /></td></tr>
+<tr class="separator:a7e42ceb2fdf5c2d449f6b1660c3e6b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28da004bf78dfee380ede805e0ebc353" id="r_a28da004bf78dfee380ede805e0ebc353"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28da004bf78dfee380ede805e0ebc353">explore_me</a> (ICommandVisitor &amp;explorer) const=0</td></tr>
+<tr class="separator:a28da004bf78dfee380ede805e0ebc353"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Команда, активный объект, паттерн команда </p>
+</div><h2 class="groupheader">Перечисления</h2>
+<a id="a440b57376794310b5229d9bdee46a43f" name="a440b57376794310b5229d9bdee46a43f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a440b57376794310b5229d9bdee46a43f">&#9670;&#160;</a></span>CommandType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="structotus__hw7_1_1ICommand.html#a440b57376794310b5229d9bdee46a43f">otus_hw7::ICommand::CommandType</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Тип команды </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a440b57376794310b5229d9bdee46a43fa6b2a86b2bdf8c17096a32ed48e7bdb16" name="a440b57376794310b5229d9bdee46a43fa6b2a86b2bdf8c17096a32ed48e7bdb16"></a>cmdEmpty&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a440b57376794310b5229d9bdee46a43faa248177b5f6e7bcfb71804a430645354" name="a440b57376794310b5229d9bdee46a43faa248177b5f6e7bcfb71804a430645354"></a>cmdSimple&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a440b57376794310b5229d9bdee46a43fafe43349aa328b8c1f00400508e9fca67" name="a440b57376794310b5229d9bdee46a43fafe43349aa328b8c1f00400508e9fca67"></a>cmdFirst&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a440b57376794310b5229d9bdee46a43fa9a2ad8cbe8a411a198162543669034d8" name="a440b57376794310b5229d9bdee46a43fa9a2ad8cbe8a411a198162543669034d8"></a>cmdLast&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a440b57376794310b5229d9bdee46a43faeba1bb75b5f07e6e2c775125d07f4a05" name="a440b57376794310b5229d9bdee46a43faeba1bb75b5f07e6e2c775125d07f4a05"></a>cmdBulk&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a2c11686acb4b3eba7a26d5858cb7734d" name="a2c11686acb4b3eba7a26d5858cb7734d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c11686acb4b3eba7a26d5858cb7734d">&#9670;&#160;</a></span>~ICommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual otus_hw7::ICommand::~ICommand </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a7e42ceb2fdf5c2d449f6b1660c3e6b31" name="a7e42ceb2fdf5c2d449f6b1660c3e6b31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e42ceb2fdf5c2d449f6b1660c3e6b31">&#9670;&#160;</a></span>bulk_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structotus__hw9_1_1ICommandQueue.html#a7608608a3aac9b3fcae5022cfe94dfec">ICommandQueue::id_t</a> otus_hw7::ICommand::bulk_id </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ИД блока, к которому принадлежит команда </p>
+
+</div>
+</div>
+<a id="ac0f10255f3500b4edf341bb75d421aa0" name="ac0f10255f3500b4edf341bb75d421aa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0f10255f3500b4edf341bb75d421aa0">&#9670;&#160;</a></span>execute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void otus_hw7::ICommand::execute </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structotus__hw7_1_1ICommandContext.html">ICommandContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Выполнить команду в заданном контексте </p>
+
+</div>
+</div>
+<a id="a28da004bf78dfee380ede805e0ebc353" name="a28da004bf78dfee380ede805e0ebc353"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28da004bf78dfee380ede805e0ebc353">&#9670;&#160;</a></span>explore_me()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void otus_hw7::ICommand::explore_me </td>
+          <td>(</td>
+          <td class="paramtype">ICommandVisitor &amp;</td>          <td class="paramname"><span class="paramname"><em>explorer</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af634241b058994e8769ece41f39ec37e" name="af634241b058994e8769ece41f39ec37e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af634241b058994e8769ece41f39ec37e">&#9670;&#160;</a></span>operator()()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otus_hw7::ICommand::operator() </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structotus__hw7_1_1ICommandContext.html">ICommandContext</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ctx</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Обертка для превращения в Callable. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>-контекст команды </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a74bada2cc28f88d93160becc3e8b6091" name="a74bada2cc28f88d93160becc3e8b6091"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74bada2cc28f88d93160becc3e8b6091">&#9670;&#160;</a></span>type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="#a440b57376794310b5229d9bdee46a43f">CommandType</a> otus_hw7::ICommand::type </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Тип команды </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов структуры находятся в файле:<ul>
+<li><a class="el" href="bulk_8h_source.html">bulk.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Файл mydbgtrace.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">bulk_server<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">Bulk text commands network server made for homework 9</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a>  </div>
+  <div class="headertitle"><div class="title">Файл mydbgtrace.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="pretty_8h_source.html">pretty.h</a>&quot;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;iomanip&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;thread&gt;</code><br />
+<code>#include &lt;ctime&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для mydbgtrace.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="mydbgtrace_8h__incl.png" border="0" usemap="#amydbgtrace_8h" alt=""/></div>
+<map name="amydbgtrace_8h" id="amydbgtrace_8h">
+<area shape="rect" title=" " alt="" coords="218,5,317,31"/>
+<area shape="rect" href="pretty_8h.html" title=" " alt="" coords="5,79,69,105"/>
+<area shape="poly" title=" " alt="" coords="229,34,84,79,83,74,228,29"/>
+<area shape="rect" title=" " alt="" coords="93,79,165,105"/>
+<area shape="poly" title=" " alt="" coords="245,34,167,74,165,69,243,29"/>
+<area shape="rect" title=" " alt="" coords="189,79,256,105"/>
+<area shape="poly" title=" " alt="" coords="262,33,240,67,236,64,258,30"/>
+<area shape="rect" title=" " alt="" coords="280,79,348,105"/>
+<area shape="poly" title=" " alt="" coords="278,30,300,64,296,67,273,33"/>
+<area shape="rect" title=" " alt="" coords="372,79,430,105"/>
+<area shape="poly" title=" " alt="" coords="292,29,366,69,364,74,289,34"/>
+<area shape="rect" title=" " alt="" coords="454,79,508,105"/>
+<area shape="poly" title=" " alt="" coords="305,29,441,74,439,79,303,34"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="mydbgtrace_8h__dep__incl.png" border="0" usemap="#amydbgtrace_8hdep" alt=""/></div>
+<map name="amydbgtrace_8hdep" id="amydbgtrace_8hdep">
+<area shape="rect" title=" " alt="" coords="312,5,410,31"/>
+<area shape="rect" href="bulk__internal_8h.html" title=" " alt="" coords="309,79,413,105"/>
+<area shape="poly" title=" " alt="" coords="364,46,364,79,358,79,358,46"/>
+<area shape="rect" href="async__internal_8h.html" title=" " alt="" coords="188,153,302,178"/>
+<area shape="poly" title=" " alt="" coords="330,115,266,154,263,150,327,111"/>
+<area shape="rect" href="bulk_8cpp.html" title=" " alt="" coords="326,153,396,178"/>
+<area shape="poly" title=" " alt="" coords="364,120,364,152,358,152,358,120"/>
+<area shape="rect" href="test__bulk_8cpp.html" title=" " alt="" coords="420,153,518,178"/>
+<area shape="poly" title=" " alt="" coords="394,111,452,150,449,154,391,116"/>
+<area shape="rect" href="async_8cpp.html" title=" " alt="" coords="5,226,85,252"/>
+<area shape="poly" title=" " alt="" coords="198,186,80,228,78,223,196,181"/>
+<area shape="rect" href="async__internal_8cpp.html" title=" " alt="" coords="109,226,237,252"/>
+<area shape="poly" title=" " alt="" coords="224,191,187,228,183,224,220,187"/>
+<area shape="rect" href="main__async_8cpp.html" title=" " alt="" coords="261,226,376,252"/>
+<area shape="poly" title=" " alt="" coords="270,187,308,224,304,228,266,191"/>
+<area shape="rect" href="test__async_8cpp.html" title=" " alt="" coords="400,226,508,252"/>
+<area shape="poly" title=" " alt="" coords="296,181,420,223,418,228,294,186"/>
+</map>
+</div>
+</div>
+<p><a href="mydbgtrace_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a423e895063bc749b0a9bb3aa6af81520" id="r_a423e895063bc749b0a9bb3aa6af81520"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a423e895063bc749b0a9bb3aa6af81520">DBG_TRACE</a>(func,  trace_statements)</td></tr>
+<tr class="separator:a423e895063bc749b0a9bb3aa6af81520"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="a423e895063bc749b0a9bb3aa6af81520" name="a423e895063bc749b0a9bb3aa6af81520"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a423e895063bc749b0a9bb3aa6af81520">&#9670;&#160;</a></span>DBG_TRACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DBG_TRACE</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>func</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>trace_statements</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

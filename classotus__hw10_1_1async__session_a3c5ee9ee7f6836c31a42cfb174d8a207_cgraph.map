@@ -1,0 +1,12 @@
+<map id="otus_hw10::async_session::start" name="otus_hw10::async_session::start">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,182,70"/>
+<area shape="rect" id="Node000002" href="$classotus__hw10_1_1async__session.html#ad732c389af6db6ff23aa8da8f02e1cf6" title="Метод для запуска асинхронного чтения в буффер и вызова обработки. Поскольку обработка не предполагае..." alt="" coords="230,29,406,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,47,214,47,214,52,182,52"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="281,29,279,19,285,10,298,5,318,3,339,5,352,11,349,16,338,10,318,8,299,10,288,15,284,20,286,28"/>
+<area shape="rect" id="Node000003" href="$async_8cpp.html#aa4d56a15362dd2a9ae09f654abf68a8f" title="принимает команду (список команд, если встречается перевод строки)." alt="" coords="454,37,571,62"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="406,47,439,47,439,52,406,52"/>
+<area shape="rect" id="Node000004" href="$namespaceotus__hw9.html#a8b1d16c81c29e3dead27817adff69af8" title=" " alt="" coords="619,37,745,62"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="572,47,604,47,604,52,572,52"/>
+<area shape="rect" id="Node000005" href="$classotus__hw9_1_1LibAsyncCtx__t.html#a0d9b890d3c946496c45bc30f3ae761f1" title=" " alt="" coords="793,29,949,70"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="745,47,777,47,777,52,745,52"/>
+</map>

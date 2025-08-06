@@ -1,0 +1,9 @@
+<map id="otus_hw7::EmptyCommand" name="otus_hw7::EmptyCommand">
+<area shape="rect" id="Node000001" title="Реализация пустой команды" alt="" coords="95,221,263,410"/>
+<area shape="rect" id="Node000003" href="$classotus__hw7_1_1BulkCommand.html" title=" " alt="" coords="5,458,163,646"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="138,424,124,459,119,457,133,422"/>
+<area shape="rect" id="Node000004" href="$classotus__hw7_1_1SimpleCommand.html" title="Реализация простой команды, выводящей себя в поток" alt="" coords="188,498,359,605"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="225,423,255,498,250,500,220,425"/>
+<area shape="rect" id="Node000002" href="$structotus__hw7_1_1ICommand.html" title="Команда, активный объект, паттерн команда" alt="" coords="111,5,247,173"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,189,182,221,176,221,176,189"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="otus_hw7::SimpleCommandDelim" name="otus_hw7::SimpleCommandDelim">
+<area shape="rect" id="Node000001" title="Реализация декоратора команды для вывода в поток разделителя" alt="" coords="5,437,210,524"/>
+<area shape="rect" id="Node000004" href="$classotus__hw7_1_1SimpleCommandFirst.html" title="Реализация команды&#45;декоратора для первой команды в блоке" alt="" coords="9,572,206,659"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="110,539,110,572,105,572,105,539"/>
+<area shape="rect" id="Node000002" href="$classotus__hw7_1_1CommandDecorator.html" title="Реализация команды&#45;декоратора" alt="" coords="14,221,202,389"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,404,110,438,105,438,105,404"/>
+<area shape="rect" id="Node000003" href="$structotus__hw7_1_1ICommand.html" title="Команда, активный объект, паттерн команда" alt="" coords="40,5,176,173"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="110,188,110,221,105,221,105,188"/>
+</map>

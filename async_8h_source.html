@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл async.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">bulk_server<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">Bulk text commands network server made for homework 9</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">async.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="async_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="async_8h.html#a2e8545bd66a6c098006ff1f4727c86bf">    5</a></span>    <span class="keyword">typedef</span> <span class="keywordtype">void</span>* <a class="code hl_typedef" href="async_8h.html#a2e8545bd66a6c098006ff1f4727c86bf">libasync_ctx_t</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <a class="code hl_typedef" href="async_8h.html#a2e8545bd66a6c098006ff1f4727c86bf">libasync_ctx_t</a>  <a class="code hl_function" href="async_8h.html#a6f0268136fc2b696c5ad31481a297954">libasync_connect</a>(<span class="keywordtype">size_t</span> bulk_size);</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="async_8h.html#aa4d56a15362dd2a9ae09f654abf68a8f">libasync_receive</a>(<a class="code hl_typedef" href="async_8h.html#a2e8545bd66a6c098006ff1f4727c86bf">libasync_ctx_t</a> ctx, <span class="keyword">const</span> <span class="keywordtype">char</span> buf[], <span class="keywordtype">size_t</span> buf_sz);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="async_8h.html#ac2a564d46e0cc5d0efe9a4a53ebe6ece">libasync_disconnect</a>(<a class="code hl_typedef" href="async_8h.html#a2e8545bd66a6c098006ff1f4727c86bf">libasync_ctx_t</a> ctx);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>};</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceotus__hw9.html">otus_hw9</a></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_typedef" href="async_8h.html#a2e8545bd66a6c098006ff1f4727c86bf">libasync_ctx_t</a>  <a class="code hl_function" href="namespaceotus__hw9.html#a1ee84ffea4a31b6cc61fa42e8ea534cf">connect</a>(<span class="keywordtype">size_t</span> bulk_size);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="namespaceotus__hw9.html#a8b1d16c81c29e3dead27817adff69af8">receive</a>(<a class="code hl_typedef" href="async_8h.html#a2e8545bd66a6c098006ff1f4727c86bf">libasync_ctx_t</a> ctx, <span class="keyword">const</span> <span class="keywordtype">char</span> buf[], <span class="keywordtype">size_t</span> buf_sz);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="namespaceotus__hw9.html#a65b3f7c86fd93ba3911d2dcd72a454ba">disconnect</a>(<a class="code hl_typedef" href="async_8h.html#a2e8545bd66a6c098006ff1f4727c86bf">libasync_ctx_t</a> ctx);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>}</div>
+<div class="ttc" id="aasync_8h_html_a2e8545bd66a6c098006ff1f4727c86bf"><div class="ttname"><a href="async_8h.html#a2e8545bd66a6c098006ff1f4727c86bf">libasync_ctx_t</a></div><div class="ttdeci">void * libasync_ctx_t</div><div class="ttdef"><b>Определения</b> async.h:5</div></div>
+<div class="ttc" id="aasync_8h_html_a6f0268136fc2b696c5ad31481a297954"><div class="ttname"><a href="async_8h.html#a6f0268136fc2b696c5ad31481a297954">libasync_connect</a></div><div class="ttdeci">libasync_ctx_t libasync_connect(size_t bulk_size)</div><div class="ttdoc">Открывает сессию обработки команд.</div><div class="ttdef"><b>Определения</b> async.cpp:105</div></div>
+<div class="ttc" id="aasync_8h_html_aa4d56a15362dd2a9ae09f654abf68a8f"><div class="ttname"><a href="async_8h.html#aa4d56a15362dd2a9ae09f654abf68a8f">libasync_receive</a></div><div class="ttdeci">int libasync_receive(libasync_ctx_t ctx, const char buf[], size_t buf_sz)</div><div class="ttdoc">принимает команду (список команд, если встречается перевод строки).</div><div class="ttdef"><b>Определения</b> async.cpp:110</div></div>
+<div class="ttc" id="aasync_8h_html_ac2a564d46e0cc5d0efe9a4a53ebe6ece"><div class="ttname"><a href="async_8h.html#ac2a564d46e0cc5d0efe9a4a53ebe6ece">libasync_disconnect</a></div><div class="ttdeci">int libasync_disconnect(libasync_ctx_t ctx)</div><div class="ttdoc">Закрывает сессию и разрушает контекст. С точки зрения логики обработки команд этот вызов считается за...</div><div class="ttdef"><b>Определения</b> async.cpp:118</div></div>
+<div class="ttc" id="anamespaceotus__hw9_html"><div class="ttname"><a href="namespaceotus__hw9.html">otus_hw9</a></div><div class="ttdef"><b>Определения</b> async.cpp:9</div></div>
+<div class="ttc" id="anamespaceotus__hw9_html_a1ee84ffea4a31b6cc61fa42e8ea534cf"><div class="ttname"><a href="namespaceotus__hw9.html#a1ee84ffea4a31b6cc61fa42e8ea534cf">otus_hw9::connect</a></div><div class="ttdeci">libasync_ctx_t connect(size_t bulk_size)</div><div class="ttdef"><b>Определения</b> async.cpp:56</div></div>
+<div class="ttc" id="anamespaceotus__hw9_html_a65b3f7c86fd93ba3911d2dcd72a454ba"><div class="ttname"><a href="namespaceotus__hw9.html#a65b3f7c86fd93ba3911d2dcd72a454ba">otus_hw9::disconnect</a></div><div class="ttdeci">int disconnect(libasync_ctx_t ctx)</div><div class="ttdef"><b>Определения</b> async.cpp:84</div></div>
+<div class="ttc" id="anamespaceotus__hw9_html_a8b1d16c81c29e3dead27817adff69af8"><div class="ttname"><a href="namespaceotus__hw9.html#a8b1d16c81c29e3dead27817adff69af8">otus_hw9::receive</a></div><div class="ttdeci">int receive(libasync_ctx_t ctx, const char buf[], size_t buf_sz)</div><div class="ttdef"><b>Определения</b> async.cpp:67</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

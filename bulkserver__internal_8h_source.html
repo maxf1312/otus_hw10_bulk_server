@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл bulkserver_internal.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">bulk_server<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">Bulk text commands network server made for homework 9</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">bulkserver_internal.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="bulkserver__internal_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;boost/asio.hpp&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="async_8h.html">async.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="foldopen" id="foldopen00006" data-start="{" data-end="}">
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="namespaceotus__hw10.html">    6</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceotus__hw10.html">otus_hw10</a>{</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keyword">namespace </span>ba = boost::asio;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keyword">using </span>ba::ip::tcp;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">using </span>std::istream;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">using </span>std::ostream;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classotus__hw10_1_1async__session.html">   15</a></span>    <span class="keyword">class </span><a class="code hl_function" href="classotus__hw10_1_1async__session.html#a09861a33b4b009c73540411221272a6b">async_session</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    : <span class="keyword">public</span> std::enable_shared_from_this&lt;async_session&gt;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classotus__hw10_1_1async__session.html#a09861a33b4b009c73540411221272a6b">   19</a></span>        <a class="code hl_function" href="classotus__hw10_1_1async__session.html#a09861a33b4b009c73540411221272a6b">async_session</a>(tcp::socket socket, <span class="keywordtype">size_t</span> bulk_size)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            : <a class="code hl_variable" href="classotus__hw10_1_1async__session.html#abc72309698417bfef22acafaf6a138c6">socket_</a>(std::move(socket))</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <a class="code hl_variable" href="classotus__hw10_1_1async__session.html#ae271fc0777aefa069da5dea7f0d32be8">ctx_</a> = <a class="code hl_function" href="async_8cpp.html#a6f0268136fc2b696c5ad31481a297954">libasync_connect</a>(bulk_size);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <span class="keywordflow">if</span>( !<a class="code hl_variable" href="classotus__hw10_1_1async__session.html#ae271fc0777aefa069da5dea7f0d32be8">ctx_</a> )</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Cannot connect to libasync!&quot;</span>);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        }</div>
+</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classotus__hw10_1_1async__session.html#ac08e2846b2f3b73b6b3ec290aec2e34d">   28</a></span>        <a class="code hl_function" href="classotus__hw10_1_1async__session.html#ac08e2846b2f3b73b6b3ec290aec2e34d">~async_session</a>()</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            <a class="code hl_function" href="async_8cpp.html#ac2a564d46e0cc5d0efe9a4a53ebe6ece">libasync_disconnect</a>(<a class="code hl_variable" href="classotus__hw10_1_1async__session.html#ae271fc0777aefa069da5dea7f0d32be8">ctx_</a>);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        }</div>
+</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="foldopen" id="foldopen00033" data-start="{" data-end="}">
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classotus__hw10_1_1async__session.html#a3c5ee9ee7f6836c31a42cfb174d8a207">   33</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classotus__hw10_1_1async__session.html#a3c5ee9ee7f6836c31a42cfb174d8a207">start</a>()</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <a class="code hl_function" href="classotus__hw10_1_1async__session.html#ad732c389af6db6ff23aa8da8f02e1cf6">do_read</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        }</div>
+</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">private</span>:</div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classotus__hw10_1_1async__session.html#ad732c389af6db6ff23aa8da8f02e1cf6">   41</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classotus__hw10_1_1async__session.html#ad732c389af6db6ff23aa8da8f02e1cf6">do_read</a>()</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="keyword">auto</span> self(shared_from_this());</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <a class="code hl_variable" href="classotus__hw10_1_1async__session.html#abc72309698417bfef22acafaf6a138c6">socket_</a>.async_read_some(ba::buffer(<a class="code hl_variable" href="classotus__hw10_1_1async__session.html#a6e5c2437c69fe0bec43f383c06e57f33">data_</a>, <a class="code hl_enumvalue" href="classotus__hw10_1_1async__session.html#ac3f1c415d3b4b8c453eec6ea1d76d153a862d8689f427525daf40259db7c0db10">max_length</a>),</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                [<span class="keyword">this</span>, self](boost::system::error_code ec, std::size_t length)</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                    <span class="keywordflow">if</span> (!ec)</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                    {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                        <span class="comment">//std::cout &lt;&lt; &quot;receive &quot; &lt;&lt; length &lt;&lt; &quot;=&quot; &lt;&lt; std::string{data_, length} &lt;&lt; std::endl;</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                        <span class="keywordtype">int</span> rc = <a class="code hl_function" href="async_8cpp.html#aa4d56a15362dd2a9ae09f654abf68a8f">libasync_receive</a>(<a class="code hl_variable" href="classotus__hw10_1_1async__session.html#ae271fc0777aefa069da5dea7f0d32be8">ctx_</a>, <a class="code hl_variable" href="classotus__hw10_1_1async__session.html#a6e5c2437c69fe0bec43f383c06e57f33">data_</a>, length);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                        <span class="keywordflow">if</span>( rc )</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;libasync_receive error: &quot;</span> + std::to_string(rc));</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                        <a class="code hl_function" href="classotus__hw10_1_1async__session.html#ad732c389af6db6ff23aa8da8f02e1cf6">do_read</a>();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                    }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            );</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
+</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classotus__hw10_1_1async__session.html#abc72309698417bfef22acafaf6a138c6">   59</a></span>        tcp::socket <a class="code hl_variable" href="classotus__hw10_1_1async__session.html#abc72309698417bfef22acafaf6a138c6">socket_</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classotus__hw10_1_1async__session.html#ac3f1c415d3b4b8c453eec6ea1d76d153a862d8689f427525daf40259db7c0db10">   60</a></span>        <span class="keyword">enum</span> { <a class="code hl_enumvalue" href="classotus__hw10_1_1async__session.html#ac3f1c415d3b4b8c453eec6ea1d76d153a862d8689f427525daf40259db7c0db10">max_length</a> = 1024 };</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classotus__hw10_1_1async__session.html#a6e5c2437c69fe0bec43f383c06e57f33">   61</a></span>        <span class="keywordtype">char</span> <a class="code hl_variable" href="classotus__hw10_1_1async__session.html#a6e5c2437c69fe0bec43f383c06e57f33">data_</a>[<a class="code hl_enumvalue" href="classotus__hw10_1_1async__session.html#ac3f1c415d3b4b8c453eec6ea1d76d153a862d8689f427525daf40259db7c0db10">max_length</a>];</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classotus__hw10_1_1async__session.html#ae271fc0777aefa069da5dea7f0d32be8">   62</a></span>        <a class="code hl_typedef" href="async_8h.html#a2e8545bd66a6c098006ff1f4727c86bf">libasync_ctx_t</a>  <a class="code hl_variable" href="classotus__hw10_1_1async__session.html#ae271fc0777aefa069da5dea7f0d32be8">ctx_</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    };</div>
+</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span></div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="};">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classotus__hw10_1_1async__server.html">   68</a></span>    <span class="keyword">class </span><a class="code hl_function" href="classotus__hw10_1_1async__server.html#a996dd3c4cc392352f8681c48442c5a9a">async_server</a></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00071" data-start="{" data-end="}">
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classotus__hw10_1_1async__server.html#a996dd3c4cc392352f8681c48442c5a9a">   71</a></span>        <a class="code hl_function" href="classotus__hw10_1_1async__server.html#a996dd3c4cc392352f8681c48442c5a9a">async_server</a>(ba::io_context&amp; io_context, <span class="keywordtype">short</span> port, <span class="keywordtype">size_t</span> bulk_size)</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            : <a class="code hl_variable" href="classotus__hw10_1_1async__server.html#a0e216ae6d37bc655c1aee5666b0e9ca2">acceptor_</a>(io_context, tcp::endpoint(tcp::v4(), port)), <a class="code hl_variable" href="classotus__hw10_1_1async__server.html#a1ab8a1471971528cdc9c4b3a500d6f09">bulk_size_</a>(bulk_size)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <a class="code hl_function" href="classotus__hw10_1_1async__server.html#a72a2fa7b540e7ffb525436f504ea7565">do_accept</a>();</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        }</div>
+</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">private</span>:</div>
+<div class="foldopen" id="foldopen00078" data-start="{" data-end="}">
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classotus__hw10_1_1async__server.html#a72a2fa7b540e7ffb525436f504ea7565">   78</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classotus__hw10_1_1async__server.html#a72a2fa7b540e7ffb525436f504ea7565">do_accept</a>()</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <a class="code hl_variable" href="classotus__hw10_1_1async__server.html#a0e216ae6d37bc655c1aee5666b0e9ca2">acceptor_</a>.async_accept(</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                [<span class="keyword">this</span>](boost::system::error_code ec, tcp::socket socket)</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                    <span class="keywordflow">if</span> (!ec)</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                    {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                        std::make_shared&lt;async_session&gt;(std::move(socket), <a class="code hl_variable" href="classotus__hw10_1_1async__server.html#a1ab8a1471971528cdc9c4b3a500d6f09">bulk_size_</a>)-&gt;start();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                    }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                    <a class="code hl_function" href="classotus__hw10_1_1async__server.html#a72a2fa7b540e7ffb525436f504ea7565">do_accept</a>();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                });</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        }</div>
+</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="classotus__hw10_1_1async__server.html#a0e216ae6d37bc655c1aee5666b0e9ca2">   91</a></span>        tcp::acceptor <a class="code hl_variable" href="classotus__hw10_1_1async__server.html#a0e216ae6d37bc655c1aee5666b0e9ca2">acceptor_</a>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="classotus__hw10_1_1async__server.html#a1ab8a1471971528cdc9c4b3a500d6f09">   92</a></span>        <span class="keywordtype">size_t</span>        <a class="code hl_variable" href="classotus__hw10_1_1async__server.html#a1ab8a1471971528cdc9c4b3a500d6f09">bulk_size_</a>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    };</div>
+</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>}</div>
+</div>
+<div class="ttc" id="aasync_8cpp_html_a6f0268136fc2b696c5ad31481a297954"><div class="ttname"><a href="async_8cpp.html#a6f0268136fc2b696c5ad31481a297954">libasync_connect</a></div><div class="ttdeci">libasync_ctx_t libasync_connect(size_t bulk_size)</div><div class="ttdoc">Открывает сессию обработки команд.</div><div class="ttdef"><b>Определения</b> async.cpp:105</div></div>
+<div class="ttc" id="aasync_8cpp_html_aa4d56a15362dd2a9ae09f654abf68a8f"><div class="ttname"><a href="async_8cpp.html#aa4d56a15362dd2a9ae09f654abf68a8f">libasync_receive</a></div><div class="ttdeci">int libasync_receive(libasync_ctx_t ctx, const char buf[], size_t buf_sz)</div><div class="ttdoc">принимает команду (список команд, если встречается перевод строки).</div><div class="ttdef"><b>Определения</b> async.cpp:110</div></div>
+<div class="ttc" id="aasync_8cpp_html_ac2a564d46e0cc5d0efe9a4a53ebe6ece"><div class="ttname"><a href="async_8cpp.html#ac2a564d46e0cc5d0efe9a4a53ebe6ece">libasync_disconnect</a></div><div class="ttdeci">int libasync_disconnect(libasync_ctx_t ctx)</div><div class="ttdoc">Закрывает сессию и разрушает контекст. С точки зрения логики обработки команд этот вызов считается за...</div><div class="ttdef"><b>Определения</b> async.cpp:118</div></div>
+<div class="ttc" id="aasync_8h_html"><div class="ttname"><a href="async_8h.html">async.h</a></div></div>
+<div class="ttc" id="aasync_8h_html_a2e8545bd66a6c098006ff1f4727c86bf"><div class="ttname"><a href="async_8h.html#a2e8545bd66a6c098006ff1f4727c86bf">libasync_ctx_t</a></div><div class="ttdeci">void * libasync_ctx_t</div><div class="ttdef"><b>Определения</b> async.h:5</div></div>
+<div class="ttc" id="aclassotus__hw10_1_1async__server_html_a0e216ae6d37bc655c1aee5666b0e9ca2"><div class="ttname"><a href="classotus__hw10_1_1async__server.html#a0e216ae6d37bc655c1aee5666b0e9ca2">otus_hw10::async_server::acceptor_</a></div><div class="ttdeci">tcp::acceptor acceptor_</div><div class="ttdef"><b>Определения</b> bulkserver_internal.h:91</div></div>
+<div class="ttc" id="aclassotus__hw10_1_1async__server_html_a1ab8a1471971528cdc9c4b3a500d6f09"><div class="ttname"><a href="classotus__hw10_1_1async__server.html#a1ab8a1471971528cdc9c4b3a500d6f09">otus_hw10::async_server::bulk_size_</a></div><div class="ttdeci">size_t bulk_size_</div><div class="ttdef"><b>Определения</b> bulkserver_internal.h:92</div></div>
+<div class="ttc" id="aclassotus__hw10_1_1async__server_html_a72a2fa7b540e7ffb525436f504ea7565"><div class="ttname"><a href="classotus__hw10_1_1async__server.html#a72a2fa7b540e7ffb525436f504ea7565">otus_hw10::async_server::do_accept</a></div><div class="ttdeci">void do_accept()</div><div class="ttdef"><b>Определения</b> bulkserver_internal.h:78</div></div>
+<div class="ttc" id="aclassotus__hw10_1_1async__server_html_a996dd3c4cc392352f8681c48442c5a9a"><div class="ttname"><a href="classotus__hw10_1_1async__server.html#a996dd3c4cc392352f8681c48442c5a9a">otus_hw10::async_server::async_server</a></div><div class="ttdeci">async_server(ba::io_context &amp;io_context, short port, size_t bulk_size)</div><div class="ttdef"><b>Определения</b> bulkserver_internal.h:71</div></div>
+<div class="ttc" id="aclassotus__hw10_1_1async__session_html_a09861a33b4b009c73540411221272a6b"><div class="ttname"><a href="classotus__hw10_1_1async__session.html#a09861a33b4b009c73540411221272a6b">otus_hw10::async_session::async_session</a></div><div class="ttdeci">async_session(tcp::socket socket, size_t bulk_size)</div><div class="ttdef"><b>Определения</b> bulkserver_internal.h:19</div></div>
+<div class="ttc" id="aclassotus__hw10_1_1async__session_html_a3c5ee9ee7f6836c31a42cfb174d8a207"><div class="ttname"><a href="classotus__hw10_1_1async__session.html#a3c5ee9ee7f6836c31a42cfb174d8a207">otus_hw10::async_session::start</a></div><div class="ttdeci">void start()</div><div class="ttdef"><b>Определения</b> bulkserver_internal.h:33</div></div>
+<div class="ttc" id="aclassotus__hw10_1_1async__session_html_a6e5c2437c69fe0bec43f383c06e57f33"><div class="ttname"><a href="classotus__hw10_1_1async__session.html#a6e5c2437c69fe0bec43f383c06e57f33">otus_hw10::async_session::data_</a></div><div class="ttdeci">char data_[max_length]</div><div class="ttdef"><b>Определения</b> bulkserver_internal.h:61</div></div>
+<div class="ttc" id="aclassotus__hw10_1_1async__session_html_abc72309698417bfef22acafaf6a138c6"><div class="ttname"><a href="classotus__hw10_1_1async__session.html#abc72309698417bfef22acafaf6a138c6">otus_hw10::async_session::socket_</a></div><div class="ttdeci">tcp::socket socket_</div><div class="ttdef"><b>Определения</b> bulkserver_internal.h:59</div></div>
+<div class="ttc" id="aclassotus__hw10_1_1async__session_html_ac08e2846b2f3b73b6b3ec290aec2e34d"><div class="ttname"><a href="classotus__hw10_1_1async__session.html#ac08e2846b2f3b73b6b3ec290aec2e34d">otus_hw10::async_session::~async_session</a></div><div class="ttdeci">~async_session()</div><div class="ttdef"><b>Определения</b> bulkserver_internal.h:28</div></div>
+<div class="ttc" id="aclassotus__hw10_1_1async__session_html_ac3f1c415d3b4b8c453eec6ea1d76d153a862d8689f427525daf40259db7c0db10"><div class="ttname"><a href="classotus__hw10_1_1async__session.html#ac3f1c415d3b4b8c453eec6ea1d76d153a862d8689f427525daf40259db7c0db10">otus_hw10::async_session::max_length</a></div><div class="ttdeci">@ max_length</div><div class="ttdef"><b>Определения</b> bulkserver_internal.h:60</div></div>
+<div class="ttc" id="aclassotus__hw10_1_1async__session_html_ad732c389af6db6ff23aa8da8f02e1cf6"><div class="ttname"><a href="classotus__hw10_1_1async__session.html#ad732c389af6db6ff23aa8da8f02e1cf6">otus_hw10::async_session::do_read</a></div><div class="ttdeci">void do_read()</div><div class="ttdoc">Метод для запуска асинхронного чтения в буффер и вызова обработки. Поскольку обработка не предполагае...</div><div class="ttdef"><b>Определения</b> bulkserver_internal.h:41</div></div>
+<div class="ttc" id="aclassotus__hw10_1_1async__session_html_ae271fc0777aefa069da5dea7f0d32be8"><div class="ttname"><a href="classotus__hw10_1_1async__session.html#ae271fc0777aefa069da5dea7f0d32be8">otus_hw10::async_session::ctx_</a></div><div class="ttdeci">libasync_ctx_t ctx_</div><div class="ttdef"><b>Определения</b> bulkserver_internal.h:62</div></div>
+<div class="ttc" id="anamespaceotus__hw10_html"><div class="ttname"><a href="namespaceotus__hw10.html">otus_hw10</a></div><div class="ttdef"><b>Определения</b> bulkserver_internal.h:6</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,23 @@
+<map id="otus_hw9::QueueExecutorWithThread" name="otus_hw9::QueueExecutorWithThread">
+<area shape="rect" id="Node000001" title="Реализация исполнителя очереди в отдельном потоке" alt="" coords="470,482,663,625"/>
+<area shape="rect" id="Node000002" href="$structotus__hw7_1_1IQueueExecutor.html" title="Актор, выполняющий очередь" alt="" coords="5,213,170,341"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,352,155,386,184,417,216,442,251,464,326,498,402,522,471,537,470,542,400,527,324,503,249,468,213,446,181,421,150,390,125,355"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="194,244,229,310"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="213,310,219,364,228,393,243,418,288,459,341,492,398,515,454,531,453,536,397,520,339,496,285,464,239,421,223,395,213,365,207,310"/>
+<area shape="rect" id="Node000004" href="$structotus__hw7_1_1ICommandQueue.html" title="Очередь команд. Формируется парсером, затем выполняется исполнителем под управлением процессора." alt="" coords="254,135,442,419"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="444,402,456,418,497,468,493,471,452,421,439,405"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="215,5,262,72"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="251,71,266,110,270,118,265,120,261,112,246,73"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="301,5,394,72"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="350,72,350,118,345,118,345,72"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="418,5,523,72"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="456,73,431,121,427,118,451,70"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="466,244,667,310"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="569,310,569,465,564,465,564,310"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="691,244,738,310"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="713,311,702,363,681,421,648,471,644,468,676,418,697,362,708,309"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="762,244,808,310"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="791,310,791,343,787,383,777,423,758,460,722,495,680,520,677,516,719,491,754,457,772,421,782,382,786,343,785,310"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="849,244,964,310"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="909,310,907,345,899,385,884,425,860,460,821,493,775,517,727,533,680,544,679,539,726,528,773,512,818,488,856,457,880,422,894,383,901,344,904,310"/>
+</map>

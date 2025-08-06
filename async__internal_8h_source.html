@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Исходный файл async_internal.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">bulk_server<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">Bulk text commands network server made for homework 9</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">async_internal.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="async__internal_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;condition_variable&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="bulk__internal_8h.html">bulk_internal.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="async__utils_8h.html">async_utils.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceotus__hw9.html">otus_hw9</a>{</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keyword">using </span>std::istream;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">using </span>std::ostream;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">using </span>otus_hw7::IQueueExecutor;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">using </span>otus_hw7::ICommandContext;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">using </span>otus_hw7::IInputParser;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">using </span>otus_hw7::ICommand;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">using </span>otus_hw7::ICommandQueue;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">using </span>otus_hw7::IProcessor;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespaceotus__hw7.html#afc5c79b47326e4974d9df5ae863f5961">otus_hw7::IQueueExecutorPtr_t</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespaceotus__hw7.html#ad99bb3540faa8719e73ee68f17cf9f5a">otus_hw7::IInputParserPtr_t</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespaceotus__hw7.html#aeb181c4f20f2c6a8263ba7a9a717224a">otus_hw7::ICommandPtr_t</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespaceotus__hw7.html#ac6fc38ba9456ac58490737e0219feaa4">otus_hw7::ICommandQueuePtr_t</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespaceotus__hw7.html#aa7f86a27801044b4e45589f182119e99">otus_hw7::IProcessorPtr_t</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespaceotus__hw7.html#ad2fa0f85c65498f80219bcc070a6af2a">otus_hw7::ICommandContextPtr_t</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">using </span>otus_hw7::ICommand;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">using </span>otus_hw7::CommandDecorator;    </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">using </span>otus_hw7::CommandQueue;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">using </span>otus_hw7::ICommandCreator;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespaceotus__hw7.html#a4026c375a8b417622490dac4f7ffac85">otus_hw7::ICommandCreatorPtr_t</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">using </span>otus_hw7::Processor;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">using </span><a class="code hl_typedef" href="namespaceotus__hw7.html#ac8cc5d28a000a949a58d3357a139073d">otus_hw7::ICommandPtrArray_t</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">using </span>otus_hw7::QueueExecutorToFile;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">using </span>otus_hw7::QueueExecutorDecorator;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">using </span>otus_hw7::QueueExecutorMulti;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">using </span>otus_hw7::QueueExecutorToFileInitializer;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">using </span>otus_hw7::QueueExecutorToBulkInitializer;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="};">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classotus__hw9_1_1CommandQueueMT.html">   40</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classotus__hw9_1_1CommandQueueMT.html">CommandQueueMT</a> : <span class="keyword">public</span> <a class="code hl_class" href="classotus__hw7_1_1CommandQueue.html">CommandQueue</a></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classotus__hw9_1_1CommandQueueMT.html#a6dd3d8c52c72401290a2772731924976">   43</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="classotus__hw9_1_1CommandQueueMT.html#a6dd3d8c52c72401290a2772731924976">BaseCls_t</a> = <a class="code hl_class" href="classotus__hw7_1_1CommandQueue.html">CommandQueue</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_struct" href="structotus__hw7_1_1ICommandQueue.html">ICommandQueue</a>&amp;  <a class="code hl_function" href="classotus__hw9_1_1CommandQueueMT.html#abb064a8debc005b6ac7536c26923366a">push</a>(<a class="code hl_typedef" href="namespaceotus__hw7.html#aeb181c4f20f2c6a8263ba7a9a717224a">ICommandPtr_t</a> cmd) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordtype">bool</span>            <a class="code hl_function" href="classotus__hw9_1_1CommandQueueMT.html#a63133e44624520783c4d72bf04a22844">pop</a>(<a class="code hl_typedef" href="namespaceotus__hw7.html#aeb181c4f20f2c6a8263ba7a9a717224a">ICommandPtr_t</a>&amp; cmd) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_struct" href="structotus__hw7_1_1ICommandQueue.html">ICommandQueue</a>&amp;  <a class="code hl_function" href="classotus__hw9_1_1CommandQueueMT.html#af32eb00a42a6f2330e194010bc467963">reset</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordtype">size_t</span>          <a class="code hl_function" href="classotus__hw9_1_1CommandQueueMT.html#a3fc7b0f99c3d2e1d96f46cad25ca1530">size</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        std::ostream&amp;   <a class="code hl_function" href="classotus__hw9_1_1CommandQueueMT.html#a302d56961de9de361e03b92e548a94ff">print</a>(std::ostream&amp; os) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classotus__hw9_1_1CommandQueueMT.html#a6edb642c4f25f915691c66580a715d56">   51</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="classotus__hw9_1_1CommandQueueMT.html#a6edb642c4f25f915691c66580a715d56">lk_t</a> = std::unique_lock&lt;std::mutex&gt;;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classotus__hw9_1_1CommandQueueMT.html#abe092104fe79309256cb0187c06cb2e9">   52</a></span>        <span class="keyword">mutable</span> std::mutex <a class="code hl_variable" href="classotus__hw9_1_1CommandQueueMT.html#abe092104fe79309256cb0187c06cb2e9">guard_mx_</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    };</div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>   </div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="};">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classotus__hw9_1_1QueueExecutorMT.html">   56</a></span>    <span class="keyword">class </span><a class="code hl_function" href="classotus__hw9_1_1QueueExecutorMT.html#aea0d6856f10853e4c41ee9ec0915f1b1">QueueExecutorMT</a> : <span class="keyword">public</span> <a class="code hl_function" href="classotus__hw7_1_1QueueExecutorMulti.html#a19f9b64d4ae62bb3323ec55a74aee8bd">QueueExecutorMulti</a></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classotus__hw9_1_1QueueExecutorMT.html#ac4648b3258cc46a3c1b9d499335fa937">   59</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="classotus__hw9_1_1QueueExecutorMT.html#ac4648b3258cc46a3c1b9d499335fa937">BaseCls_t</a> = <a class="code hl_function" href="classotus__hw7_1_1QueueExecutorMulti.html#a19f9b64d4ae62bb3323ec55a74aee8bd">QueueExecutorMulti</a>;    </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_function" href="classotus__hw9_1_1QueueExecutorMT.html#aea0d6856f10853e4c41ee9ec0915f1b1">QueueExecutorMT</a>(<span class="keywordtype">size_t</span> thread_count = 3);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    };</div>
+</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span></div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="};">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classotus__hw9_1_1QueueExecutorWithThread.html">   64</a></span>    <span class="keyword">class </span><a class="code hl_function" href="classotus__hw9_1_1QueueExecutorWithThread.html#a2ab85118420350a4e594c9572440f5b3">QueueExecutorWithThread</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structotus__hw7_1_1IQueueExecutor.html">IQueueExecutor</a></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">public</span>:    </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <a class="code hl_function" href="classotus__hw9_1_1QueueExecutorWithThread.html#a2ab85118420350a4e594c9572440f5b3">QueueExecutorWithThread</a>();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keyword">virtual</span> <a class="code hl_function" href="classotus__hw9_1_1QueueExecutorWithThread.html#a905871e7ef64cf160df5c46e59249b2c">~QueueExecutorWithThread</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classotus__hw9_1_1QueueExecutorWithThread.html#ab2a5ccc2236ae330954ce8d5cccca907">execute</a>(<a class="code hl_struct" href="structotus__hw7_1_1ICommandQueue.html">ICommandQueue</a>&amp; q, <a class="code hl_struct" href="structotus__hw7_1_1ICommandContext.html">ICommandContext</a>&amp; ctx, <span class="keywordtype">size_t</span> cnt) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordtype">void</span>  <a class="code hl_function" href="classotus__hw9_1_1QueueExecutorWithThread.html#a56cb430919d9528bb2da11a8102e9274">execute_q</a>();    </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classotus__hw9_1_1QueueExecutorWithThread.html#a98f6b5c6702575a5358dfbebf78038c6">   72</a></span>        <span class="keywordtype">bool</span>  <a class="code hl_variable" href="classotus__hw9_1_1QueueExecutorWithThread.html#a98f6b5c6702575a5358dfbebf78038c6">stop_flag_</a>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classotus__hw9_1_1QueueExecutorWithThread.html#ab587b1d426735392222a6d1c571d4a6e">   73</a></span>        <a class="code hl_struct" href="structotus__hw7_1_1ICommandQueue.html">ICommandQueue</a>* <a class="code hl_variable" href="classotus__hw9_1_1QueueExecutorWithThread.html#ab587b1d426735392222a6d1c571d4a6e">q_</a>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classotus__hw9_1_1QueueExecutorWithThread.html#afe10d5cf573e21131410434bfd501e68">   74</a></span>        <a class="code hl_typedef" href="namespaceotus__hw7.html#ad2fa0f85c65498f80219bcc070a6af2a">ICommandContextPtr_t</a> <a class="code hl_variable" href="classotus__hw9_1_1QueueExecutorWithThread.html#afe10d5cf573e21131410434bfd501e68">ctx_</a>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classotus__hw9_1_1QueueExecutorWithThread.html#a531047fd282b8b0146b5c719452801c0">   75</a></span>        std::thread <a class="code hl_variable" href="classotus__hw9_1_1QueueExecutorWithThread.html#a531047fd282b8b0146b5c719452801c0">work_thread_</a>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="classotus__hw9_1_1QueueExecutorWithThread.html#a9f133d3985243b86d5906bb89da9153a">   76</a></span>        <span class="keyword">static</span> std::mutex <a class="code hl_variable" href="classotus__hw9_1_1QueueExecutorWithThread.html#a9f133d3985243b86d5906bb89da9153a">cmd_wait_mx</a>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="classotus__hw9_1_1QueueExecutorWithThread.html#a2fea63795f39976b108212bf0f56b009">   77</a></span>        <span class="keyword">static</span> std::condition_variable <a class="code hl_variable" href="classotus__hw9_1_1QueueExecutorWithThread.html#a2fea63795f39976b108212bf0f56b009">cmd_wait_cv</a>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    };</div>
+</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span></div>
+<div class="foldopen" id="foldopen00081" data-start="{" data-end="};">
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classotus__hw9_1_1ProcessorMT.html">   81</a></span>    <span class="keyword">class </span><a class="code hl_function" href="classotus__hw9_1_1ProcessorMT.html#a317de2d5a3dd644c12f96dd4f1910ac4">ProcessorMT</a> : <span class="keyword">public</span> <a class="code hl_function" href="classotus__hw7_1_1Processor.html#afbcd3ae25ad4ac8fe7d2c6f76cdc7ca4">Processor</a></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classotus__hw9_1_1ProcessorMT.html#a2a8ffefde6f1aec4b87030f42efc489e">   84</a></span>        <span class="keyword">using </span><a class="code hl_typedef" href="classotus__hw9_1_1ProcessorMT.html#a2a8ffefde6f1aec4b87030f42efc489e">BaseCls_t</a> = <a class="code hl_function" href="classotus__hw7_1_1Processor.html#afbcd3ae25ad4ac8fe7d2c6f76cdc7ca4">Processor</a>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <a class="code hl_function" href="classotus__hw9_1_1ProcessorMT.html#a317de2d5a3dd644c12f96dd4f1910ac4">ProcessorMT</a>(<a class="code hl_typedef" href="namespaceotus__hw7.html#ad99bb3540faa8719e73ee68f17cf9f5a">IInputParserPtr_t</a> parser, <a class="code hl_typedef" href="namespaceotus__hw7.html#ac6fc38ba9456ac58490737e0219feaa4">ICommandQueuePtr_t</a> cmd_queue, <a class="code hl_typedef" href="namespaceotus__hw7.html#afc5c79b47326e4974d9df5ae863f5961">IQueueExecutorPtr_t</a> executor);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    };</div>
+</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <a class="code hl_typedef" href="namespaceotus__hw7.html#ac6fc38ba9456ac58490737e0219feaa4">ICommandQueuePtr_t</a> <a class="code hl_function" href="namespaceotus__hw9.html#a8ff4738172837efd8ee2b2828d5ed5ba">create_command_queue</a>(<a class="code hl_enumeration" href="structotus__hw9_1_1ICommandQueue.html#aa26f1104a7666afa52917523cfd5d987">ICommandQueue::Type</a> q_type);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structotus__hw9_1_1Options.html">Options</a>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <a class="code hl_typedef" href="namespaceotus__hw7.html#afc5c79b47326e4974d9df5ae863f5961">IQueueExecutorPtr_t</a> <a class="code hl_function" href="namespaceotus__hw9.html#af82e02949614cb74e06b88c4b5922adb">create_queue_executor</a>(<a class="code hl_struct" href="structotus__hw9_1_1Options.html">Options</a> <span class="keyword">const</span>&amp; options);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <a class="code hl_typedef" href="namespaceotus__hw7.html#aa7f86a27801044b4e45589f182119e99">IProcessorPtr_t</a> <a class="code hl_function" href="namespaceotus__hw9.html#a5fbf7ff97a27c75bbed9280d8bf2a527">create_processor</a>(<a class="code hl_struct" href="structotus__hw9_1_1Options.html">Options</a> <span class="keyword">const</span>&amp; options);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>}</div>
+<div class="ttc" id="aasync__utils_8h_html"><div class="ttname"><a href="async__utils_8h.html">async_utils.h</a></div></div>
+<div class="ttc" id="abulk__internal_8h_html"><div class="ttname"><a href="bulk__internal_8h.html">bulk_internal.h</a></div></div>
+<div class="ttc" id="aclassotus__hw7_1_1CommandQueue_html"><div class="ttname"><a href="classotus__hw7_1_1CommandQueue.html">otus_hw7::CommandQueue</a></div><div class="ttdoc">Реализация очереди команд</div><div class="ttdef"><b>Определения</b> bulk_internal.h:218</div></div>
+<div class="ttc" id="aclassotus__hw7_1_1Processor_html_afbcd3ae25ad4ac8fe7d2c6f76cdc7ca4"><div class="ttname"><a href="classotus__hw7_1_1Processor.html#afbcd3ae25ad4ac8fe7d2c6f76cdc7ca4">otus_hw7::Processor::Processor</a></div><div class="ttdeci">Processor(IInputParserPtr_t parser, ICommandQueuePtr_t cmd_queue, IQueueExecutorPtr_t executor)</div><div class="ttdef"><b>Определения</b> bulk_internal.h:599</div></div>
+<div class="ttc" id="aclassotus__hw7_1_1QueueExecutorMulti_html_a19f9b64d4ae62bb3323ec55a74aee8bd"><div class="ttname"><a href="classotus__hw7_1_1QueueExecutorMulti.html#a19f9b64d4ae62bb3323ec55a74aee8bd">otus_hw7::QueueExecutorMulti::QueueExecutorMulti</a></div><div class="ttdeci">QueueExecutorMulti(size_t worker_count=3, ICommandQueuePtr_t log_queue=create_command_queue(CommandQueue::Type::qLog), ICommandQueuePtr_t file_queue=create_command_queue(CommandQueue::Type::qFile))</div><div class="ttdef"><b>Определения</b> bulk.cpp:249</div></div>
+<div class="ttc" id="aclassotus__hw9_1_1CommandQueueMT_html"><div class="ttname"><a href="classotus__hw9_1_1CommandQueueMT.html">otus_hw9::CommandQueueMT</a></div><div class="ttdoc">Реализация многопоточной очереди команд</div><div class="ttdef"><b>Определения</b> async_internal.h:41</div></div>
+<div class="ttc" id="aclassotus__hw9_1_1CommandQueueMT_html_a302d56961de9de361e03b92e548a94ff"><div class="ttname"><a href="classotus__hw9_1_1CommandQueueMT.html#a302d56961de9de361e03b92e548a94ff">otus_hw9::CommandQueueMT::print</a></div><div class="ttdeci">std::ostream &amp; print(std::ostream &amp;os) const override</div><div class="ttdef"><b>Определения</b> async_internal.cpp:35</div></div>
+<div class="ttc" id="aclassotus__hw9_1_1CommandQueueMT_html_a3fc7b0f99c3d2e1d96f46cad25ca1530"><div class="ttname"><a href="classotus__hw9_1_1CommandQueueMT.html#a3fc7b0f99c3d2e1d96f46cad25ca1530">otus_hw9::CommandQueueMT::size</a></div><div class="ttdeci">size_t size() const override</div><div class="ttdef"><b>Определения</b> async_internal.cpp:29</div></div>
+<div class="ttc" id="aclassotus__hw9_1_1CommandQueueMT_html_a63133e44624520783c4d72bf04a22844"><div class="ttname"><a href="classotus__hw9_1_1CommandQueueMT.html#a63133e44624520783c4d72bf04a22844">otus_hw9::CommandQueueMT::pop</a></div><div class="ttdeci">bool pop(ICommandPtr_t &amp;cmd) override</div><div class="ttdef"><b>Определения</b> async_internal.cpp:11</div></div>
+<div class="ttc" id="aclassotus__hw9_1_1CommandQueueMT_html_a6dd3d8c52c72401290a2772731924976"><div class="ttname"><a href="classotus__hw9_1_1CommandQueueMT.html#a6dd3d8c52c72401290a2772731924976">otus_hw9::CommandQueueMT::BaseCls_t</a></div><div class="ttdeci">CommandQueue BaseCls_t</div><div class="ttdef"><b>Определения</b> async_internal.h:43</div></div>
+<div class="ttc" id="aclassotus__hw9_1_1CommandQueueMT_html_a6edb642c4f25f915691c66580a715d56"><div class="ttname"><a href="classotus__hw9_1_1CommandQueueMT.html#a6edb642c4f25f915691c66580a715d56">otus_hw9::CommandQueueMT::lk_t</a></div><div class="ttdeci">std::unique_lock&lt; std::mutex &gt; lk_t</div><div class="ttdef"><b>Определения</b> async_internal.h:51</div></div>
+<div class="ttc" id="aclassotus__hw9_1_1CommandQueueMT_html_abb064a8debc005b6ac7536c26923366a"><div class="ttname"><a href="classotus__hw9_1_1CommandQueueMT.html#abb064a8debc005b6ac7536c26923366a">otus_hw9::CommandQueueMT::push</a></div><div class="ttdeci">ICommandQueue &amp; push(ICommandPtr_t cmd) override</div><div class="ttdef"><b>Определения</b> async_internal.cpp:17</div></div>
+<div class="ttc" id="aclassotus__hw9_1_1CommandQueueMT_html_abe092104fe79309256cb0187c06cb2e9"><div class="ttname"><a href="classotus__hw9_1_1CommandQueueMT.html#abe092104fe79309256cb0187c06cb2e9">otus_hw9::CommandQueueMT::guard_mx_</a></div><div class="ttdeci">std::mutex guard_mx_</div><div class="ttdef"><b>Определения</b> async_internal.h:52</div></div>
+<div class="ttc" id="aclassotus__hw9_1_1CommandQueueMT_html_af32eb00a42a6f2330e194010bc467963"><div class="ttname"><a href="classotus__hw9_1_1CommandQueueMT.html#af32eb00a42a6f2330e194010bc467963">otus_hw9::CommandQueueMT::reset</a></div><div class="ttdeci">ICommandQueue &amp; reset() override</div><div class="ttdef"><b>Определения</b> async_internal.cpp:23</div></div>
+<div class="ttc" id="aclassotus__hw9_1_1ProcessorMT_html_a2a8ffefde6f1aec4b87030f42efc489e"><div class="ttname"><a href="classotus__hw9_1_1ProcessorMT.html#a2a8ffefde6f1aec4b87030f42efc489e">otus_hw9::ProcessorMT::BaseCls_t</a></div><div class="ttdeci">Processor BaseCls_t</div><div class="ttdef"><b>Определения</b> async_internal.h:84</div></div>
+<div class="ttc" id="aclassotus__hw9_1_1ProcessorMT_html_a317de2d5a3dd644c12f96dd4f1910ac4"><div class="ttname"><a href="classotus__hw9_1_1ProcessorMT.html#a317de2d5a3dd644c12f96dd4f1910ac4">otus_hw9::ProcessorMT::ProcessorMT</a></div><div class="ttdeci">ProcessorMT(IInputParserPtr_t parser, ICommandQueuePtr_t cmd_queue, IQueueExecutorPtr_t executor)</div><div class="ttdef"><b>Определения</b> async_internal.cpp:95</div></div>
+<div class="ttc" id="aclassotus__hw9_1_1QueueExecutorMT_html_ac4648b3258cc46a3c1b9d499335fa937"><div class="ttname"><a href="classotus__hw9_1_1QueueExecutorMT.html#ac4648b3258cc46a3c1b9d499335fa937">otus_hw9::QueueExecutorMT::BaseCls_t</a></div><div class="ttdeci">QueueExecutorMulti BaseCls_t</div><div class="ttdef"><b>Определения</b> async_internal.h:59</div></div>
+<div class="ttc" id="aclassotus__hw9_1_1QueueExecutorMT_html_aea0d6856f10853e4c41ee9ec0915f1b1"><div class="ttname"><a href="classotus__hw9_1_1QueueExecutorMT.html#aea0d6856f10853e4c41ee9ec0915f1b1">otus_hw9::QueueExecutorMT::QueueExecutorMT</a></div><div class="ttdeci">QueueExecutorMT(size_t thread_count=3)</div><div class="ttdef"><b>Определения</b> async_internal.cpp:100</div></div>
+<div class="ttc" id="aclassotus__hw9_1_1QueueExecutorWithThread_html_a2ab85118420350a4e594c9572440f5b3"><div class="ttname"><a href="classotus__hw9_1_1QueueExecutorWithThread.html#a2ab85118420350a4e594c9572440f5b3">otus_hw9::QueueExecutorWithThread::QueueExecutorWithThread</a></div><div class="ttdeci">QueueExecutorWithThread()</div><div class="ttdef"><b>Определения</b> async_internal.cpp:137</div></div>
+<div class="ttc" id="aclassotus__hw9_1_1QueueExecutorWithThread_html_a2fea63795f39976b108212bf0f56b009"><div class="ttname"><a href="classotus__hw9_1_1QueueExecutorWithThread.html#a2fea63795f39976b108212bf0f56b009">otus_hw9::QueueExecutorWithThread::cmd_wait_cv</a></div><div class="ttdeci">static std::condition_variable cmd_wait_cv</div><div class="ttdef"><b>Определения</b> async_internal.h:77</div></div>
+<div class="ttc" id="aclassotus__hw9_1_1QueueExecutorWithThread_html_a531047fd282b8b0146b5c719452801c0"><div class="ttname"><a href="classotus__hw9_1_1QueueExecutorWithThread.html#a531047fd282b8b0146b5c719452801c0">otus_hw9::QueueExecutorWithThread::work_thread_</a></div><div class="ttdeci">std::thread work_thread_</div><div class="ttdef"><b>Определения</b> async_internal.h:75</div></div>
+<div class="ttc" id="aclassotus__hw9_1_1QueueExecutorWithThread_html_a56cb430919d9528bb2da11a8102e9274"><div class="ttname"><a href="classotus__hw9_1_1QueueExecutorWithThread.html#a56cb430919d9528bb2da11a8102e9274">otus_hw9::QueueExecutorWithThread::execute_q</a></div><div class="ttdeci">void execute_q()</div><div class="ttdef"><b>Определения</b> async_internal.cpp:168</div></div>
+<div class="ttc" id="aclassotus__hw9_1_1QueueExecutorWithThread_html_a905871e7ef64cf160df5c46e59249b2c"><div class="ttname"><a href="classotus__hw9_1_1QueueExecutorWithThread.html#a905871e7ef64cf160df5c46e59249b2c">otus_hw9::QueueExecutorWithThread::~QueueExecutorWithThread</a></div><div class="ttdeci">virtual ~QueueExecutorWithThread() override</div><div class="ttdef"><b>Определения</b> async_internal.cpp:142</div></div>
+<div class="ttc" id="aclassotus__hw9_1_1QueueExecutorWithThread_html_a98f6b5c6702575a5358dfbebf78038c6"><div class="ttname"><a href="classotus__hw9_1_1QueueExecutorWithThread.html#a98f6b5c6702575a5358dfbebf78038c6">otus_hw9::QueueExecutorWithThread::stop_flag_</a></div><div class="ttdeci">bool stop_flag_</div><div class="ttdef"><b>Определения</b> async_internal.h:72</div></div>
+<div class="ttc" id="aclassotus__hw9_1_1QueueExecutorWithThread_html_a9f133d3985243b86d5906bb89da9153a"><div class="ttname"><a href="classotus__hw9_1_1QueueExecutorWithThread.html#a9f133d3985243b86d5906bb89da9153a">otus_hw9::QueueExecutorWithThread::cmd_wait_mx</a></div><div class="ttdeci">static std::mutex cmd_wait_mx</div><div class="ttdef"><b>Определения</b> async_internal.h:76</div></div>
+<div class="ttc" id="aclassotus__hw9_1_1QueueExecutorWithThread_html_ab2a5ccc2236ae330954ce8d5cccca907"><div class="ttname"><a href="classotus__hw9_1_1QueueExecutorWithThread.html#ab2a5ccc2236ae330954ce8d5cccca907">otus_hw9::QueueExecutorWithThread::execute</a></div><div class="ttdeci">virtual void execute(ICommandQueue &amp;q, ICommandContext &amp;ctx, size_t cnt) override</div><div class="ttdoc">получает стратегии и контекст, пробуждает поток</div><div class="ttdef"><b>Определения</b> async_internal.cpp:154</div></div>
+<div class="ttc" id="aclassotus__hw9_1_1QueueExecutorWithThread_html_ab587b1d426735392222a6d1c571d4a6e"><div class="ttname"><a href="classotus__hw9_1_1QueueExecutorWithThread.html#ab587b1d426735392222a6d1c571d4a6e">otus_hw9::QueueExecutorWithThread::q_</a></div><div class="ttdeci">ICommandQueue * q_</div><div class="ttdef"><b>Определения</b> async_internal.h:73</div></div>
+<div class="ttc" id="aclassotus__hw9_1_1QueueExecutorWithThread_html_afe10d5cf573e21131410434bfd501e68"><div class="ttname"><a href="classotus__hw9_1_1QueueExecutorWithThread.html#afe10d5cf573e21131410434bfd501e68">otus_hw9::QueueExecutorWithThread::ctx_</a></div><div class="ttdeci">ICommandContextPtr_t ctx_</div><div class="ttdef"><b>Определения</b> async_internal.h:74</div></div>
+<div class="ttc" id="anamespaceotus__hw7_html_a4026c375a8b417622490dac4f7ffac85"><div class="ttname"><a href="namespaceotus__hw7.html#a4026c375a8b417622490dac4f7ffac85">otus_hw7::ICommandCreatorPtr_t</a></div><div class="ttdeci">std::unique_ptr&lt; ICommandCreator &gt; ICommandCreatorPtr_t</div><div class="ttdef"><b>Определения</b> bulk_internal.h:26</div></div>
+<div class="ttc" id="anamespaceotus__hw7_html_aa7f86a27801044b4e45589f182119e99"><div class="ttname"><a href="namespaceotus__hw7.html#aa7f86a27801044b4e45589f182119e99">otus_hw7::IProcessorPtr_t</a></div><div class="ttdeci">std::unique_ptr&lt; IProcessor &gt; IProcessorPtr_t</div><div class="ttdef"><b>Определения</b> bulk.h:28</div></div>
+<div class="ttc" id="anamespaceotus__hw7_html_ac6fc38ba9456ac58490737e0219feaa4"><div class="ttname"><a href="namespaceotus__hw7.html#ac6fc38ba9456ac58490737e0219feaa4">otus_hw7::ICommandQueuePtr_t</a></div><div class="ttdeci">std::shared_ptr&lt; ICommandQueue &gt; ICommandQueuePtr_t</div><div class="ttdef"><b>Определения</b> bulk.h:26</div></div>
+<div class="ttc" id="anamespaceotus__hw7_html_ac8cc5d28a000a949a58d3357a139073d"><div class="ttname"><a href="namespaceotus__hw7.html#ac8cc5d28a000a949a58d3357a139073d">otus_hw7::ICommandPtrArray_t</a></div><div class="ttdeci">std::vector&lt; ICommandPtr_t &gt; ICommandPtrArray_t</div><div class="ttdef"><b>Определения</b> bulk.h:32</div></div>
+<div class="ttc" id="anamespaceotus__hw7_html_ad2fa0f85c65498f80219bcc070a6af2a"><div class="ttname"><a href="namespaceotus__hw7.html#ad2fa0f85c65498f80219bcc070a6af2a">otus_hw7::ICommandContextPtr_t</a></div><div class="ttdeci">std::shared_ptr&lt; ICommandContext &gt; ICommandContextPtr_t</div><div class="ttdef"><b>Определения</b> bulk.h:29</div></div>
+<div class="ttc" id="anamespaceotus__hw7_html_ad99bb3540faa8719e73ee68f17cf9f5a"><div class="ttname"><a href="namespaceotus__hw7.html#ad99bb3540faa8719e73ee68f17cf9f5a">otus_hw7::IInputParserPtr_t</a></div><div class="ttdeci">std::unique_ptr&lt; IInputParser &gt; IInputParserPtr_t</div><div class="ttdef"><b>Определения</b> bulk.h:24</div></div>
+<div class="ttc" id="anamespaceotus__hw7_html_aeb181c4f20f2c6a8263ba7a9a717224a"><div class="ttname"><a href="namespaceotus__hw7.html#aeb181c4f20f2c6a8263ba7a9a717224a">otus_hw7::ICommandPtr_t</a></div><div class="ttdeci">std::shared_ptr&lt; ICommand &gt; ICommandPtr_t</div><div class="ttdef"><b>Определения</b> bulk.h:25</div></div>
+<div class="ttc" id="anamespaceotus__hw7_html_afc5c79b47326e4974d9df5ae863f5961"><div class="ttname"><a href="namespaceotus__hw7.html#afc5c79b47326e4974d9df5ae863f5961">otus_hw7::IQueueExecutorPtr_t</a></div><div class="ttdeci">std::shared_ptr&lt; IQueueExecutor &gt; IQueueExecutorPtr_t</div><div class="ttdef"><b>Определения</b> bulk.h:22</div></div>
+<div class="ttc" id="anamespaceotus__hw9_html"><div class="ttname"><a href="namespaceotus__hw9.html">otus_hw9</a></div><div class="ttdef"><b>Определения</b> async.cpp:9</div></div>
+<div class="ttc" id="anamespaceotus__hw9_html_a5fbf7ff97a27c75bbed9280d8bf2a527"><div class="ttname"><a href="namespaceotus__hw9.html#a5fbf7ff97a27c75bbed9280d8bf2a527">otus_hw9::create_processor</a></div><div class="ttdeci">IProcessorPtr_t create_processor(Options const &amp;options)</div><div class="ttdoc">Фабрика для процессора, сама по настройкам выбирает какой тип процессора создать</div><div class="ttdef"><b>Определения</b> async_internal.cpp:210</div></div>
+<div class="ttc" id="anamespaceotus__hw9_html_a8ff4738172837efd8ee2b2828d5ed5ba"><div class="ttname"><a href="namespaceotus__hw9.html#a8ff4738172837efd8ee2b2828d5ed5ba">otus_hw9::create_command_queue</a></div><div class="ttdeci">ICommandQueuePtr_t create_command_queue(ICommandQueue::Type)</div><div class="ttdoc">Фабрика очереди команд</div><div class="ttdef"><b>Определения</b> async_internal.cpp:195</div></div>
+<div class="ttc" id="anamespaceotus__hw9_html_af82e02949614cb74e06b88c4b5922adb"><div class="ttname"><a href="namespaceotus__hw9.html#af82e02949614cb74e06b88c4b5922adb">otus_hw9::create_queue_executor</a></div><div class="ttdeci">IQueueExecutorPtr_t create_queue_executor(Options const &amp;options)</div><div class="ttdoc">Фабрика исполнителя очереди команд</div><div class="ttdef"><b>Определения</b> async_internal.cpp:202</div></div>
+<div class="ttc" id="astructotus__hw7_1_1ICommandContext_html"><div class="ttname"><a href="structotus__hw7_1_1ICommandContext.html">otus_hw7::ICommandContext</a></div><div class="ttdoc">Контекст выполнения команды</div><div class="ttdef"><b>Определения</b> bulk.h:129</div></div>
+<div class="ttc" id="astructotus__hw7_1_1ICommandQueue_html"><div class="ttname"><a href="structotus__hw7_1_1ICommandQueue.html">otus_hw7::ICommandQueue</a></div><div class="ttdoc">Очередь команд. Формируется парсером, затем выполняется исполнителем под управлением процессора.</div><div class="ttdef"><b>Определения</b> bulk.h:56</div></div>
+<div class="ttc" id="astructotus__hw7_1_1IQueueExecutor_html"><div class="ttname"><a href="structotus__hw7_1_1IQueueExecutor.html">otus_hw7::IQueueExecutor</a></div><div class="ttdoc">Актор, выполняющий очередь</div><div class="ttdef"><b>Определения</b> bulk.h:119</div></div>
+<div class="ttc" id="astructotus__hw9_1_1ICommandQueue_html_aa26f1104a7666afa52917523cfd5d987"><div class="ttname"><a href="structotus__hw9_1_1ICommandQueue.html#aa26f1104a7666afa52917523cfd5d987">otus_hw9::ICommandQueue::Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Определения</b> bulk.h:60</div></div>
+<div class="ttc" id="astructotus__hw9_1_1Options_html"><div class="ttname"><a href="structotus__hw9_1_1Options.html">otus_hw9::Options</a></div><div class="ttdef"><b>Определения</b> async_utils.h:9</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

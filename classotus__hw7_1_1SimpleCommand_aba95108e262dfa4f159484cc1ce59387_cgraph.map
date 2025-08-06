@@ -1,0 +1,5 @@
+<map id="otus_hw7::SimpleCommand::SimpleCommand" name="otus_hw7::SimpleCommand::SimpleCommand">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,188,46"/>
+<area shape="rect" id="Node000002" href="$classotus__hw7_1_1EmptyCommand.html#a8316b90f56d41d5c4791da6ed7c532d8" title="ИД блока, к которому принадлежит команда" alt="" coords="236,5,414,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,23,220,23,220,28,188,28"/>
+</map>

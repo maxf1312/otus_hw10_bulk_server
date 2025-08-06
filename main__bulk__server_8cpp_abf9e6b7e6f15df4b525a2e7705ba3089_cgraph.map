@@ -1,0 +1,18 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,128,55,153"/>
+<area shape="rect" id="Node000002" href="$structotus__hw7_1_1Options.html#a25e46ea8ccd0eeb7fab7140e105f84fe" title=" " alt="" coords="103,120,247,161"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,138,87,138,87,143,55,143"/>
+<area shape="rect" id="Node000003" href="$structotus__hw7_1_1Options.html#a56f7e104bc9288282c660a2d326aa434" title=" " alt="" coords="298,5,432,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="206,117,294,62,311,52,314,56,296,67,209,122"/>
+<area shape="rect" id="Node000004" href="$structotus__hw7_1_1Options.html#a87d11a6a9a7a2c8acfaef8085da85a03" title=" " alt="" coords="482,92,617,133"/>
+<area shape="poly" id="edge8_Node000002_Node000004" title=" " alt="" coords="241,117,295,106,384,100,467,102,467,108,384,105,295,111,242,122"/>
+<area shape="rect" id="Node000005" href="$structotus__hw7_1_1Options.html#ad8518181dd4001b68ba853f7fb9a66cf" title=" " alt="" coords="298,120,432,161"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="247,138,282,138,282,143,247,143"/>
+<area shape="rect" id="Node000006" href="$structotus__hw7_1_1Options.html#ac0efbab3d6edbf345e3c3870e8cabcc2" title=" " alt="" coords="298,185,432,226"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="237,159,290,177,289,182,235,164"/>
+<area shape="rect" id="Node000007" href="$namespaceotus__hw7.html#adb5a45f3fdb0627a223d9e18128428f0" title=" " alt="" coords="295,250,434,276"/>
+<area shape="poly" id="edge9_Node000002_Node000007" title=" " alt="" coords="199,159,242,197,296,235,308,241,305,246,294,240,239,201,195,163"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="411,44,492,83,490,87,409,49"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="432,128,467,122,468,127,433,133"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="408,182,433,170,495,138,497,143,436,175,411,187"/>
+</map>

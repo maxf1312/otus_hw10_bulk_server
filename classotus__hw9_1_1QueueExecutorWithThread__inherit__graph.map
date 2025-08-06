@@ -1,0 +1,5 @@
+<map id="otus_hw9::QueueExecutorWithThread" name="otus_hw9::QueueExecutorWithThread">
+<area shape="rect" id="Node000001" title="Реализация исполнителя очереди в отдельном потоке" alt="" coords="5,181,198,425"/>
+<area shape="rect" id="Node000002" href="$structotus__hw7_1_1IQueueExecutor.html" title="Актор, выполняющий очередь" alt="" coords="20,5,184,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,148,104,181,99,181,99,148"/>
+</map>

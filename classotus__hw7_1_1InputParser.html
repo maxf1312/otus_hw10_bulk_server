@@ -1,0 +1,742 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bulk_server: Класс otus_hw7::InputParser</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">bulk_server<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">Bulk text commands network server made for homework 9</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespaceotus__hw7.html">otus_hw7</a></li><li class="navelem"><a class="el" href="classotus__hw7_1_1InputParser.html">InputParser</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pri-types">Закрытые типы</a> &#124;
+<a href="#pri-methods">Закрытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="classotus__hw7_1_1InputParser-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс otus_hw7::InputParser</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Реализация парсера входного потока команд  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="bulk__internal_8h_source.html">bulk_internal.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:otus_hw7::InputParser:</div>
+<div class="dyncontent">
+<div class="center"><img src="classotus__hw7_1_1InputParser__inherit__graph.png" border="0" usemap="#aotus__hw7_1_1InputParser_inherit__map" alt="Inheritance graph"/></div>
+<map name="aotus__hw7_1_1InputParser_inherit__map" id="aotus__hw7_1_1InputParser_inherit__map">
+<area shape="rect" title="Реализация парсера входного потока команд" alt="" coords="5,201,179,593"/>
+<area shape="rect" href="structotus__hw7_1_1IInputParser.html" title="Парсер для четния, разбора ввода и формирования пакетов команд. Формирует пакеты, возвращая сразу дан..." alt="" coords="16,5,169,153"/>
+<area shape="poly" title=" " alt="" coords="95,168,95,202,90,202,90,168"/>
+</map>
+</div>
+<div class="dynheader">
+Граф связей класса otus_hw7::InputParser:</div>
+<div class="dyncontent">
+<div class="center"><img src="classotus__hw7_1_1InputParser__coll__graph.png" border="0" usemap="#aotus__hw7_1_1InputParser_coll__map" alt="Collaboration graph"/></div>
+<map name="aotus__hw7_1_1InputParser_coll__map" id="aotus__hw7_1_1InputParser_coll__map">
+<area shape="rect" title="Реализация парсера входного потока команд" alt="" coords="462,246,636,455"/>
+<area shape="rect" href="structotus__hw7_1_1IInputParser.html" title="Парсер для четния, разбора ввода и формирования пакетов команд. Формирует пакеты, возвращая сразу дан..." alt="" coords="5,5,158,153"/>
+<area shape="poly" title=" " alt="" coords="146,162,176,193,210,220,272,256,338,286,403,309,462,326,461,332,402,314,336,291,270,261,207,224,173,197,142,166"/>
+<area shape="rect" title=" " alt="" coords="182,46,216,112"/>
+<area shape="poly" title=" " alt="" coords="203,111,213,166,224,195,241,220,285,260,338,290,392,313,446,328,444,333,391,318,335,295,282,264,237,224,219,197,208,168,198,112"/>
+<area shape="rect" title=" " alt="" coords="293,46,359,112"/>
+<area shape="poly" title=" " alt="" coords="344,111,374,164,413,220,451,262,447,265,409,224,369,166,339,113"/>
+<area shape="rect" title=" " alt="" coords="382,46,427,112"/>
+<area shape="poly" title=" " alt="" coords="417,111,436,163,463,221,468,230,463,233,458,223,432,165,412,113"/>
+<area shape="rect" title=" " alt="" coords="451,46,649,112"/>
+<area shape="poly" title=" " alt="" coords="552,112,552,229,546,229,547,112"/>
+<area shape="rect" title=" " alt="" coords="672,46,715,112"/>
+<area shape="poly" title=" " alt="" coords="686,113,666,166,639,223,634,233,629,230,634,221,661,164,681,111"/>
+<area shape="rect" title=" " alt="" coords="740,46,786,112"/>
+<area shape="poly" title=" " alt="" coords="764,113,755,167,745,196,731,224,694,265,651,298,648,294,691,261,726,220,740,194,750,166,759,112"/>
+<area shape="rect" title=" " alt="" coords="830,46,878,112"/>
+<area shape="poly" title=" " alt="" coords="855,113,844,168,833,197,816,224,780,258,739,286,696,308,653,325,651,320,694,303,737,281,777,254,812,220,828,195,839,166,850,112"/>
+<area shape="rect" title=" " alt="" coords="904,46,993,112"/>
+<area shape="poly" title=" " alt="" coords="950,113,938,169,926,198,908,224,881,249,851,270,785,303,717,326,653,340,652,335,715,321,783,298,848,265,877,244,904,220,922,195,933,167,944,112"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:adcc574067b0985651f2a018ebf00ef59" id="r_adcc574067b0985651f2a018ebf00ef59"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adcc574067b0985651f2a018ebf00ef59">InputParser</a> (size_t chunk_size, istream &amp;is, <a class="el" href="namespaceotus__hw7.html#a4026c375a8b417622490dac4f7ffac85">ICommandCreatorPtr_t</a> cmd_creator)</td></tr>
+<tr class="separator:adcc574067b0985651f2a018ebf00ef59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a481a04942eaf8ec7b79ad2d96db134d3" id="r_a481a04942eaf8ec7b79ad2d96db134d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structotus__hw7_1_1IInputParser.html#a8a2d8073f2656c0330752c9e0fbddf86">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a481a04942eaf8ec7b79ad2d96db134d3">read_next_command</a> (<a class="el" href="namespaceotus__hw7.html#aeb181c4f20f2c6a8263ba7a9a717224a">ICommandPtr_t</a> &amp;cmd) override</td></tr>
+<tr class="separator:a481a04942eaf8ec7b79ad2d96db134d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af538f7bc7b318d69bd08ad0182aadf5a" id="r_af538f7bc7b318d69bd08ad0182aadf5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structotus__hw7_1_1IInputParser.html#a8a2d8073f2656c0330752c9e0fbddf86">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af538f7bc7b318d69bd08ad0182aadf5a">read_next_bulk</a> (<a class="el" href="structotus__hw7_1_1ICommandQueue.html">ICommandQueue</a> &amp;cmd_queue) override</td></tr>
+<tr class="separator:af538f7bc7b318d69bd08ad0182aadf5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af89ca304922b73708bfb001b747d69f6" id="r_af89ca304922b73708bfb001b747d69f6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af89ca304922b73708bfb001b747d69f6">save_status_at_stop</a> (bool b_save) override</td></tr>
+<tr class="separator:af89ca304922b73708bfb001b747d69f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27288dde05c45b97562cd87a394fda26" id="r_a27288dde05c45b97562cd87a394fda26"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27288dde05c45b97562cd87a394fda26">save_status_at_stop</a> () const override</td></tr>
+<tr class="separator:a27288dde05c45b97562cd87a394fda26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_structotus__hw7_1_1IInputParser"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_structotus__hw7_1_1IInputParser')"><img src="closed.png" alt="-"/>&#160;Открытые члены унаследованные от <a class="el" href="structotus__hw7_1_1IInputParser.html">otus_hw7::IInputParser</a></td></tr>
+<tr class="memitem:a9ef051986b4c09eea3df66b33edc8b04 inherit pub_methods_structotus__hw7_1_1IInputParser" id="r_a9ef051986b4c09eea3df66b33edc8b04"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structotus__hw7_1_1IInputParser.html#a9ef051986b4c09eea3df66b33edc8b04">~IInputParser</a> ()=default</td></tr>
+<tr class="separator:a9ef051986b4c09eea3df66b33edc8b04 inherit pub_methods_structotus__hw7_1_1IInputParser"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-types" name="pri-types"></a>
+Закрытые типы</h2></td></tr>
+<tr class="memitem:ab8a923be8d4e6540c097c6201b7a3ad0" id="r_ab8a923be8d4e6540c097c6201b7a3ad0"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8a923be8d4e6540c097c6201b7a3ad0">Token</a> : uint8_t { <a class="el" href="#ab8a923be8d4e6540c097c6201b7a3ad0ab2d91e76914f511272426507e9d48e9a">kCommand</a>
+, <a class="el" href="#ab8a923be8d4e6540c097c6201b7a3ad0a0481c739ee345031f45440e8d1171e52">kBegin_Block</a>
+, <a class="el" href="#ab8a923be8d4e6540c097c6201b7a3ad0a4bac23fb862fa11999045daf5e310302">kEnd_Block</a>
+, <a class="el" href="#ab8a923be8d4e6540c097c6201b7a3ad0ab8c537d633ec58a1c93a6a2ea12f91bf">kEnd_Of_File</a>
+ }</td></tr>
+<tr class="separator:ab8a923be8d4e6540c097c6201b7a3ad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Закрытые члены</h2></td></tr>
+<tr class="memitem:a2a89b98b66b6a40dc8682998a423f5c0" id="r_a2a89b98b66b6a40dc8682998a423f5c0"><td class="memItemLeft" align="right" valign="top">istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a89b98b66b6a40dc8682998a423f5c0">read_command</a> ()</td></tr>
+<tr class="separator:a2a89b98b66b6a40dc8682998a423f5c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a009f547fc452df09a1b9c92ed6e568ab" id="r_a009f547fc452df09a1b9c92ed6e568ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structotus__hw7_1_1IInputParser.html#a8a2d8073f2656c0330752c9e0fbddf86">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a009f547fc452df09a1b9c92ed6e568ab">get_last_command_data</a> (<a class="el" href="namespaceotus__hw7.html#a0c86cf94c5b8f55b306d92c48431b7f8">command_data_t</a> &amp;cmd) const</td></tr>
+<tr class="separator:a009f547fc452df09a1b9c92ed6e568ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4f4337d67a3fa49305989bed526bfa3" id="r_ad4f4337d67a3fa49305989bed526bfa3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4f4337d67a3fa49305989bed526bfa3">set_status</a> (<a class="el" href="structotus__hw7_1_1IInputParser.html#a8a2d8073f2656c0330752c9e0fbddf86">Status</a> new_st)</td></tr>
+<tr class="separator:ad4f4337d67a3fa49305989bed526bfa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:ab98c30e1710fa066efe205181109154d" id="r_ab98c30e1710fa066efe205181109154d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab98c30e1710fa066efe205181109154d">save_status_at_stop_</a></td></tr>
+<tr class="separator:ab98c30e1710fa066efe205181109154d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52ab194a259146d5f0eb41f374776a38" id="r_a52ab194a259146d5f0eb41f374776a38"><td class="memItemLeft" align="right" valign="top">istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52ab194a259146d5f0eb41f374776a38">is_</a></td></tr>
+<tr class="separator:a52ab194a259146d5f0eb41f374776a38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0881476f7a6c1349305de1f8eccd29c5" id="r_a0881476f7a6c1349305de1f8eccd29c5"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0881476f7a6c1349305de1f8eccd29c5">chunk_size_</a></td></tr>
+<tr class="separator:a0881476f7a6c1349305de1f8eccd29c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21d6bf80141bcf3206374b18bd2e65ab" id="r_a21d6bf80141bcf3206374b18bd2e65ab"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a21d6bf80141bcf3206374b18bd2e65ab">cmd_count_</a> = 0</td></tr>
+<tr class="separator:a21d6bf80141bcf3206374b18bd2e65ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67c625a0169f61f6675d801450649378" id="r_a67c625a0169f61f6675d801450649378"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67c625a0169f61f6675d801450649378">block_count_</a> = 0</td></tr>
+<tr class="separator:a67c625a0169f61f6675d801450649378"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1feb6b8929bbc7fd11a4dbe6d6d3f255" id="r_a1feb6b8929bbc7fd11a4dbe6d6d3f255"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceotus__hw7.html#a4026c375a8b417622490dac4f7ffac85">ICommandCreatorPtr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1feb6b8929bbc7fd11a4dbe6d6d3f255">cmd_creator_</a></td></tr>
+<tr class="separator:a1feb6b8929bbc7fd11a4dbe6d6d3f255"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98ac17dab6e11714d2b8366a802e5f0e" id="r_a98ac17dab6e11714d2b8366a802e5f0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceotus__hw7.html#a0c86cf94c5b8f55b306d92c48431b7f8">command_data_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98ac17dab6e11714d2b8366a802e5f0e">last_cmd_</a></td></tr>
+<tr class="separator:a98ac17dab6e11714d2b8366a802e5f0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e3c2f95e62a05729b152a7827ddbef5" id="r_a5e3c2f95e62a05729b152a7827ddbef5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ab8a923be8d4e6540c097c6201b7a3ad0">Token</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e3c2f95e62a05729b152a7827ddbef5">last_tok_</a></td></tr>
+<tr class="separator:a5e3c2f95e62a05729b152a7827ddbef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69da77b4804033ca3db58b0206906d6d" id="r_a69da77b4804033ca3db58b0206906d6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structotus__hw7_1_1IInputParser.html#a8a2d8073f2656c0330752c9e0fbddf86">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69da77b4804033ca3db58b0206906d6d">last_stat_</a></td></tr>
+<tr class="separator:a69da77b4804033ca3db58b0206906d6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e9cdc2428a94f3fe8f347e0f064c148" id="r_a0e9cdc2428a94f3fe8f347e0f064c148"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structotus__hw7_1_1ICommandQueue.html#a7608608a3aac9b3fcae5022cfe94dfec">ICommandQueue::id_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e9cdc2428a94f3fe8f347e0f064c148">last_bulk_id_</a></td></tr>
+<tr class="separator:a0e9cdc2428a94f3fe8f347e0f064c148"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Дополнительные унаследованные члены</h2></td></tr>
+<tr class="inherit_header pub_types_structotus__hw7_1_1IInputParser"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_types_structotus__hw7_1_1IInputParser')"><img src="closed.png" alt="-"/>&#160;Открытые типы унаследованные от <a class="el" href="structotus__hw7_1_1IInputParser.html">otus_hw7::IInputParser</a></td></tr>
+<tr class="memitem:a8a2d8073f2656c0330752c9e0fbddf86 inherit pub_types_structotus__hw7_1_1IInputParser" id="r_a8a2d8073f2656c0330752c9e0fbddf86"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structotus__hw7_1_1IInputParser.html#a8a2d8073f2656c0330752c9e0fbddf86">Status</a> : uint8_t { <a class="el" href="structotus__hw7_1_1IInputParser.html#a8a2d8073f2656c0330752c9e0fbddf86a119b95f1855d21488205f47929028dac">kReading</a>
+, <a class="el" href="structotus__hw7_1_1IInputParser.html#a8a2d8073f2656c0330752c9e0fbddf86a25d5606fe07425ea73f245c48612c039">kReady</a>
+, <a class="el" href="structotus__hw7_1_1IInputParser.html#a8a2d8073f2656c0330752c9e0fbddf86aa7c4e68b845afc4ee4dcaf41b0b503e4">kIgnore</a>
+, <a class="el" href="structotus__hw7_1_1IInputParser.html#a8a2d8073f2656c0330752c9e0fbddf86a97bebae73e3334ef0c946c5df81e440b">kStop</a>
+ }</td></tr>
+<tr class="memdesc:a8a2d8073f2656c0330752c9e0fbddf86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Статус чтения ввода и готовности к выполнению  <a href="structotus__hw7_1_1IInputParser.html#a8a2d8073f2656c0330752c9e0fbddf86">Подробнее...</a><br /></td></tr>
+<tr class="separator:a8a2d8073f2656c0330752c9e0fbddf86 inherit pub_types_structotus__hw7_1_1IInputParser"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Реализация парсера входного потока команд </p>
+</div><h2 class="groupheader">Перечисления</h2>
+<a id="ab8a923be8d4e6540c097c6201b7a3ad0" name="ab8a923be8d4e6540c097c6201b7a3ad0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8a923be8d4e6540c097c6201b7a3ad0">&#9670;&#160;</a></span>Token</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ab8a923be8d4e6540c097c6201b7a3ad0">otus_hw7::InputParser::Token</a> : uint8_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="ab8a923be8d4e6540c097c6201b7a3ad0ab2d91e76914f511272426507e9d48e9a" name="ab8a923be8d4e6540c097c6201b7a3ad0ab2d91e76914f511272426507e9d48e9a"></a>kCommand&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab8a923be8d4e6540c097c6201b7a3ad0a0481c739ee345031f45440e8d1171e52" name="ab8a923be8d4e6540c097c6201b7a3ad0a0481c739ee345031f45440e8d1171e52"></a>kBegin_Block&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab8a923be8d4e6540c097c6201b7a3ad0a4bac23fb862fa11999045daf5e310302" name="ab8a923be8d4e6540c097c6201b7a3ad0a4bac23fb862fa11999045daf5e310302"></a>kEnd_Block&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab8a923be8d4e6540c097c6201b7a3ad0ab8c537d633ec58a1c93a6a2ea12f91bf" name="ab8a923be8d4e6540c097c6201b7a3ad0ab8c537d633ec58a1c93a6a2ea12f91bf"></a>kEnd_Of_File&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Конструктор(ы)</h2>
+<a id="adcc574067b0985651f2a018ebf00ef59" name="adcc574067b0985651f2a018ebf00ef59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcc574067b0985651f2a018ebf00ef59">&#9670;&#160;</a></span>InputParser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">otus_hw7::InputParser::InputParser </td>
+          <td>(</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>chunk_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">istream &amp;</td>          <td class="paramname"><span class="paramname"><em>is</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceotus__hw7.html#a4026c375a8b417622490dac4f7ffac85">ICommandCreatorPtr_t</a></td>          <td class="paramname"><span class="paramname"><em>cmd_creator</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a009f547fc452df09a1b9c92ed6e568ab" name="a009f547fc452df09a1b9c92ed6e568ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a009f547fc452df09a1b9c92ed6e568ab">&#9670;&#160;</a></span>get_last_command_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structotus__hw7_1_1IInputParser.html#a8a2d8073f2656c0330752c9e0fbddf86">Status</a> otus_hw7::InputParser::get_last_command_data </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceotus__hw7.html#a0c86cf94c5b8f55b306d92c48431b7f8">command_data_t</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>cmd</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a89b98b66b6a40dc8682998a423f5c0" name="a2a89b98b66b6a40dc8682998a423f5c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a89b98b66b6a40dc8682998a423f5c0">&#9670;&#160;</a></span>read_command()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">istream &amp; otus_hw7::InputParser::read_command </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="classotus__hw7_1_1InputParser_a2a89b98b66b6a40dc8682998a423f5c0_cgraph.png" border="0" usemap="#aclassotus__hw7_1_1InputParser_a2a89b98b66b6a40dc8682998a423f5c0_cgraph" alt=""/></div>
+<map name="aclassotus__hw7_1_1InputParser_a2a89b98b66b6a40dc8682998a423f5c0_cgraph" id="aclassotus__hw7_1_1InputParser_a2a89b98b66b6a40dc8682998a423f5c0_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,156,46"/>
+<area shape="rect" href="classotus__hw7_1_1InputParser.html#ad4f4337d67a3fa49305989bed526bfa3" title=" " alt="" coords="204,5,354,46"/>
+<area shape="poly" title=" " alt="" coords="156,23,188,23,188,28,156,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af538f7bc7b318d69bd08ad0182aadf5a" name="af538f7bc7b318d69bd08ad0182aadf5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af538f7bc7b318d69bd08ad0182aadf5a">&#9670;&#160;</a></span>read_next_bulk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structotus__hw7_1_1IInputParser.html#a8a2d8073f2656c0330752c9e0fbddf86">IInputParser::Status</a> otus_hw7::InputParser::read_next_bulk </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structotus__hw7_1_1ICommandQueue.html">ICommandQueue</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>cmd_queue</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="structotus__hw7_1_1IInputParser.html#ad132fab9a6ef6975a9c913068b5b2c1f">otus_hw7::IInputParser</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="classotus__hw7_1_1InputParser_af538f7bc7b318d69bd08ad0182aadf5a_cgraph.png" border="0" usemap="#aclassotus__hw7_1_1InputParser_af538f7bc7b318d69bd08ad0182aadf5a_cgraph" alt=""/></div>
+<map name="aclassotus__hw7_1_1InputParser_af538f7bc7b318d69bd08ad0182aadf5a_cgraph" id="aclassotus__hw7_1_1InputParser_af538f7bc7b318d69bd08ad0182aadf5a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,104,156,145"/>
+<area shape="rect" href="structotus__hw7_1_1ICommandQueue.html#a322c576f0ef75557447811a1f89edae9" title=" " alt="" coords="204,5,388,46"/>
+<area shape="poly" title=" " alt="" coords="116,101,203,57,219,50,221,54,205,61,119,106"/>
+<area shape="rect" href="structotus__hw7_1_1ICommandQueue.html#a9a3072246700682ab5a96c7fd37760d8" title=" " alt="" coords="204,71,388,111"/>
+<area shape="poly" title=" " alt="" coords="156,110,188,105,189,110,157,115"/>
+<area shape="rect" href="classotus__hw7_1_1InputParser.html#a481a04942eaf8ec7b79ad2d96db134d3" title=" " alt="" coords="221,201,371,242"/>
+<area shape="poly" title=" " alt="" coords="120,143,205,186,221,193,219,198,203,191,117,148"/>
+<area shape="rect" href="structotus__hw7_1_1ICommandQueue.html#a12e8da44388805caabdf7253cafa917d" title=" " alt="" coords="204,136,388,177"/>
+<area shape="poly" title=" " alt="" coords="157,133,189,138,188,143,156,138"/>
+<area shape="rect" href="structotus__hw7_1_1ICommandQueue.html#af2267bc113b4fb5cf212c1e0ac1d7c9e" title=" " alt="" coords="436,87,620,127"/>
+<area shape="poly" title=" " alt="" coords="389,95,420,97,420,102,388,100"/>
+<area shape="rect" href="classotus__hw7_1_1InputParser.html#a009f547fc452df09a1b9c92ed6e568ab" title=" " alt="" coords="444,184,613,225"/>
+<area shape="poly" title=" " alt="" coords="371,213,428,209,428,214,371,219"/>
+<area shape="rect" href="classotus__hw7_1_1InputParser.html#a2a89b98b66b6a40dc8682998a423f5c0" title=" " alt="" coords="453,249,603,290"/>
+<area shape="poly" title=" " alt="" coords="372,235,438,248,437,254,371,240"/>
+<area shape="rect" href="classotus__hw7_1_1InputParser.html#ad4f4337d67a3fa49305989bed526bfa3" title=" " alt="" coords="668,249,819,290"/>
+<area shape="poly" title=" " alt="" coords="604,267,653,267,653,272,604,272"/>
+<area shape="poly" title=" " alt="" coords="388,134,420,127,421,132,389,139"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a481a04942eaf8ec7b79ad2d96db134d3" name="a481a04942eaf8ec7b79ad2d96db134d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a481a04942eaf8ec7b79ad2d96db134d3">&#9670;&#160;</a></span>read_next_command()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structotus__hw7_1_1IInputParser.html#a8a2d8073f2656c0330752c9e0fbddf86">IInputParser::Status</a> otus_hw7::InputParser::read_next_command </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceotus__hw7.html#aeb181c4f20f2c6a8263ba7a9a717224a">ICommandPtr_t</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>cmd</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="structotus__hw7_1_1IInputParser.html#ab897bdafe0a5ba83fa5a82d3f460a3a4">otus_hw7::IInputParser</a>.</p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="classotus__hw7_1_1InputParser_a481a04942eaf8ec7b79ad2d96db134d3_cgraph.png" border="0" usemap="#aclassotus__hw7_1_1InputParser_a481a04942eaf8ec7b79ad2d96db134d3_cgraph" alt=""/></div>
+<map name="aclassotus__hw7_1_1InputParser_a481a04942eaf8ec7b79ad2d96db134d3_cgraph" id="aclassotus__hw7_1_1InputParser_a481a04942eaf8ec7b79ad2d96db134d3_cgraph">
+<area shape="rect" title=" " alt="" coords="5,39,156,79"/>
+<area shape="rect" href="classotus__hw7_1_1InputParser.html#a009f547fc452df09a1b9c92ed6e568ab" title=" " alt="" coords="204,5,373,46"/>
+<area shape="poly" title=" " alt="" coords="155,44,188,39,189,44,156,50"/>
+<area shape="rect" href="classotus__hw7_1_1InputParser.html#a2a89b98b66b6a40dc8682998a423f5c0" title=" " alt="" coords="213,71,364,111"/>
+<area shape="poly" title=" " alt="" coords="156,68,198,74,197,80,155,73"/>
+<area shape="rect" href="classotus__hw7_1_1InputParser.html#ad4f4337d67a3fa49305989bed526bfa3" title=" " alt="" coords="421,71,571,111"/>
+<area shape="poly" title=" " alt="" coords="364,88,406,88,406,94,364,94"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a27288dde05c45b97562cd87a394fda26" name="a27288dde05c45b97562cd87a394fda26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27288dde05c45b97562cd87a394fda26">&#9670;&#160;</a></span>save_status_at_stop() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool otus_hw7::InputParser::save_status_at_stop </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="structotus__hw7_1_1IInputParser.html#a829b4d1c2362ff2a3b588ddcf0a57e32">otus_hw7::IInputParser</a>.</p>
+
+</div>
+</div>
+<a id="af89ca304922b73708bfb001b747d69f6" name="af89ca304922b73708bfb001b747d69f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af89ca304922b73708bfb001b747d69f6">&#9670;&#160;</a></span>save_status_at_stop() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool otus_hw7::InputParser::save_status_at_stop </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>b_save</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Замещает <a class="el" href="structotus__hw7_1_1IInputParser.html#a04bd5d5e0e2a408a359e9073b6712371">otus_hw7::IInputParser</a>.</p>
+
+</div>
+</div>
+<a id="ad4f4337d67a3fa49305989bed526bfa3" name="ad4f4337d67a3fa49305989bed526bfa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4f4337d67a3fa49305989bed526bfa3">&#9670;&#160;</a></span>set_status()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void otus_hw7::InputParser::set_status </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structotus__hw7_1_1IInputParser.html#a8a2d8073f2656c0330752c9e0fbddf86">Status</a></td>          <td class="paramname"><span class="paramname"><em>new_st</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="a67c625a0169f61f6675d801450649378" name="a67c625a0169f61f6675d801450649378"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67c625a0169f61f6675d801450649378">&#9670;&#160;</a></span>block_count_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t otus_hw7::InputParser::block_count_ = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0881476f7a6c1349305de1f8eccd29c5" name="a0881476f7a6c1349305de1f8eccd29c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0881476f7a6c1349305de1f8eccd29c5">&#9670;&#160;</a></span>chunk_size_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t otus_hw7::InputParser::chunk_size_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a21d6bf80141bcf3206374b18bd2e65ab" name="a21d6bf80141bcf3206374b18bd2e65ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21d6bf80141bcf3206374b18bd2e65ab">&#9670;&#160;</a></span>cmd_count_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t otus_hw7::InputParser::cmd_count_ = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1feb6b8929bbc7fd11a4dbe6d6d3f255" name="a1feb6b8929bbc7fd11a4dbe6d6d3f255"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1feb6b8929bbc7fd11a4dbe6d6d3f255">&#9670;&#160;</a></span>cmd_creator_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceotus__hw7.html#a4026c375a8b417622490dac4f7ffac85">ICommandCreatorPtr_t</a> otus_hw7::InputParser::cmd_creator_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a52ab194a259146d5f0eb41f374776a38" name="a52ab194a259146d5f0eb41f374776a38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52ab194a259146d5f0eb41f374776a38">&#9670;&#160;</a></span>is_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">istream&amp; otus_hw7::InputParser::is_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e9cdc2428a94f3fe8f347e0f064c148" name="a0e9cdc2428a94f3fe8f347e0f064c148"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e9cdc2428a94f3fe8f347e0f064c148">&#9670;&#160;</a></span>last_bulk_id_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structotus__hw7_1_1ICommandQueue.html#a7608608a3aac9b3fcae5022cfe94dfec">ICommandQueue::id_t</a> otus_hw7::InputParser::last_bulk_id_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a98ac17dab6e11714d2b8366a802e5f0e" name="a98ac17dab6e11714d2b8366a802e5f0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98ac17dab6e11714d2b8366a802e5f0e">&#9670;&#160;</a></span>last_cmd_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceotus__hw7.html#a0c86cf94c5b8f55b306d92c48431b7f8">command_data_t</a> otus_hw7::InputParser::last_cmd_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a69da77b4804033ca3db58b0206906d6d" name="a69da77b4804033ca3db58b0206906d6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69da77b4804033ca3db58b0206906d6d">&#9670;&#160;</a></span>last_stat_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structotus__hw7_1_1IInputParser.html#a8a2d8073f2656c0330752c9e0fbddf86">Status</a> otus_hw7::InputParser::last_stat_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5e3c2f95e62a05729b152a7827ddbef5" name="a5e3c2f95e62a05729b152a7827ddbef5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e3c2f95e62a05729b152a7827ddbef5">&#9670;&#160;</a></span>last_tok_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ab8a923be8d4e6540c097c6201b7a3ad0">Token</a> otus_hw7::InputParser::last_tok_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab98c30e1710fa066efe205181109154d" name="ab98c30e1710fa066efe205181109154d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab98c30e1710fa066efe205181109154d">&#9670;&#160;</a></span>save_status_at_stop_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool otus_hw7::InputParser::save_status_at_stop_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="bulk__internal_8h_source.html">bulk_internal.h</a></li>
+<li><a class="el" href="bulk_8cpp.html">bulk.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

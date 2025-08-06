@@ -1,0 +1,7 @@
+<map id="otus_hw7::BulkCommand::BulkCommand" name="otus_hw7::BulkCommand::BulkCommand">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,174,46"/>
+<area shape="rect" id="Node000002" href="$classotus__hw7_1_1EmptyCommand.html#a60399dd07553ffb0bd301cbf23989a06" title=" " alt="" coords="222,5,400,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,23,206,23,206,28,174,28"/>
+<area shape="rect" id="Node000003" href="$classotus__hw7_1_1EmptyCommand.html#a8316b90f56d41d5c4791da6ed7c532d8" title="ИД блока, к которому принадлежит команда" alt="" coords="448,5,626,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="401,23,432,23,432,28,401,28"/>
+</map>

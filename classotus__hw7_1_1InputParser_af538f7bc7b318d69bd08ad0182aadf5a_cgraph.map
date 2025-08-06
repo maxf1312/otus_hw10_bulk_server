@@ -1,0 +1,20 @@
+<map id="otus_hw7::InputParser::read_next_bulk" name="otus_hw7::InputParser::read_next_bulk">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,104,156,145"/>
+<area shape="rect" id="Node000002" href="$structotus__hw7_1_1ICommandQueue.html#a322c576f0ef75557447811a1f89edae9" title=" " alt="" coords="204,5,388,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,101,203,57,219,50,221,54,205,61,119,106"/>
+<area shape="rect" id="Node000003" href="$structotus__hw7_1_1ICommandQueue.html#a9a3072246700682ab5a96c7fd37760d8" title=" " alt="" coords="204,71,388,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="156,110,188,105,189,110,157,115"/>
+<area shape="rect" id="Node000005" href="$classotus__hw7_1_1InputParser.html#a481a04942eaf8ec7b79ad2d96db134d3" title=" " alt="" coords="221,201,371,242"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="120,143,205,186,221,193,219,198,203,191,117,148"/>
+<area shape="rect" id="Node000009" href="$structotus__hw7_1_1ICommandQueue.html#a12e8da44388805caabdf7253cafa917d" title=" " alt="" coords="204,136,388,177"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="157,133,189,138,188,143,156,138"/>
+<area shape="rect" id="Node000004" href="$structotus__hw7_1_1ICommandQueue.html#af2267bc113b4fb5cf212c1e0ac1d7c9e" title=" " alt="" coords="436,87,620,127"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="389,95,420,97,420,102,388,100"/>
+<area shape="rect" id="Node000006" href="$classotus__hw7_1_1InputParser.html#a009f547fc452df09a1b9c92ed6e568ab" title=" " alt="" coords="444,184,613,225"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="371,213,428,209,428,214,371,219"/>
+<area shape="rect" id="Node000007" href="$classotus__hw7_1_1InputParser.html#a2a89b98b66b6a40dc8682998a423f5c0" title=" " alt="" coords="453,249,603,290"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="372,235,438,248,437,254,371,240"/>
+<area shape="rect" id="Node000008" href="$classotus__hw7_1_1InputParser.html#ad4f4337d67a3fa49305989bed526bfa3" title=" " alt="" coords="668,249,819,290"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="604,267,653,267,653,272,604,272"/>
+<area shape="poly" id="edge9_Node000009_Node000004" title=" " alt="" coords="388,134,420,127,421,132,389,139"/>
+</map>

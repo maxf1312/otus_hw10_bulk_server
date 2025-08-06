@@ -1,0 +1,13 @@
+<map id="otus_hw7::CommandQueue" name="otus_hw7::CommandQueue">
+<area shape="rect" id="Node000001" title="Реализация очереди команд" alt="" coords="192,482,380,706"/>
+<area shape="rect" id="Node000002" href="$structotus__hw7_1_1ICommandQueue.html" title="Очередь команд. Формируется парсером, затем выполняется исполнителем под управлением процессора." alt="" coords="44,135,232,419"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="213,431,236,481,232,484,208,434"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,52,72"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="41,71,56,110,60,118,55,120,51,112,36,73"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="92,5,184,72"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="141,72,141,118,135,118,135,72"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="208,5,314,72"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="246,73,222,121,217,118,242,70"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="256,244,415,310"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="333,310,309,466,303,465,328,309"/>
+</map>
